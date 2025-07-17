@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Booking Confirmation</title>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+      }
+
+      .email-container {
+        max-width: 600px;
+        margin: 40px auto;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+        padding: 30px;
+        color: #333;
+      }
+
+      .header {
+        text-align: center;
+        padding-bottom: 20px;
+        border-bottom: 2px solid #eee;
+      }
+
+      .header h1 {
+        margin: 0;
+        color: #4caf50;
+        font-size: 26px;
+      }
+
+      .content {
+        padding: 20px 0;
+        font-size: 16px;
+        line-height: 1.6;
+      }
+
+      .content p {
+        margin: 10px 0;
+      }
+
+      .service-box {
+        background-color: #f0f9f0;
+        padding: 12px 18px;
+        border-left: 5px solid #4caf50;
+        border-radius: 5px;
+        margin: 20px 0;
+        font-weight: 500;
+      }
+
+      .footer {
+        text-align: center;
+        margin-top: 30px;
+        font-size: 13px;
+        color: #888;
+      }
+
+      .btn {
+        display: inline-block;
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        margin-top: 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .btn:hover {
+        background-color: #43a047;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="email-container">
+      <div class="header">
+        <h1>Booking Confirmed ✅</h1>
+      </div>
+
+      <div class="content">
+        <p>Hi <strong>{{ name }}</strong>,</p>
+
+        <p>
+          Thank you for booking <strong>{{ service }}</strong> with me! Your
+          request has been received and I will get in touch with you soon to
+          confirm the details.
+        </p>
+
+        <div class="service-box"><strong>Service:</strong> {{ service }}</div>
+
+        <p>
+          If you have any questions or want to provide more info, feel free to
+          reply to this email.
+        </p>
+
+        <a href="mailto:swayam.portfolio@gmail.com" class="btn">Contact Me</a>
+      </div>
+
+      <div class="footer">
+        © {{ now|date:"Y" }} Swayam Nanda Portfolio • All rights reserved.
+      </div>
+    </div>
+  </body>
+</html>

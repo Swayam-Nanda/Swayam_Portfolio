@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f9f9f9;
+        padding: 20px;
+        color: #333;
+      }
+      .container {
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        border: 1px solid #eee;
+      }
+      h2 {
+        color: #0ef;
+      }
+      p {
+        margin: 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>New Contact Message</h2>
+      <p><strong>Name:</strong> {{ name }}</p>
+      <p><strong>Email:</strong> {{ email }}</p>
+      <p><strong>Mobile:</strong> {{ mobile }}</p>
+      <p><strong>Subject:</strong> {{ subject }}</p>
+      <p><strong>Message:</strong><br />{{ message }}</p>
+    </div>
+  </body>
+</html>

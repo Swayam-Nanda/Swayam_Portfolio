@@ -1,0 +1,414 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio01</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+                  :root {
+                  --bg-color: {{ theme.bg_color }};
+                  --second-bg-color: {{ theme.second_bg_color }};
+                  --text-color: {{ theme.text_color }};
+                  --main-color: {{ theme.main_color }};
+                  }
+                  .message-container {
+                    margin-bottom: 20px;
+                    animation: fadeIn 0.5s ease-in-out;
+                  }
+
+                  .flash-message {
+                    background-color: #d1fae5;
+                    border-left: 6px solid #10b981;
+                    color: #065f46;
+                    padding: 1.5rem;
+                    font-size: 1.6rem;
+                    border-radius: 1rem;
+                    position: relative;
+                    box-shadow: 0 0 1rem var(--main-color);
+                    margin-bottom: 2rem;
+                    backdrop-filter: blur(3px);
+                    background: rgba(209, 250, 229, 0.2);
+                    color: var(--main-color);
+                    border-left: 4px solid var(--main-color);
+                  }
+
+                  .flash-message.success {
+                    border-left-color: var(--main-color);
+                  }
+
+                  .flash-message.error {
+                    border-left-color: red;
+                  }
+
+                  .close-btn {
+                    position: absolute;
+                    top: 1rem;
+                    right: 1.5rem;
+                    font-size: 2rem;
+                    color: var(--main-color);
+                    cursor: pointer;
+                    transition: color 0.2s ease-in-out;
+                    transform: 0.7s ease-in-out;
+                  }
+
+                  .close-btn:hover {
+                    color: red;
+                    transform: scale(1.5);
+                  }
+                  .see-more-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+      }
+
+                  .see-more-wrapper .btn {
+              padding: 1rem 2.5rem;
+              font-size: 1.6rem;
+              border-radius: 0.8rem;
+              background: var(--main-color);
+              color: var(--bg-color);
+              border: none;
+              cursor: pointer;
+              transition: 0.3s ease;
+            }
+
+            .see-more-wrapper .btn:hover {
+              transform: scale(1.05);
+              box-shadow: 0 0 1rem var(--main-color);
+            }
+
+                  .extra-service,
+                  .extra-project {
+                     display: none;
+                  }
+
+                  .extra-service.show,
+                  .extra-project.show {
+                    display: block;
+                    animation: fadeIn 0.5s ease-in-out;
+                  }
+
+
+                  .contact-container {
+                    padding: 2rem;
+                    position: relative;
+                    --border-radius: 1rem;
+                    border-radius: var(--border-radius);
+                    overflow: hidden;
+                    isolation: isolate;
+                  }
+
+                  .contact-container.animate::before {
+                    content: "";
+                    position: absolute;
+                    width: 200%;
+                    height: 200%;
+                    background-image: conic-gradient(
+                      var(--main-color) 0deg,
+                      transparent 60deg,
+                      transparent 180deg,
+                      var(--main-color) 180deg,
+                      transparent 240deg
+                    );
+                    inset: -50%;
+                    z-index: -2;
+                    animation: borderanimation 3s linear infinite;
+                  }
+
+                  .contact-container.animate::after {
+                    content: "";
+                    position: absolute;
+                    inset: 4px;
+                    background: var(--bg-color);
+                    border-radius: calc(var(--border-radius) - 4px);
+                    z-index: -1;
+                  }
+
+                  @keyframes fadeIn {
+                    from {
+                      opacity: 0;
+                      transform: translateY(-15px);
+                    }
+                    to {
+                      opacity: 1;
+                      transform: translateY(0);
+                    }
+                  }
+
+                  @keyframes borderanimation {
+                    to {
+                      transform: rotate(-360deg);
+                    }
+                  }
+    </style>
+  </head>
+  <body>
+    <!-- Header Design -->
+    <header class="header">
+      <a href="#" class="logo">About SWAYAM</a>
+      <i class="bx bx-menu" id="menu-icon"></i>
+      <nav class="navBar">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#project">Project</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+    <!-- Home Section Design -->
+    <section class="home" id="home">
+      <div class="home-content">
+        <h3>{{ hero.greeting }}</h3>
+        <h1>{{ hero.name }}</h1>
+        <h3>And I'm <span class="multiple-text"></span></h3>
+        <p>{{ hero.description }}</p>
+        <div class="social-media">
+          {% if hero.github %}<a href="{{ hero.github }}" target="_blank"
+            ><i class="bx bxl-github"></i></a
+          >{% endif %} {% if hero.linkedin %}<a
+            href="{{ hero.linkedin }}"
+            target="_blank"
+            ><i class="bx bxl-linkedin"></i></a
+          >{% endif %} {% if hero.twitter %}<a
+            href="{{ hero.twitter }}"
+            target="_blank"
+            title="X"
+            ><svg
+              width="20"
+              height="20"
+              viewBox="0 0 1200 1227"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M896.333 0H1080L705.333 527.667L1140 1227H790L519.667 800.667L211.333 1227H28L423.333 666.333L0 0H362.667L608 388L896.333 0Z"
+              /></svg></a
+          >{% endif %} {% if hero.email %}<a href="mailto:{{ hero.email }}"
+            ><i class="bx bxs-envelope"></i></a
+          >{% endif %}
+        </div>
+
+        {% if hero.cv %}
+        <a href="{{ hero.cv.url }}" class="btn" download>Download CV</a>
+        {% endif %}
+      </div>
+      <div class="home-img">
+        <img src="{{ hero.image.url }}" alt="home-img" />
+      </div>
+    </section>
+
+    <!-- About Section Design -->
+    <section class="about" id="about">
+      <div class="about-img">
+        <img src="{{ about.image.url }}" alt="about" />
+      </div>
+
+      <div class="about-content">
+        <h2 class="heading">About <span>Me</span></h2>
+        <h3>{{ about.heading }}</h3>
+        <p>{{ about.description }}</p>
+
+        <a href="{% url 'about' %}" class="btn">Read More</a>
+      </div>
+    </section>
+
+    <!-- Services Section Design -->
+    <section class="services" id="services">
+      <h2 class="heading">Our <span>Services</span></h2>
+      <div class="services-container">
+        {% for service in services %}
+        <div
+          class="services-box {% if forloop.counter > 3 %}extra-service{% endif %}"
+        >
+          <i class="{{ service.icon }}"></i>
+          <h3>{{ service.title }}</h3>
+          <p>{{ service.short_description }}</p>
+          <a
+            href="{% url 'book_service' %}?service={{service.title}}"
+            class="btn"
+            >Book Now</a
+          >
+        </div>
+        {% endfor %}
+      </div>
+      {% if services|length > 3 %}
+      <div class="see-more-wrapper">
+        <button id="toggleServicesBtn" class="btn">See More</button>
+      </div>
+      {% endif %}
+    </section>
+
+    <!-- project Section Design -->
+    <section class="project" id="project">
+      <h2 class="heading">Latest <span>Projects</span></h2>
+      <div class="project-container">
+        {% for project in projects %}
+        <div
+          class="project-box {% if forloop.counter > 6 %}extra-project{% endif %}"
+        >
+          <img src="{{ project.image.url }}" alt="{{ project.title }}" />
+          <div class="project-layer">
+            <h4>{{ project.title }}</h4>
+            <p>{{ project.description }}</p>
+            {% if project.link %}
+            <a href="{{ project.link }}" target="_blank">
+              <i class="bx bx-link-external"></i>
+            </a>
+            {% endif %}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      {% if projects|length > 6 %}
+      <div class="see-more-wrapper">
+        <button id="toggleProjectsBtn" class="btn">See More</button>
+      </div>
+      {% endif %}
+    </section>
+
+    <!-- Contact Section Design -->
+    <section class="contact" id="contact">
+      <h2 class="heading">Contact <span>Me!</span></h2>
+      <div class="contact-container" id="formContainer">
+        <form method="POST" action="#contact" onsubmit="startBorderAnimation()">
+          {% csrf_token %} {% if messages %}
+          <div class="message-container">
+            {% for message in messages %}
+            <div class="flash-message {{ message.tags }}">
+              {{ message }}
+              <span
+                class="close-btn"
+                onclick="this.parentElement.style.display='none';"
+                >&times;</span
+              >
+            </div>
+            <script>
+              document
+                .getElementById("formContainer")
+                .classList.remove("animate");
+            </script>
+            {% endfor %}
+          </div>
+          {% endif %}
+
+          <div class="input-box">
+            <input type="text" name="name" placeholder="Full Name" required />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email Address"
+              required
+            />
+          </div>
+          <div class="input-box">
+            <input type="number" name="mobile" placeholder="Mobile Number" />
+            <input type="text" name="subject" placeholder="Email Subject" />
+          </div>
+          <textarea
+            name="message"
+            cols="30"
+            rows="10"
+            placeholder="Your Message"
+            required
+          ></textarea>
+          <input type="submit" value="Send Message" class="btn" />
+        </form>
+      </div>
+    </section>
+
+    <button
+      id="themeToggleBtn"
+      title="Change Theme"
+      style="background: none; border: none; cursor: pointer"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="26"
+        height="26"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+      >
+        <path
+          d="M12 3C7.03 3 3 6.94 3 12c0 4.38 3.44 7 7 7 .5 0 1.21-.1 1.5-.5.49-.68.25-1.73.15-2.12-.17-.63-.46-.93-.15-1.5.37-.68 1.44-.89 2.31-.73 1.18.21 2.69.4 3.95-.3C20.52 12.85 21 11.53 21 10c0-4.69-3.67-7-9-7zm-5.5 6A1.5 1.5 0 1110 10.5 1.5 1.5 0 016.5 9zM12 5a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm5.5 4A1.5 1.5 0 1116 10.5 1.5 1.5 0 0117.5 9zM17 14a1 1 0 11-2 0 1 1 0 012 0z"
+        />
+      </svg>
+    </button>
+    <!-- Footer Design -->
+    <footer class="footer">
+      <div class="footer-text">
+        <p>Copyright &copy; 2025 by Swayam Nanda | All Rights Reserved</p>
+      </div>
+      <div class="footer-iconTop">
+        <a href="#home"><i class="bx bx-up-arrow-alt"></i></a>
+      </div>
+    </footer>
+    <!-- Js -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="{% static 'js/app.js' %}"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    {{ roles|json_script:"role-data" }}
+    <script>
+      function applyTheme(theme) {
+        document.documentElement.style.setProperty(
+          "--bg-color",
+          theme.bg_color
+        );
+        document.documentElement.style.setProperty(
+          "--second-bg-color",
+          theme.second_bg_color
+        );
+        document.documentElement.style.setProperty(
+          "--text-color",
+          theme.text_color
+        );
+        document.documentElement.style.setProperty(
+          "--main-color",
+          theme.main_color
+        );
+      }
+
+      document
+        .getElementById("themeToggleBtn")
+        .addEventListener("click", () => {
+          fetch("/api/change-theme/", {
+            headers: { "X-Requested-With": "XMLHttpRequest" },
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              if (data.status === "success") {
+                applyTheme(data.theme);
+              }
+            });
+        });
+
+      const roles = JSON.parse(
+        document.getElementById("role-data").textContent
+      );
+      typed = new Typed(".multiple-text", {
+        strings: roles,
+        typeSpeed: 100,
+        backSpeed: 100,
+        backDelay: 1000,
+        loop: true,
+      });
+      function startBorderAnimation() {
+        document.getElementById("formContainer").classList.add("animate");
+      }
+    </script>
+  </body>
+</html>

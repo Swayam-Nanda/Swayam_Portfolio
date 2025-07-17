@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background: #f9f9f9;
+        color: #333;
+        padding: 20px;
+      }
+      .container {
+        background: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      h2 {
+        color: #0077cc;
+      }
+      p {
+        line-height: 1.6;
+      }
+      .footer {
+        margin-top: 20px;
+        font-size: 0.85rem;
+        color: #888;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Hey {{ name }} 👋</h2>
+      <p>Thanks for reaching out!</p>
+      <p>
+        I’ve received your message regarding <strong>{{ subject }}</strong> and
+        I’ll get back to you soon.
+      </p>
+      <p>
+        In the meantime, feel free to check out my latest projects or book a
+        service.
+      </p>
+      <p>Cheers,<br /><strong>Swayam</strong></p>
+      <div class="footer">
+        swayam.portfolio@gmail.com | swayam-nanda.github.io
+      </div>
+    </div>
+  </body>
+</html>

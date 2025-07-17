@@ -1,0 +1,156 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Book Service</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    :root {
+      --bg-color: {{ theme.bg_color }};
+      --second-bg-color: {{ theme.second_bg_color }};
+      --text-color: {{ theme.text_color }};
+      --main-color: {{ theme.main_color }};
+    }
+
+    select,
+    textarea,
+    input[type="text"],
+    input[type="email"] {
+      width: 100%;
+      padding: 1.5rem;
+      font-size: 1.6rem;
+      color: var(--text-color);
+      background: var(--second-bg-color);
+      border-radius: 0.8rem;
+      margin: 0.7rem 0;
+      border: none;
+    }
+
+    option {
+      background-color: var(--second-bg-color);
+      color: var(--text-color);
+    }
+
+    .message-container {
+      margin-bottom: 20px;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    .flash-message {
+      background: rgba(209, 250, 229, 0.2);
+      border-left: 4px solid var(--main-color);
+      color: var(--main-color);
+      padding: 1.5rem;
+      font-size: 1.6rem;
+      border-radius: 1rem;
+      position: relative;
+      box-shadow: 0 0 1rem var(--main-color);
+      margin-bottom: 2rem;
+      backdrop-filter: blur(3px);
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 1rem;
+      right: 1.5rem;
+      font-size: 2rem;
+      color: var(--main-color);
+      cursor: pointer;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-15px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    
+  </style>
+</head>
+
+<body>
+  <section class="contact">
+    <a href="/#services" class="btn">Back</a>
+
+    <h2 class="heading">Book a Service</h2>
+    <div class="form-container" id="formContainer">
+      <form method="POST" onsubmit="startBorderAnimation()">
+        {% csrf_token %}
+        {% if messages %}
+        <div class="message-container">
+          {% for message in messages %}
+          <div class="flash-message {{ message.tags }}">
+            {{ message }}
+            <span class="close-btn" onclick="this.parentElement.style.display='none';">&times;</span>
+          </div>
+          <script>
+            document.getElementById("formContainer").classList.remove("animate");
+          </script>
+          {% endfor %}
+        </div>
+        {% endif %}
+
+        <div class="input-box">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+        </div>
+
+        <div class="input-box">
+          <select name="service" required>
+            {% for service in services %}
+            <option value="{{ service.title }}" {% if service.title == selected_service %}selected{% endif %}>
+              {{ service.title }}
+            </option>
+            {% endfor %}
+          </select>
+        </div>
+
+        <textarea name="message" rows="5" placeholder="Any special requests?"></textarea>
+        <button type="submit" class="btn">Submit Booking</button>
+      </form>
+    </div>
+  </section>
+
+  <button id="themeToggleBtn" title="Change Theme" style="background: none; border: none; cursor: pointer">
+    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+      <path
+        d="M12 3C7.03 3 3 6.94 3 12c0 4.38 3.44 7 7 7 .5 0 1.21-.1 1.5-.5.49-.68.25-1.73.15-2.12-.17-.63-.46-.93-.15-1.5.37-.68 1.44-.89 2.31-.73 1.18.21 2.69.4 3.95-.3C20.52 12.85 21 11.53 21 10c0-4.69-3.67-7-9-7zm-5.5 6A1.5 1.5 0 1110 10.5 1.5 1.5 0 016.5 9zM12 5a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm5.5 4A1.5 1.5 0 1116 10.5 1.5 1.5 0 0117.5 9zM17 14a1 1 0 11-2 0 1 1 0 012 0z" />
+    </svg>
+  </button>
+
+  <script>
+    function applyTheme(theme) {
+      document.documentElement.style.setProperty("--bg-color", theme.bg_color);
+      document.documentElement.style.setProperty("--second-bg-color", theme.second_bg_color);
+      document.documentElement.style.setProperty("--text-color", theme.text_color);
+      document.documentElement.style.setProperty("--main-color", theme.main_color);
+    }
+
+    document.getElementById("themeToggleBtn").addEventListener("click", () => {
+      fetch("/api/change-theme/", {
+        headers: { "X-Requested-With": "XMLHttpRequest" },
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.status === "success") {
+            applyTheme(data.theme);
+          }
+        });
+    });
+
+    function startBorderAnimation() {
+      document.getElementById("formContainer").classList.add("animate");
+    }
+  </script>
+</body>
+
+</html>

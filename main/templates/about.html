@@ -1,0 +1,214 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio01</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+            :root {
+              --bg-color: {{ theme.bg_color }};
+              --second-bg-color: {{ theme.second_bg_color }};
+              --text-color: {{ theme.text_color }};
+              --main-color: {{ theme.main_color }};
+            }
+
+            body {
+              position: relative;
+              min-height: 100vh;
+              color: var(--text-color);
+              background-color: var(--bg-color);
+              font-family: 'Poppins', sans-serif;
+            }
+
+            .bg-blur {
+              position: fixed;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background: url("{{ about.bgimage.url }}") no-repeat center center/cover;
+              filter: blur(8px) brightness(0.5); /* ⬅ darkens for better text contrast */
+              z-index: -1;
+              opacity: 0.6;
+            }
+
+            .overlay {
+              position: relative;
+              z-index: 1;
+            }
+
+            .header1 {
+              background-color: var(--second-bg-color);
+              text-align: center;
+              padding: 1.5rem 0;
+              font-size: 2.5rem;
+              font-weight: 700;
+              color: var(--main-color);
+              box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6); /* ⬅ deeper shadow for separation */
+            }
+
+            .about-section {
+              padding: 2rem 5vw;
+              display: flex;
+              flex-direction: column;
+              gap: 2rem;
+            }
+
+            .about-top {
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: space-between;
+              background: rgba(0, 0, 0, 0.4); /* ⬅ better contrast */
+              backdrop-filter: blur(4px);
+              border-radius: 1rem;
+              padding: 2rem;
+              gap: 2rem;
+              box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+            }
+
+            .about-img img {
+              width: 55%;
+              border-radius: 50%;
+              border: 3px solid var(--main-color);
+              box-shadow: 0 0 1.5rem var(--main-color);
+            }
+
+            .about-details {
+              flex: 2;
+              min-width: 250px;
+              font-size: 1.6rem;
+              color: var(--text-color);
+            }
+
+            .about-details h2 {
+              font-size: 2.8rem;
+              color: var(--main-color);
+              margin-bottom: 1rem;
+            }
+
+            .about-details ul li {
+              margin-bottom: 1rem;
+              line-height: 1.5;
+              color: color-mix(in srgb, white 90%, var(--text-color) 10%);
+      }
+
+
+            .about-details strong {
+              color: var(--main-color);
+            }
+
+            .about-bottom {
+              background-color: rgba(0, 0, 0, 0.4); /* ⬅ stronger bg for contrast */
+              backdrop-filter: blur(6px);
+              border-radius: 1rem;
+              padding: 2rem;
+              font-size: 1.6rem;
+              line-height: 1.8;
+              box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
+              color: color-mix(in srgb, white 90%, var(--text-color) 10%);
+            }
+    </style>
+  </head>
+  <body>
+    <div class="bg-blur"></div>
+    <div class="overlay">
+      <!-- Header Design -->
+      <header class="header1">
+        <h1>About SWAYAM</h1>
+      </header>
+      <button
+        id="themeToggleBtn"
+        title="Change Theme"
+        style="background: none; border: none; cursor: pointer"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="26"
+          height="26"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+        >
+          <path
+            d="M12 3C7.03 3 3 6.94 3 12c0 4.38 3.44 7 7 7 .5 0 1.21-.1 1.5-.5.49-.68.25-1.73.15-2.12-.17-.63-.46-.93-.15-1.5.37-.68 1.44-.89 2.31-.73 1.18.21 2.69.4 3.95-.3C20.52 12.85 21 11.53 21 10c0-4.69-3.67-7-9-7zm-5.5 6A1.5 1.5 0 1110 10.5 1.5 1.5 0 016.5 9zM12 5a1.5 1.5 0 110 3 1.5 1.5 0 010-3zm5.5 4A1.5 1.5 0 1116 10.5 1.5 1.5 0 0117.5 9zM17 14a1 1 0 11-2 0 1 1 0 012 0z"
+          />
+        </svg>
+      </button>
+      <!-- About Section Design -->
+      <section class="about-section">
+        <div class="about-top">
+          <div class="about-img">
+            <img src="{{ about.image.url }}" alt="about photo" />
+          </div>
+
+          <div class="about-details">
+            <h2>{{ about.heading }}</h2>
+            <ul>
+              <li><strong>Name:</strong> {{ about.name }}</li>
+              <li><strong>Age:</strong> {{ about.age }}</li>
+              <li><strong>Address:</strong> {{ about.address }}</li>
+              <li><strong>Email:</strong> {{ about.email }}</li>
+              <li><strong>Phone:</strong> {{ about.phone }}</li>
+              <li><strong>Occupation:</strong> {{ about.occupation }}</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="about-bottom">
+          {{ about.long_description|linebreaks }}
+          <br /><br />
+          <a href="/#about" class="btn">Back</a>
+        </div>
+      </section>
+    </div>
+    <!-- Js -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+      function applyTheme(theme) {
+        document.documentElement.style.setProperty(
+          "--bg-color",
+          theme.bg_color
+        );
+        document.documentElement.style.setProperty(
+          "--second-bg-color",
+          theme.second_bg_color
+        );
+        document.documentElement.style.setProperty(
+          "--text-color",
+          theme.text_color
+        );
+        document.documentElement.style.setProperty(
+          "--main-color",
+          theme.main_color
+        );
+      }
+
+      document
+        .getElementById("themeToggleBtn")
+        .addEventListener("click", () => {
+          fetch("/api/change-theme/", {
+            headers: { "X-Requested-With": "XMLHttpRequest" },
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              if (data.status === "success") {
+                applyTheme(data.theme);
+              }
+            });
+        });
+    </script>
+  </body>
+</html>
