@@ -9,6 +9,6 @@ services:
       - key: DJANGO_SECRET_KEY
         value: your-secure-secret-key
       - key: PYTHON_VERSION
-        value: 3.11
+        value: 3.11.8
       - key: DEBUG
         value: False
