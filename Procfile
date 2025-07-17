@@ -1,0 +1,1 @@
+web: gunicorn swayam_portfolio.wsgi
