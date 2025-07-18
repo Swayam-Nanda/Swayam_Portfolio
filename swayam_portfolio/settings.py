@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-s&)u!#$cycpz)!r6l%ql)b@k57y!@wk-g0f0hf5zoqi60is+q&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['swayam-portfolio.onrender.com']
+ALLOWED_HOSTS = ['swayam-portfolio.onrender.com' , 'localhost', '127.0.0.1']
 
 
 # Application definition

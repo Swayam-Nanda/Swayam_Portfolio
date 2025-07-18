@@ -121,6 +121,77 @@
               color: color-mix(in srgb, white 90%, var(--text-color) 10%);
             }
     </style>
+    <style>
+      @media (max-width: 768px) {
+        .about-section {
+          padding: 2rem 2rem;
+        }
+
+        .about-top {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          padding: 2rem 1.5rem;
+        }
+
+        .about-img img {
+          width: 65vw;
+          max-width: 280px;
+          margin-bottom: 2rem;
+        }
+
+        .about-details {
+          font-size: 1.5rem;
+        }
+
+        .about-details h2 {
+          font-size: 2.2rem;
+        }
+
+        .about-details ul {
+          padding: 0;
+        }
+
+        .about-details ul li {
+          font-size: 1.5rem;
+          margin-bottom: 1rem;
+        }
+
+        .about-bottom {
+          font-size: 1.5rem;
+          padding: 1.5rem;
+        }
+
+        .header1 {
+          font-size: 2rem;
+          padding: 1rem;
+        }
+
+        #themeToggleBtn {
+          bottom: 1.5rem;
+          right: 1.5rem;
+          z-index: 1000;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .about-img img {
+          width: 80vw;
+        }
+
+        .about-details h2 {
+          font-size: 2rem;
+        }
+
+        .about-details ul li {
+          font-size: 1.4rem;
+        }
+
+        .about-bottom {
+          font-size: 1.4rem;
+        }
+      }
+    </style>
   </head>
   <body>
     <div class="bg-blur"></div>

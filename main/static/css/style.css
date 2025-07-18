@@ -520,3 +520,42 @@ textarea:focus {
     transform: translateY(0);
   }
 }
+
+@media (max-width: 768px) {
+  .contact form {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .services-container .services-box,
+  .project-container .project-box {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  #themeToggleBtn {
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .social-media {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 500px) {
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+}
