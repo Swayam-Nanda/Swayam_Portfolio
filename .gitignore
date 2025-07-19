@@ -1,0 +1,46 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Environment
+.env
+*.env
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Django migrations
+*/migrations/
+*.sqlite3
+
+# Static files (collected output)
+staticfiles/
+
+# Media/uploads (optional)
+media/
+
+# Byte-compiled files
+*.so
+
+# Test/log files
+*.log
+
+# Node modules (if using npm)
+node_modules/
+
+# Compiled JS/CSS maps
+*.map
+
+# Ignore compiled/test files
+*.tmp
+*.bak
+
+# BUT keep our actual dev static assets!
+!static/
+!static/favicons/
