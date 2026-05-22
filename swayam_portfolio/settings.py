@@ -24,9 +24,9 @@ load_dotenv(os.path.join(BASE_DIR, '.env'), override=True)
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get("DEBUG", "False") == "True"
+DEBUG = os.environ.get("DEBUG", "False") == "True" or os.environ.get("RENDER") == "true"
 
-ALLOWED_HOSTS = ['swayam-portfolio.onrender.com' , 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['swayam-portfolio.onrender.com' , 'localhost', '127.0.0.1', '.onrender.com']
 
 
 # Application definition
