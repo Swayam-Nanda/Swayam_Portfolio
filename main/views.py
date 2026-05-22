@@ -43,11 +43,25 @@ def change_theme(request):
     return redirect(request.META.get('HTTP_REFERER', '/'))
 
 def get_current_theme(request):
+    themes = SiteTheme.objects.all()
+    if not themes.exists():
+        # Fallback theme if none exist
+        return type('Theme', (), {
+            'bg_color': '#0f172a',
+            'second_bg_color': '#1e293b',
+            'text_color': '#f1f5f9',
+            'main_color': '#38bdf8'
+        })
+    
     if 'theme_id' not in request.session:
-        theme = random.choice(SiteTheme.objects.all())
+        theme = random.choice(list(themes))
         request.session['theme_id'] = theme.id
     else:
-        theme = SiteTheme.objects.get(id=request.session['theme_id'])
+        try:
+            theme = SiteTheme.objects.get(id=request.session['theme_id'])
+        except SiteTheme.DoesNotExist:
+            theme = random.choice(list(themes))
+            request.session['theme_id'] = theme.id
     return theme
 
 def get_theme_json(request):
@@ -65,7 +79,12 @@ def home(request):
     services = Service.objects.all().order_by('-created_at')
     projects = Project.objects.all().order_by('-created_at')
     hero = Hero.objects.first()
-    roles = [role.strip() for role in hero.tagline.split(',')]
+    
+    if hero:
+        roles = [role.strip() for role in hero.tagline.split(',')]
+    else:
+        roles = ["Developer"]
+        
     theme = get_current_theme(request)
 
     success = False
