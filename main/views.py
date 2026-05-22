@@ -1,6 +1,5 @@
 
 from django.shortcuts import render, redirect
-from litellm import email
 from .models import Contact , Project, Service , Hero
 from django.shortcuts import redirect
 from django.contrib import messages
