@@ -1,0 +1,822 @@
+[
+  {
+    "id": "ach_7",
+    "name": "Campus Ambassador",
+    "slug": "campus-ambassador",
+    "description": "Served as Campus Ambassador for ARDENT COMPUTECH PVT. LTD. for two years.",
+    "clientName": "ARDENT COMPUTECH PVT. LTD.",
+    "completionDate": "2025-01-01T12:00:00.000Z",
+    "projectLogo": null,
+    "video": {
+      "id": "campus-ambassador",
+      "thumbnail": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/thumbnails/campus-ambassador.jpg",
+      "prefix": "media",
+      "filename": "campus-ambassador.mp4",
+      "mimeType": "video/mp4",
+      "url": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/clips/campus-ambassador.mp4"
+    },
+    "uiColor": "ff5a5a",
+    "tags": "Leadership & Campus Impact",
+    "priority": 7
+  },
+  {
+    "id": "ach_8",
+    "name": "Coding Club Member",
+    "slug": "coding-club-member",
+    "description": "Selected as the only diploma student from batches 2025-2028 to be a member of the Coding Club.",
+    "clientName": "Arka Jain University",
+    "completionDate": "2025-01-01T12:00:00.000Z",
+    "projectLogo": null,
+    "video": {
+      "id": "coding-club-member",
+      "thumbnail": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/thumbnails/coding-club-member.jpg",
+      "prefix": "media",
+      "filename": "coding-club-member.mp4",
+      "mimeType": "video/mp4",
+      "url": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/clips/coding-club-member.mp4"
+    },
+    "uiColor": "ff5a5a",
+    "tags": "Leadership & Campus Impact",
+    "priority": 8
+  },
+  {
+    "id": "ach_8",
+    "name": "Lead Student Coordinator - LPCL Club",
+    "slug": "lead-student-coordinator-lpcl-club",
+    "description": "Led and coordinated activities of the LPCL Club.",
+    "clientName": "Arka Jain University",
+    "completionDate": "2025-01-01T12:00:00.000Z",
+    "projectLogo": null,
+    "video": {
+      "id": "lead-student-coordinator-lpcl-club",
+      "thumbnail": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/thumbnails/lead-student-coordinator-lpcl-club.jpg",
+      "prefix": "media",
+      "filename": "lead-student-coordinator-lpcl-club.mp4",
+      "mimeType": "video/mp4",
+      "url": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/clips/lead-student-coordinator-lpcl-club.mp4"
+    },
+    "uiColor": "5eb8ff",
+    "tags": "Leadership & Campus Impact",
+    "priority": 8
+  },
+  {
+    "id": "ach_9",
+    "name": "First Prize - TATA Cummins Model Presentation",
+    "slug": "first-prize-tata-cummins-model-presentation",
+    "description": "Won first prize by presenting ECO VEND, a smart plastic collection bin with reward system.",
+    "clientName": "TATA Cummins",
+    "completionDate": "2025-01-01T12:00:00.000Z",
+    "projectLogo": null,
+    "video": {
+      "id": "first-prize-tata-cummins-model-presentation",
+      "thumbnail": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/thumbnails/first-prize-tata-cummins-model-presentation.jpg",
+      "prefix": "media",
+      "filename": "first-prize-tata-cummins-model-presentation.mp4",
+      "mimeType": "video/mp4",
+      "url": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/clips/first-prize-tata-cummins-model-presentation.mp4"
+    },
+    "uiColor": "f4c46b",
+    "tags": "Technical & Innovation",
+    "priority": 9
+  },
+  {
+    "id": "ach_9",
+    "name": "First Prize - Tech Quiz",
+    "slug": "first-prize-tech-quiz",
+    "description": "Secured first position in the Technical Quiz competition at NTTF Tech Fest.",
+    "clientName": "NTTF",
+    "completionDate": "2024-01-01T12:00:00.000Z",
+    "projectLogo": null,
+    "video": {
+      "id": "first-prize-tech-quiz",
+      "thumbnail": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/thumbnails/first-prize-tech-quiz.jpg",
+      "prefix": "media",
+      "filename": "first-prize-tech-quiz.mp4",
+      "mimeType": "video/mp4",
+      "url": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/clips/first-prize-tech-quiz.mp4"
+    },
+    "uiColor": "f4c46b",
+    "tags": "Technical & Innovation",
+    "priority": 9
+  },
+  {
+    "id": "ach_8",
+    "name": "Consolation Prize - IAC Model Presentation",
+    "slug": "consolation-prize-iac-model-presentation",
+    "description": "Received consolation prize for presenting Crash Notify, a smart accident alert helmet.",
+    "clientName": "NIT Jamshedpur",
+    "completionDate": "2024-01-01T12:00:00.000Z",
+    "projectLogo": null,
+    "video": {
+      "id": "consolation-prize-iac-model-presentation",
+      "thumbnail": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/thumbnails/consolation-prize-iac-model-presentation.jpg",
+      "prefix": "media",
+      "filename": "consolation-prize-iac-model-presentation.mp4",
+      "mimeType": "video/mp4",
+      "url": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/clips/consolation-prize-iac-model-presentation.mp4"
+    },
+    "uiColor": "ff5a5a",
+    "tags": "Technical & Innovation",
+    "priority": 8
+  },
+  {
+    "id": "ach_8",
+    "name": "HackHorizon 1 Top 22",
+    "slug": "hackhorizon-1-top-22",
+    "description": "Ranked among Top 22 teams out of 100+ teams with Virtual Police Station project.",
+    "clientName": "HackHorizon",
+    "completionDate": "2025-01-01T12:00:00.000Z",
+    "projectLogo": null,
+    "video": {
+      "id": "hackhorizon-1-top-22",
+      "thumbnail": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/thumbnails/hackhorizon-1-top-22.jpg",
+      "prefix": "media",
+      "filename": "hackhorizon-1-top-22.mp4",
+      "mimeType": "video/mp4",
+      "url": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/clips/hackhorizon-1-top-22.mp4"
+    },
+    "uiColor": "ff5a5a",
+    "tags": "Technical & Innovation",
+    "priority": 8
+  },
+  {
+    "id": "ach_10",
+    "name": "HackHorizon 2.0 Diploma Winner",
+    "slug": "hackhorizon-2-diploma-winner",
+    "description": "Won HackHorizon 2.0 Diploma category and received Rs. 9000 cash prize for FarmBroker.",
+    "clientName": "HackHorizon",
+    "completionDate": "2026-01-01T12:00:00.000Z",
+    "projectLogo": null,
+    "video": {
+      "id": "hackhorizon-2-diploma-winner",
+      "thumbnail": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/thumbnails/hackhorizon-2-diploma-winner.jpg",
+      "prefix": "media",
+      "filename": "hackhorizon-2-diploma-winner.mp4",
+      "mimeType": "video/mp4",
+      "url": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/clips/hackhorizon-2-diploma-winner.mp4"
+    },
+    "uiColor": "f4c46b",
+    "tags": "Technical & Innovation",
+    "priority": 10
+  },
+  {
+    "id": "ach_7",
+    "name": "International Conference Paper Presentation",
+    "slug": "international-conference-paper-presentation",
+    "description": "Presented research paper on technology and social dynamics at an international conference.",
+    "clientName": "Arka Jain University",
+    "completionDate": "2024-01-01T12:00:00.000Z",
+    "projectLogo": null,
+    "video": {
+      "id": "international-conference-paper-presentation",
+      "thumbnail": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/thumbnails/international-conference-paper-presentation.jpg",
+      "prefix": "media",
+      "filename": "international-conference-paper-presentation.mp4",
+      "mimeType": "video/mp4",
+      "url": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/clips/international-conference-paper-presentation.mp4"
+    },
+    "uiColor": "ff5a5a",
+    "tags": "Technical & Innovation",
+    "priority": 7
+  },
+  {
+    "id": "ach_8",
+    "name": "SIH Internal Hackathon Runner Up",
+    "slug": "sih-internal-hackathon-runner-up",
+    "description": "Secured First Runner Up position with RailSim developed in six hours.",
+    "clientName": "Arka Jain University",
+    "completionDate": "2025-01-01T12:00:00.000Z",
+    "projectLogo": null,
+    "video": {
+      "id": "sih-internal-hackathon-runner-up",
+      "thumbnail": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/thumbnails/sih-internal-hackathon-runner-up.jpg",
+      "prefix": "media",
+      "filename": "sih-internal-hackathon-runner-up.mp4",
+      "mimeType": "video/mp4",
+      "url": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/clips/sih-internal-hackathon-runner-up.mp4"
+    },
+    "uiColor": "f4c46b",
+    "tags": "Technical & Innovation",
+    "priority": 8
+  },
+  {
+    "id": "ach_8",
+    "name": "First Prize - Ideathon",
+    "slug": "first-prize-ideathon",
+    "description": "Won Ideathon competition at Technika 5.0.",
+    "clientName": "Technika 5.0",
+    "completionDate": "2025-01-01T12:00:00.000Z",
+    "projectLogo": null,
+    "video": {
+      "id": "first-prize-ideathon",
+      "thumbnail": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/thumbnails/first-prize-ideathon.jpg",
+      "prefix": "media",
+      "filename": "first-prize-ideathon.mp4",
+      "mimeType": "video/mp4",
+      "url": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/clips/first-prize-ideathon.mp4"
+    },
+    "uiColor": "f4c46b",
+    "tags": "Technical & Innovation",
+    "priority": 8
+  },
+  {
+    "id": "ach_8",
+    "name": "First Prize and Best Speaker - Debate",
+    "slug": "first-prize-best-speaker-debate",
+    "description": "Won debate competition and Best Speaker award on the future of work.",
+    "clientName": "Arka Jain University",
+    "completionDate": "2024-01-01T12:00:00.000Z",
+    "projectLogo": null,
+    "video": {
+      "id": "first-prize-best-speaker-debate",
+      "thumbnail": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/thumbnails/first-prize-best-speaker-debate.jpg",
+      "prefix": "media",
+      "filename": "first-prize-best-speaker-debate.mp4",
+      "mimeType": "video/mp4",
+      "url": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/clips/first-prize-best-speaker-debate.mp4"
+    },
+    "uiColor": "f4c46b",
+    "tags": "Communication & Personality",
+    "priority": 8
+  },
+  {
+    "id": "ach_7",
+    "name": "First Prize - Extempore Competition",
+    "slug": "first-prize-extempore-competition",
+    "description": "Won first place in Extempore Competition.",
+    "clientName": "Arka Jain University",
+    "completionDate": "2024-01-01T12:00:00.000Z",
+    "projectLogo": null,
+    "video": {
+      "id": "first-prize-extempore-competition",
+      "thumbnail": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/thumbnails/first-prize-extempore-competition.jpg",
+      "prefix": "media",
+      "filename": "first-prize-extempore-competition.mp4",
+      "mimeType": "video/mp4",
+      "url": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/clips/first-prize-extempore-competition.mp4"
+    },
+    "uiColor": "f4c46b",
+    "tags": "Communication & Personality",
+    "priority": 7
+  },
+  {
+    "id": "ach_7",
+    "name": "First Prize - Poster Presentation 2023",
+    "slug": "first-prize-poster-presentation-2023",
+    "description": "Won National Engineer's Day poster presentation competition.",
+    "clientName": "Arka Jain University",
+    "completionDate": "2023-01-01T12:00:00.000Z",
+    "projectLogo": null,
+    "video": {
+      "id": "first-prize-poster-presentation-2023",
+      "thumbnail": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/thumbnails/first-prize-poster-presentation-2023.jpg",
+      "prefix": "media",
+      "filename": "first-prize-poster-presentation-2023.mp4",
+      "mimeType": "video/mp4",
+      "url": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/clips/first-prize-poster-presentation-2023.mp4"
+    },
+    "uiColor": "f4c46b",
+    "tags": "Technical & Innovation",
+    "priority": 7
+  },
+  {
+    "id": "ach_7",
+    "name": "First Prize - Poster Presentation 2024",
+    "slug": "first-prize-poster-presentation-2024",
+    "description": "Won National Engineer's Day poster presentation competition.",
+    "clientName": "Arka Jain University",
+    "completionDate": "2024-01-01T12:00:00.000Z",
+    "projectLogo": null,
+    "video": {
+      "id": "first-prize-poster-presentation-2024",
+      "thumbnail": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/thumbnails/first-prize-poster-presentation-2024.jpg",
+      "prefix": "media",
+      "filename": "first-prize-poster-presentation-2024.mp4",
+      "mimeType": "video/mp4",
+      "url": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/clips/first-prize-poster-presentation-2024.mp4"
+    },
+    "uiColor": "f4c46b",
+    "tags": "Technical & Innovation",
+    "priority": 7
+  },
+  {
+    "id": "ach_7",
+    "name": "First Prize - PowerPoint Presentation",
+    "slug": "first-prize-powerpoint-presentation",
+    "description": "Won PowerPoint Presentation Competition on National Science Day.",
+    "clientName": "Arka Jain University",
+    "completionDate": "2024-01-01T12:00:00.000Z",
+    "projectLogo": null,
+    "video": {
+      "id": "first-prize-powerpoint-presentation",
+      "thumbnail": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/thumbnails/first-prize-powerpoint-presentation.jpg",
+      "prefix": "media",
+      "filename": "first-prize-powerpoint-presentation.mp4",
+      "mimeType": "video/mp4",
+      "url": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/clips/first-prize-powerpoint-presentation.mp4"
+    },
+    "uiColor": "f4c46b",
+    "tags": "Technical & Innovation",
+    "priority": 7
+  },
+  {
+    "id": "ach_8",
+    "name": "First Prize - Tech Startup Pitch",
+    "slug": "first-prize-tech-startup-pitch",
+    "description": "Won Tech Startup Pitch competition at Technika 4.0.",
+    "clientName": "Technika 4.0",
+    "completionDate": "2024-01-01T12:00:00.000Z",
+    "projectLogo": null,
+    "video": {
+      "id": "first-prize-tech-startup-pitch",
+      "thumbnail": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/thumbnails/first-prize-tech-startup-pitch.jpg",
+      "prefix": "media",
+      "filename": "first-prize-tech-startup-pitch.mp4",
+      "mimeType": "video/mp4",
+      "url": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/clips/first-prize-tech-startup-pitch.mp4"
+    },
+    "uiColor": "f4c46b",
+    "tags": "Technical & Innovation",
+    "priority": 8
+  },
+  {
+    "id": "ach_6",
+    "name": "Anchor - Technika 4.0",
+    "slug": "anchor-technika-4",
+    "description": "Served as official anchor for Technika 4.0.",
+    "clientName": "Arka Jain University",
+    "completionDate": "2024-01-01T12:00:00.000Z",
+    "projectLogo": null,
+    "video": {
+      "id": "anchor-technika-4",
+      "thumbnail": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/thumbnails/anchor-technika-4.jpg",
+      "prefix": "media",
+      "filename": "anchor-technika-4.mp4",
+      "mimeType": "video/mp4",
+      "url": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/clips/anchor-technika-4.mp4"
+    },
+    "uiColor": "ff5a5a",
+    "tags": "Leadership & Campus Impact",
+    "priority": 6
+  },
+  {
+    "id": "ach_7",
+    "name": "Anchor - Technika 5.0",
+    "slug": "anchor-technika-5",
+    "description": "Served as official anchor for Technika 5.0.",
+    "clientName": "Arka Jain University",
+    "completionDate": "2025-01-01T12:00:00.000Z",
+    "projectLogo": null,
+    "video": {
+      "id": "anchor-technika-5",
+      "thumbnail": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/thumbnails/anchor-technika-5.jpg",
+      "prefix": "media",
+      "filename": "anchor-technika-5.mp4",
+      "mimeType": "video/mp4",
+      "url": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/clips/anchor-technika-5.mp4"
+    },
+    "uiColor": "ff5a5a",
+    "tags": "Leadership & Campus Impact",
+    "priority": 7
+  },
+  {
+    "id": "ach_7",
+    "name": "Best Anchor Award 2024",
+    "slug": "best-anchor-award-2024",
+    "description": "Received Best Anchor Award for outstanding stage hosting.",
+    "clientName": "Arka Jain University",
+    "completionDate": "2024-01-01T12:00:00.000Z",
+    "projectLogo": null,
+    "video": {
+      "id": "best-anchor-award-2024",
+      "thumbnail": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/thumbnails/best-anchor-award-2024.jpg",
+      "prefix": "media",
+      "filename": "best-anchor-award-2024.mp4",
+      "mimeType": "video/mp4",
+      "url": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/clips/best-anchor-award-2024.mp4"
+    },
+    "uiColor": "f4c46b",
+    "tags": "Communication & Personality",
+    "priority": 7
+  },
+  {
+    "id": "ach_8",
+    "name": "Best Anchor Award 2025",
+    "slug": "best-anchor-award-2025",
+    "description": "Received Best Anchor Award for outstanding stage hosting.",
+    "clientName": "Arka Jain University",
+    "completionDate": "2025-01-01T12:00:00.000Z",
+    "projectLogo": null,
+    "video": {
+      "id": "best-anchor-award-2025",
+      "thumbnail": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/thumbnails/best-anchor-award-2025.jpg",
+      "prefix": "media",
+      "filename": "best-anchor-award-2025.mp4",
+      "mimeType": "video/mp4",
+      "url": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/clips/best-anchor-award-2025.mp4"
+    },
+    "uiColor": "f4c46b",
+    "tags": "Communication & Personality",
+    "priority": 8
+  },
+  {
+    "id": "ach_7",
+    "name": "Special Excellence Recognition - NPTEL",
+    "slug": "special-excellence-recognition-nptel",
+    "description": "Recognized for exceptional performance in NPTEL courses.",
+    "clientName": "Arka Jain University",
+    "completionDate": "2024-01-01T12:00:00.000Z",
+    "projectLogo": null,
+    "video": {
+      "id": "special-excellence-recognition-nptel",
+      "thumbnail": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/thumbnails/special-excellence-recognition-nptel.jpg",
+      "prefix": "media",
+      "filename": "special-excellence-recognition-nptel.mp4",
+      "mimeType": "video/mp4",
+      "url": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/clips/special-excellence-recognition-nptel.mp4"
+    },
+    "uiColor": "ff5a5a",
+    "tags": "Academic Excellence",
+    "priority": 7
+  },
+  {
+    "id": "ach_8",
+    "name": "Special Excellence Recognition - Model Presentation",
+    "slug": "special-excellence-recognition-model-presentation",
+    "description": "Recognized for achievements in model presentation competitions.",
+    "clientName": "Arka Jain University",
+    "completionDate": "2025-01-01T12:00:00.000Z",
+    "projectLogo": null,
+    "video": {
+      "id": "special-excellence-recognition-model-presentation",
+      "thumbnail": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/thumbnails/special-excellence-recognition-model-presentation.jpg",
+      "prefix": "media",
+      "filename": "special-excellence-recognition-model-presentation.mp4",
+      "mimeType": "video/mp4",
+      "url": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/clips/special-excellence-recognition-model-presentation.mp4"
+    },
+    "uiColor": "ff5a5a",
+    "tags": "Technical & Innovation",
+    "priority": 8
+  },
+  {
+    "id": "ach_8",
+    "name": "Lead Student Coordinator - Technika 5.0",
+    "slug": "lead-student-coordinator-technika-5",
+    "description": "Served as one of the Lead Student Coordinators of Technika 5.0.",
+    "clientName": "Arka Jain University",
+    "completionDate": "2025-01-01T12:00:00.000Z",
+    "projectLogo": null,
+    "video": {
+      "id": "lead-student-coordinator-technika-5",
+      "thumbnail": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/thumbnails/lead-student-coordinator-technika-5.jpg",
+      "prefix": "media",
+      "filename": "lead-student-coordinator-technika-5.mp4",
+      "mimeType": "video/mp4",
+      "url": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/clips/lead-student-coordinator-technika-5.mp4"
+    },
+    "uiColor": "5eb8ff",
+    "tags": "Leadership & Campus Impact",
+    "priority": 8
+  },
+  {
+    "id": "ach_8",
+    "name": "Topper Award - First Year",
+    "slug": "topper-award-first-year",
+    "description": "Secured first rank in first year with CGPA of 9.67.",
+    "clientName": "Arka Jain University",
+    "completionDate": "2024-01-01T12:00:00.000Z",
+    "projectLogo": null,
+    "video": {
+      "id": "topper-award-first-year",
+      "thumbnail": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/thumbnails/topper-award-first-year.jpg",
+      "prefix": "media",
+      "filename": "topper-award-first-year.mp4",
+      "mimeType": "video/mp4",
+      "url": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/clips/topper-award-first-year.mp4"
+    },
+    "uiColor": "5ee3a8",
+    "tags": "Academic Excellence",
+    "priority": 8
+  },
+  {
+    "id": "ach_5",
+    "name": "Workshop on Canva and Video Editing",
+    "slug": "workshop-canva-video-editing",
+    "description": "Completed workshop on Canva and video editing.",
+    "clientName": "Pratibhalaya",
+    "completionDate": "2024-01-01T12:00:00.000Z",
+    "projectLogo": null,
+    "video": {
+      "id": "workshop-canva-video-editing",
+      "thumbnail": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/thumbnails/workshop-canva-video-editing.jpg",
+      "prefix": "media",
+      "filename": "workshop-canva-video-editing.mp4",
+      "mimeType": "video/mp4",
+      "url": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/clips/workshop-canva-video-editing.mp4"
+    },
+    "uiColor": "b07bff",
+    "tags": "Certifications & Professional Development",
+    "priority": 5
+  },
+  {
+    "id": "ach_6",
+    "name": "Data Visualization using Python",
+    "slug": "data-visualization-using-python",
+    "description": "Completed course on data visualization using Matplotlib and Plotly.",
+    "clientName": "Udemy",
+    "completionDate": "2024-01-01T12:00:00.000Z",
+    "projectLogo": null,
+    "video": {
+      "id": "data-visualization-using-python",
+      "thumbnail": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/thumbnails/data-visualization-using-python.jpg",
+      "prefix": "media",
+      "filename": "data-visualization-using-python.mp4",
+      "mimeType": "video/mp4",
+      "url": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/clips/data-visualization-using-python.mp4"
+    },
+    "uiColor": "ff5a5a",
+    "tags": "Certifications & Professional Development",
+    "priority": 6
+  },
+  {
+    "id": "ach_6",
+    "name": "Workshop on Git GitHub and Web Development",
+    "slug": "workshop-git-github-web-development",
+    "description": "Completed workshop on Git, GitHub and web development.",
+    "clientName": "Microsoft Learn Student Ambassador",
+    "completionDate": "2023-01-01T12:00:00.000Z",
+    "projectLogo": null,
+    "video": {
+      "id": "workshop-git-github-web-development",
+      "thumbnail": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/thumbnails/workshop-git-github-web-development.jpg",
+      "prefix": "media",
+      "filename": "workshop-git-github-web-development.mp4",
+      "mimeType": "video/mp4",
+      "url": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/clips/workshop-git-github-web-development.mp4"
+    },
+    "uiColor": "b07bff",
+    "tags": "Certifications & Professional Development",
+    "priority": 6
+  },
+  {
+    "id": "ach_5",
+    "name": "Workshop on Mathematical Logical Reasoning",
+    "slug": "workshop-mathematical-logical-reasoning",
+    "description": "Completed workshop on mathematical logical reasoning.",
+    "clientName": "Arka Jain University",
+    "completionDate": "2024-01-01T12:00:00.000Z",
+    "projectLogo": null,
+    "video": {
+      "id": "workshop-mathematical-logical-reasoning",
+      "thumbnail": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/thumbnails/workshop-mathematical-logical-reasoning.jpg",
+      "prefix": "media",
+      "filename": "workshop-mathematical-logical-reasoning.mp4",
+      "mimeType": "video/mp4",
+      "url": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/clips/workshop-mathematical-logical-reasoning.mp4"
+    },
+    "uiColor": "b07bff",
+    "tags": "Certifications & Professional Development",
+    "priority": 5
+  },
+  {
+    "id": "ach_8",
+    "name": "NPTEL Problem Solving Through Programming in C 2024",
+    "slug": "nptel-problem-solving-c-2024",
+    "description": "Earned Elite + Silver certification with score of 76/100.",
+    "clientName": "IIT Kharagpur",
+    "completionDate": "2024-01-01T12:00:00.000Z",
+    "projectLogo": null,
+    "video": {
+      "id": "nptel-problem-solving-c-2024",
+      "thumbnail": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/thumbnails/nptel-problem-solving-c-2024.jpg",
+      "prefix": "media",
+      "filename": "nptel-problem-solving-c-2024.mp4",
+      "mimeType": "video/mp4",
+      "url": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/clips/nptel-problem-solving-c-2024.mp4"
+    },
+    "uiColor": "ff5a5a",
+    "tags": "Certifications & Professional Development",
+    "priority": 8
+  },
+  {
+    "id": "ach_7",
+    "name": "NPTEL Introduction to Machine Learning",
+    "slug": "nptel-introduction-machine-learning",
+    "description": "Successfully completed NPTEL Machine Learning course.",
+    "clientName": "IIT Madras",
+    "completionDate": "2025-01-01T12:00:00.000Z",
+    "projectLogo": null,
+    "video": {
+      "id": "nptel-introduction-machine-learning",
+      "thumbnail": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/thumbnails/nptel-introduction-machine-learning.jpg",
+      "prefix": "media",
+      "filename": "nptel-introduction-machine-learning.mp4",
+      "mimeType": "video/mp4",
+      "url": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/clips/nptel-introduction-machine-learning.mp4"
+    },
+    "uiColor": "ff5a5a",
+    "tags": "Certifications & Professional Development",
+    "priority": 7
+  },
+  {
+    "id": "ach_9",
+    "name": "NPTEL Joy of Computing using Python",
+    "slug": "nptel-joy-of-computing-python",
+    "description": "Earned Elite + Gold certification with score of 92/100.",
+    "clientName": "IIT Roorkee",
+    "completionDate": "2025-01-01T12:00:00.000Z",
+    "projectLogo": null,
+    "video": {
+      "id": "nptel-joy-of-computing-python",
+      "thumbnail": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/thumbnails/nptel-joy-of-computing-python.jpg",
+      "prefix": "media",
+      "filename": "nptel-joy-of-computing-python.mp4",
+      "mimeType": "video/mp4",
+      "url": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/clips/nptel-joy-of-computing-python.mp4"
+    },
+    "uiColor": "ff5a5a",
+    "tags": "Certifications & Professional Development",
+    "priority": 9
+  },
+  {
+    "id": "ach_8",
+    "name": "NPTEL Introduction to IoT 2025",
+    "slug": "nptel-problem-solving-c-2025",
+    "description": "Earned Elite + Silver certification with score of 80/100.",
+    "clientName": "IIT Kharagpur",
+    "completionDate": "2025-01-01T12:00:00.000Z",
+    "projectLogo": null,
+    "video": {
+      "id": "nptel-problem-solving-c-2025",
+      "thumbnail": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/thumbnails/nptel-problem-solving-c-2025.jpg",
+      "prefix": "media",
+      "filename": "nptel-problem-solving-c-2025.mp4",
+      "mimeType": "video/mp4",
+      "url": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/clips/nptel-problem-solving-c-2025.mp4"
+    },
+    "uiColor": "ff5a5a",
+    "tags": "Certifications & Professional Development",
+    "priority": 8
+  },
+  {
+    "id": "ach_6",
+    "name": "Workshop on Mastering Web Applications and Version Control",
+    "slug": "workshop-mastering-web-applications-version-control",
+    "description": "Completed workshop on web applications and version control systems.",
+    "clientName": "Microsoft Learn Student Ambassador",
+    "completionDate": "2024-01-01T12:00:00.000Z",
+    "projectLogo": null,
+    "video": {
+      "id": "workshop-mastering-web-applications-version-control",
+      "thumbnail": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/thumbnails/workshop-mastering-web-applications-version-control.jpg",
+      "prefix": "media",
+      "filename": "workshop-mastering-web-applications-version-control.mp4",
+      "mimeType": "video/mp4",
+      "url": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/clips/workshop-mastering-web-applications-version-control.mp4"
+    },
+    "uiColor": "b07bff",
+    "tags": "Certifications & Professional Development",
+    "priority": 6
+  },
+  {
+    "id": "ach_8",
+    "name": "Mr Farewell 2026",
+    "slug": "mr-farewell-2026",
+    "description": "Awarded Mr Farewell title for Diploma Batch 2023-26.",
+    "clientName": "Arka Jain University",
+    "completionDate": "2026-01-01T12:00:00.000Z",
+    "projectLogo": null,
+    "video": {
+      "id": "mr-farewell-2026",
+      "thumbnail": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/thumbnails/mr-farewell-2026.jpg",
+      "prefix": "media",
+      "filename": "mr-farewell-2026.mp4",
+      "mimeType": "video/mp4",
+      "url": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/clips/mr-farewell-2026.mp4"
+    },
+    "uiColor": "ff5a5a",
+    "tags": "Communication & Personality",
+    "priority": 8
+  },
+  {
+    "id": "ach_10",
+    "name": "Diploma Batch Topper 2023-26",
+    "slug": "diploma-batch-topper-2023-26",
+    "description": "Graduated as overall topper with CGPA of 9.58 across all diploma branches.",
+    "clientName": "Arka Jain University",
+    "completionDate": "2026-01-01T12:00:00.000Z",
+    "projectLogo": null,
+    "video": {
+      "id": "diploma-batch-topper-2023-26",
+      "thumbnail": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/thumbnails/diploma-batch-topper-2023-26.jpg",
+      "prefix": "media",
+      "filename": "diploma-batch-topper-2023-26.mp4",
+      "mimeType": "video/mp4",
+      "url": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/clips/diploma-batch-topper-2023-26.mp4"
+    },
+    "uiColor": "5ee3a8",
+    "tags": "Academic Excellence",
+    "priority": 10
+  },
+  {
+    "id": "ach_10",
+    "name": "Perfect 10 SGPA",
+    "slug": "perfect-10-sgpa",
+    "description": "Achieved a perfect 10.00 SGPA in the final semester.",
+    "clientName": "Arka Jain University",
+    "completionDate": "2026-01-01T12:00:00.000Z",
+    "projectLogo": null,
+    "video": {
+      "id": "perfect-10-sgpa",
+      "thumbnail": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/thumbnails/perfect-10-sgpa.jpg",
+      "prefix": "media",
+      "filename": "perfect-10-sgpa.mp4",
+      "mimeType": "video/mp4",
+      "url": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/clips/perfect-10-sgpa.mp4"
+    },
+    "uiColor": "5ee3a8",
+    "tags": "Academic Excellence",
+    "priority": 10
+  },
+  {
+    "id": "ach_8",
+    "name": "Top Lyria Artist",
+    "slug": "top-lyria-artist",
+    "description": "Recognized as a Top Lyria Artist under the Google Student Ambassador Program.",
+    "clientName": "Google Student Ambassador Program",
+    "completionDate": "2026-01-01T12:00:00.000Z",
+    "projectLogo": null,
+    "video": {
+      "id": "top-lyria-artist",
+      "thumbnail": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/thumbnails/top-lyria-artist.jpg",
+      "prefix": "media",
+      "filename": "top-lyria-artist.mp4",
+      "mimeType": "video/mp4",
+      "url": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/clips/top-lyria-artist.mp4"
+    },
+    "uiColor": "ff5a5a",
+    "tags": "Communication & Personality",
+    "priority": 8
+  },
+  {
+    "id": "ach_8",
+    "name": "Student Placement Coordinator",
+    "slug": "student-placement-coordinator",
+    "description": "Served as Student Placement Coordinator representing the student community.",
+    "clientName": "Arka Jain University",
+    "completionDate": "2026-01-01T12:00:00.000Z",
+    "projectLogo": null,
+    "video": {
+      "id": "student-placement-coordinator",
+      "thumbnail": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/thumbnails/student-placement-coordinator.jpg",
+      "prefix": "media",
+      "filename": "student-placement-coordinator.mp4",
+      "mimeType": "video/mp4",
+      "url": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/clips/student-placement-coordinator.mp4"
+    },
+    "uiColor": "5eb8ff",
+    "tags": "Leadership & Campus Impact",
+    "priority": 8
+  },
+  {
+    "id": "ach_10",
+    "name": "ICSE Class 10 Academic Excellence",
+    "slug": "icse-class-10-academic-excellence",
+    "description": "Scored 95.6% in ICSE Class 10 with 100/100 in Computer Applications and 99/100 in Mathematics.",
+    "clientName": "ICSE Board",
+    "completionDate": "2023-05-01T12:00:00.000Z",
+    "projectLogo": null,
+    "video": {
+      "id": "icse-class-10-academic-excellence",
+      "thumbnail": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/thumbnails/icse-class-10-academic-excellence.jpg",
+      "prefix": "media",
+      "filename": "icse-class-10-academic-excellence.mp4",
+      "mimeType": "video/mp4",
+      "url": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/clips/icse-class-10-academic-excellence.mp4"
+    },
+    "uiColor": "5ee3a8",
+    "tags": "Academic Excellence",
+    "priority": 10
+  },
+  {
+    "id": "ach_10",
+    "name": "Campus Placement at ROSA TECH",
+    "slug": "campus-placement-rosa-tech",
+    "description": "Achieved campus placement at ROSA TECH Adityapur with a CTC of 3.99 LPA, securing the highest package among Diploma 2023-26 students while competing against candidates from B.Tech and BCA programs.",
+    "clientName": "ROSA TECH",
+    "completionDate": "2026-04-01T12:00:00.000Z",
+    "projectLogo": null,
+    "video": {
+      "id": "campus-placement-rosa-tech",
+      "thumbnail": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/thumbnails/campus-placement-rosa-tech.jpg",
+      "prefix": "media",
+      "filename": "campus-placement-rosa-tech.mp4",
+      "mimeType": "video/mp4",
+      "url": "https://ydkbdkmwityszetkguyj.supabase.co/storage/v1/object/public/portfolio-media/achievements/clips/campus-placement-rosa-tech.mp4"
+    },
+    "uiColor": "5eb8ff",
+    "tags": "Technical & Innovation",
+    "priority": 10
+  }
+]

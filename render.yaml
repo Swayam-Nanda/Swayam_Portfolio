@@ -1,12 +1,52 @@
 services:
+  # ----------------------------------------------------
+  # Django Backend Service
+  # ----------------------------------------------------
   - type: web
-    name: swayam-portfolio
+    name: swayam-portfolio-backend
     env: python
     plan: free
-    buildCommand: "pip install -r requirements.txt && python manage.py collectstatic --noinput"
+    rootDir: backend
+    buildCommand: "pip install -r requirements.txt && python manage.py collectstatic --noinput && python manage.py migrate"
     startCommand: "gunicorn swayam_portfolio.wsgi"
     envVars:
       - key: PYTHON_VERSION
         value: 3.11.8
       - key: DEBUG
-        value: False
+        value: "False"
+      - key: DATABASE_URL
+        sync: false
+      - key: ALLOWED_HOSTS
+        value: "swayam-portfolio-backend.onrender.com,api.swayam.qd.je,localhost,127.0.0.1"
+      - key: CORS_ALLOWED_ORIGINS
+        value: "https://swayam.qd.je,https://swayam-portfolio-frontend.onrender.com"
+      - key: CSRF_TRUSTED_ORIGINS
+        value: "https://swayam.qd.je,https://swayam-portfolio-frontend.onrender.com"
+      - key: SECRET_KEY
+        generateValue: true
+      - key: AWS_ACCESS_KEY_ID
+        sync: false
+      - key: AWS_SECRET_ACCESS_KEY
+        sync: false
+      - key: AWS_STORAGE_BUCKET_NAME
+        value: "portfolio-media"
+      - key: AWS_S3_ENDPOINT_URL
+        value: "https://ydkbdkmwityszetkguyj.storage.supabase.co/storage/v1/s3"
+      - key: AWS_S3_REGION_NAME
+        value: "ap-south-1"
+
+  # ----------------------------------------------------
+  # React SSR Frontend Service
+  # ----------------------------------------------------
+  - type: web
+    name: swayam-portfolio-frontend
+    env: node
+    plan: free
+    rootDir: frontend
+    buildCommand: "npm install && npm run build"
+    startCommand: "npm run start"
+    envVars:
+      - key: NODE_VERSION
+        value: 20.x
+      - key: VITE_API_URL
+        value: "https://api.swayam.qd.je/api/v1"

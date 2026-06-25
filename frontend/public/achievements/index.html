@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui, viewport-fit=cover" />
+    <title>Swayam · Achievements</title>
+    <base href="/achievements/" />
+    <meta
+      name="description"
+      content="Grinding since 2007. I’ve built a diverse legacy across multiple disciplines—from competitive coding and hackathons to public speaking, debates, and leadership."
+    />
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Swayam · Achievements" />
+    <meta
+      property="og:description"
+      content="Grinding since 2007. I’ve built a diverse legacy across multiple disciplines—from competitive coding and hackathons to public speaking, debates, and leadership."
+    />
+    <meta property="og:image" content="" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="" />
+    <meta
+      property="twitter:title"
+      content="Swayam · Achievements"
+    />
+    <meta
+      property="twitter:description"
+      content="Grinding since 2007. I’ve built a diverse legacy across multiple disciplines—from competitive coding and hackathons to public speaking, debates, and leadership."
+    />
+    <meta property="twitter:image" content="" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/meta/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/meta/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/meta/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/meta/manifest.json" />
+    <link
+      rel="mask-icon"
+      href="assets/meta/safari-pinned-tab.svg"
+      color="#333333"
+    />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style type="text/css">
+      #Stage,
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        -ms-content-zooming: none;
+        -ms-touch-action: none;
+        touch-action: none;
+        background: #000;
+      }
+      @font-face {
+        font-family: "Aquatico";
+        src: url("assets/fonts/Aquatico-Regular.otf?v=1746999829742") format("opentype");
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Aquire";
+        src: url("assets/fonts/Aquire-BW0ox.otf?v=1746999829742") format("opentype");
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+      }
+      body, html {
+        font-family: "Space Grotesk", "Helvetica Neue", sans-serif;
+      }
+      h1, h2, h3, .title, .heading, .label {
+        font-family: "Aquire", sans-serif !important;
+      }
+      p, a, span, textarea, input {
+        font-family: "Space Grotesk", "Helvetica Neue", sans-serif !important;
+        letter-spacing: 0.05em !important;
+      }
+      .ios,
+      .ios #Stage,
+      .ios body {
+        overflow: visible;
+      }
+      .ios,
+      .mob {
+        position: relative;
+        height: 100vh;
+      }
+      .GLA11y {
+        position: absolute;
+        width: 0;
+        height: 100%;
+        clip: rect(0 0 0 0);
+        overflow: hidden;
+      }
+      :root {
+        --baropacity: 0;
+      }
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: 0 0;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, var(--baropacity, 0.9));
+        border-radius: 10px;
+      }
+      #Stage,
+      #Stage * {
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -o-user-select: none;
+        -ms-user-select: none;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-text-size-adjust: none;
+      }
+      #Stage *,
+      #Stage ::after,
+      #Stage ::before {
+        box-sizing: border-box;
+      }
+      #Stage * input,
+      #Stage * textarea {
+        -moz-user-select: auto;
+        -webkit-user-select: auto;
+        -o-user-select: auto;
+        -ms-user-select: auto;
+        -webkit-tap-highlight-color: auto;
+      }
+      .feature-detects {
+        visibility: hidden;
+        pointer-events: none;
+        position: absolute;
+        width: 0;
+        height: 100vh;
+        clip: rect(0 0 0 0);
+      }
+      @supports (--css: variables) and (padding: env(safe-area-inset-bottom)) {
+        .feature-detects {
+          --safe-area-inset-top: env(safe-area-inset-top);
+          --safe-area-inset-right: env(safe-area-inset-right);
+          --safe-area-inset-bottom: env(safe-area-inset-bottom);
+          --safe-area-inset-left: env(safe-area-inset-left);
+        }
+      }
+    </style>
+    <script>
+      // Intercept remote CMS requests to load local achievements JSON
+      (function() {
+        const originalFetch = window.fetch;
+        window.fetch = function(input, options) {
+          const urlStr = typeof input === 'string' ? input : (input && input.url);
+          if (typeof urlStr === 'string' && (urlStr.includes('projects-dev.json') || urlStr.includes('projects-latest.json'))) {
+            console.log('Intercepted CMS projects fetch, loading local assets/data/projects.json');
+            return originalFetch('assets/data/projects.json?v=' + Date.now(), options);
+          }
+          return originalFetch(input, options);
+        };
+      })();
+
+      !(function () {
+        window._ENV_ = "production";
+        window._CMS_ = "%CMS%";
+        window._UNSUPPORTED_PAGE_ = "unsupported.html";
+        window.HYDRA_BASE_PATH = "/achievements/";
+        window.HYDRA_ASSETS_BASE_PATH = "";
+        try {
+          eval("let obj = {}; obj?.prop");
+        } catch (e) {
+          window.location.replace(window._UNSUPPORTED_PAGE_);
+          return;
+        }
+        ((window._CACHE_ = "1746999829744"),
+          (window.UIL_STATIC_PATH = "assets/data/uil.1746999829744.json"));
+
+        // Theme Syncing Code
+        const THEMES = {
+          blue: { primary: "#5eb8ff", dark: "#1a90ad", highlight: "#93e5ff", light: "#ffffff" },
+          gold: { primary: "#f4c46b", dark: "#d4a44b", highlight: "#fff3ad", light: "#ffffff" },
+          white: { primary: "#f5f5f5", dark: "#a0a0a0", highlight: "#ffffff", light: "#ffffff" },
+          crimson: { primary: "#ff5a5a", dark: "#b52a2a", highlight: "#ff9b9b", light: "#ffffff" },
+          emerald: { primary: "#5ee3a8", dark: "#2a9060", highlight: "#b2ffdb", light: "#ffffff" },
+          purple: { primary: "#b07bff", dark: "#7040b0", highlight: "#e1ccff", light: "#ffffff" },
+        };
+        const getQueryParam = (name) => {
+          const match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+          return match ? decodeURIComponent(match[1].replace(/\+/g, ' ')) : null;
+        };
+        const queryTheme = getQueryParam("theme");
+        if (queryTheme && THEMES[queryTheme]) {
+          localStorage.setItem("portfolio-theme", queryTheme);
+        }
+        const activeTheme = localStorage.getItem("portfolio-theme") || "blue";
+        window.ACTIVE_THEME_COLORS = THEMES[activeTheme] || THEMES.blue;
+
+        // Reload page if theme changes in another tab
+        window.addEventListener("storage", (e) => {
+          if (e.key === "portfolio-theme") {
+            window.location.reload();
+          }
+        });
+
+        var h = document.head,
+          mods = [
+            "01_module",
+            "02_module",
+            "03_module",
+            "04_module",
+            "05_module",
+            "06_module",
+            "07_module",
+            "08_module",
+            "09_module",
+            "10_module",
+            "11_module",
+          ];
+        for (var i = 0; i < mods.length; i++) {
+          var s = "assets/js/modules/" + mods[i] + ".js?v=" + window._CACHE_,
+            e = document.createElement("link");
+          ((e.href = s),
+            (e.rel = "preload"),
+            (e.as = "script"),
+            h.appendChild(e));
+          var c = document.createElement("script");
+          ((c.src = s), (c.async = !1), h.appendChild(c));
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <noscript
+      ><p
+        style="
+          background: black;
+          color: white;
+          font-size: 20px;
+          display: inline;
+          font-family: Helvetica, Arial, sans-serif;
+          padding: 10px;
+        "
+      >
+        Please enable javascript
+      </p></noscript
+    >
+  </body>
+</html>

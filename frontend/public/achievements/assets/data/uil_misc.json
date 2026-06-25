@@ -1,0 +1,1109 @@
+{
+  "BloomLuminosityPass/BloomLuminosityPass/luminosityThreshold": 0,
+  "CleanRoomCompositeuContrast": [
+    0.97,
+    1
+  ],
+  "CleanRoomCompositeuRGBStrength": 0.3,
+  "CleanRoomCompositeuVolumetricStrength": 0.3,
+  "CleanRoomGlass/CleanRoomGlass/Element_4_CleanRoom/_tx_tEnv": {
+    "compressed": "ktx2",
+    "filename": "pano-ATv6-1700435330543.jpg",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/pano-ATv6-1700435330543.jpg",
+    "useCompressed": true
+  },
+  "CleanRoomGlass/CleanRoomGlass/Element_4_CleanRoom/_tx_tMatcap": {
+    "compressed": false,
+    "filename": "matcap-test.jpg",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/matcap-test.jpg",
+    "useCompressed": false
+  },
+  "CleanRoomGlass/CleanRoomGlass/Element_4_CleanRoom/_txtEnv": {
+    "compressed": "ktx2",
+    "filename": "pano-ATv6-1700435330543.jpg",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/pano-ATv6-1700435330543.jpg",
+    "useCompressed": true
+  },
+  "CleanRoomGlass/CleanRoomGlass/Element_4_CleanRoom/_txtMatcap": {
+    "compressed": false,
+    "filename": "matcap-test.jpg",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/matcap-test.jpg",
+    "useCompressed": false
+  },
+  "CleanRoomGlass/CleanRoomGlass/Element_4_CleanRoom/uDistortStrength": -1,
+  "CleanRoomGlass/CleanRoomGlass/Element_4_CleanRoom/uFresnelPow": -0.03,
+  "CleanRoomGlass/CleanRoomGlass/Element_4_CleanRoom/uRefractionRatio": 0.34,
+  "CoreParticlesShader/CoreParticlesShader/P_Element_0_BodyCores/uColor": "#FFD700",
+  "CoreParticlesShader/CoreParticlesShader/P_Element_0_BodyCores/uColorB": "#DC143C",
+  "CoreParticlesShader/CoreParticlesShader/P_Element_0_BodyCores/uColorC": "#FF4500",
+  "CoreParticlesShader/CoreParticlesShader/P_Element_0_BodyCores/uSize": 2,
+  "FlowerParticleShader/FlowerParticleShader/P_Element_6_Work/_tx_tMap": {
+    "hotreload": true,
+    "src": "assets/images/particle/matcap3.png?1704406093391-compressedKtx2"
+  },
+  "FlowerParticleShader/FlowerParticleShader/P_Element_6_Work/_txtMap": {
+    "compressed": "ktx2",
+    "filename": "matcap3.png",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/particle/matcap3.png",
+    "useCompressed": true
+  },
+  "GROUP_CleanRoom_group_0_name": "room",
+  "GROUP_CleanRoom_group_0_sortIndex": 1,
+  "GROUP_TreeScene_group_0_name": "wrapper",
+  "GROUP_TreeScene_group_0_sortIndex": 1,
+  "GlobalComposite_tx_tContact": {
+    "compressed": false,
+    "filename": "contact.jpg",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/_temp/contact.jpg",
+    "useCompressed": false
+  },
+  "GlobalComposite_tx_tNormal": {
+    "hotreload": true,
+    "src": "assets/images/pbr/damaged_road_normal.png?1704405937759-compressedKtx2"
+  },
+  "GlobalComposite_txtContact": {
+    "compressed": false,
+    "filename": "contact.jpg",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/_temp/contact.jpg",
+    "useCompressed": false
+  },
+  "GlobalComposite_txtNormal": {
+    "compressed": false,
+    "filename": "damaged_road_normal.png",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/pbr/damaged_road_normal.png",
+    "useCompressed": false
+  },
+  "GlobalCompositeuNormalScale": 3,
+  "GlobalCompositeuRGBStrength": 1,
+  "HomeCompositeuContrast": [
+    0.98,
+    1.2
+  ],
+  "HomeCompositeuRGBStrength": 0,
+  "HomeCompositeuVolumetricStrength": 1.1,
+  "HomeSceneVFX_home_uAtmosphere": [
+    0.13,
+    2.1300000000000003,
+    1,
+    0.4099999999999999
+  ],
+  "HomeSceneVFX_home_uDOF": [
+    0.72,
+    0.8,
+    0.3,
+    1
+  ],
+  "HomeSceneVFX_home_uDOFContrast": [
+    1.28,
+    2.41
+  ],
+  "HomeSceneVFX_home_uFog": [
+    0,
+    1.24,
+    1,
+    0.89
+  ],
+  "HomeSceneVFX_home_uFogColor": "#FF4500",
+  "HomeSceneVFX_home_uNoDOFContrast": [
+    1.3299999999999998,
+    1.8599999999999999
+  ],
+  "L_Element_10_home_scenebounce": 0,
+  "L_Element_10_home_scenedistance": 60,
+  "L_Element_10_home_sceneintensity": 2.1900000000000004,
+  "L_Element_11_home_scenebounce": 0,
+  "L_Element_11_home_scenecolor": "#FFD700",
+  "L_Element_11_home_scenedistance": 11.5,
+  "L_Element_11_home_sceneheight": 7.620000000000001,
+  "L_Element_11_home_sceneintensity": 3.44,
+  "L_Element_11_home_sceneroughness": 1,
+  "L_Element_11_home_scenewidth": 11.93,
+  "L_Element_18_CleanRoomintensity": 1,
+  "L_Element_18_CleanRoomroughness": 1,
+  "L_Element_9_CleanRoomcolor": "#ffffff",
+  "L_Element_9_CleanRoomheight": 10.11,
+  "L_Element_9_CleanRoomwidth": 0.74,
+  "LightVolume/LightVolume/Element_6_ParticleTest/uAlpha": 0.2,
+  "LightVolume/LightVolume/Element_6_ParticleTest/uDPR": 2,
+  "LightVolume/LightVolume/Element_6_ParticleTest/uHueShift": 0,
+  "LightVolume/LightVolume/Element_6_ParticleTest/uMaskScale": 0.5,
+  "LightVolume/LightVolume/Element_6_ParticleTest/uNoiseScale": 0.2,
+  "LightVolume/LightVolume/Element_6_ParticleTest/uNoiseSpeed": 1,
+  "LightVolume/LightVolume/Element_6_ParticleTest/uOffset": 0,
+  "LightVolume/LightVolume/Element_6_ParticleTest/uRotateSpeed": 0.5,
+  "LightVolume/LightVolume/Element_6_ParticleTest/uRotateTexture": 0,
+  "LightVolume/LightVolume/Element_6_ParticleTest/uScale": 1,
+  "LightVolume/LightVolume/Element_6_ParticleTest/uSeparation": 1,
+  "LogoParticleShader/LogoParticleShader/P_Element_0_LogoParticle/_tx_tMap": {
+    "hotreload": true,
+    "src": "assets/images/particle/matcap3.png?1704406093391-compressedKtx2"
+  },
+  "LogoParticleShader/LogoParticleShader/P_Element_0_LogoParticle/_txtMap": {
+    "compressed": false,
+    "filename": "matcap3.png",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/particle/matcap3.png",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_0_CleanRoom/_tx_tBaseColor": {
+    "compressed": false,
+    "filename": "floor_lightmap.jpg",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/floor_lightmap.jpg",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_0_CleanRoom/_tx_tEnvDiffuse": {
+    "compressed": false,
+    "filename": "tomoco_studio-diffuse-sRGB.png",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/tomoco_studio-diffuse-sRGB.png",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_0_CleanRoom/_tx_tEnvSpecular": {
+    "compressed": false,
+    "filename": "tomoco_studio-specular-RGBM.png",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/tomoco_studio-specular-RGBM.png",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_0_CleanRoom/_tx_tLightmap": {
+    "compressed": false,
+    "filename": "floor_lightmap.jpg",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/floor_lightmap.jpg",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_0_CleanRoom/_tx_tMRO": {
+    "compressed": false,
+    "filename": "walls_default_MRO.png",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/walls_default_MRO.png",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_0_CleanRoom/_tx_tNormal": {
+    "compressed": false,
+    "filename": "concrete-polished-normal.jpg",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/concrete-polished-normal.jpg",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_0_CleanRoom/_txtBaseColor": {
+    "compressed": false,
+    "filename": "floor_lightmap.jpg",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/floor_lightmap.jpg",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_0_CleanRoom/_txtEnvDiffuse": {
+    "compressed": false,
+    "filename": "tomoco_studio-diffuse-sRGB.png",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/tomoco_studio-diffuse-sRGB.png",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_0_CleanRoom/_txtEnvSpecular": {
+    "compressed": false,
+    "filename": "tomoco_studio-specular-RGBM.png",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/tomoco_studio-specular-RGBM.png",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_0_CleanRoom/_txtLightmap": {
+    "compressed": false,
+    "filename": "floor_lightmap.jpg",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/floor_lightmap.jpg",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_0_CleanRoom/_txtMRO": {
+    "compressed": false,
+    "filename": "walls_default_MRO.png",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/walls_default_MRO.png",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_0_CleanRoom/_txtNormal": {
+    "compressed": false,
+    "filename": "concrete-polished-normal.jpg",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/concrete-polished-normal.jpg",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_0_CleanRoom/uEnv": [
+    1,
+    1,
+    1
+  ],
+  "PBR/PBR/Element_0_CleanRoom/uMRON": [
+    1,
+    0.3,
+    1,
+    0.6
+  ],
+  "PBR/PBR/Element_0_CleanRoom/uTiling": [
+    1,
+    1
+  ],
+  "PBR/PBR/Element_0_CleanRoom/uTint": "#4f4f4f",
+  "PBR/PBR/Element_0_CleanRoom/uUseLightmap": 0,
+  "PBR/PBR/Element_12_CleanRoom/_tx_tBaseColor": {
+    "compressed": false,
+    "filename": "uv.jpg",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/_scenelayout/uv.jpg",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_12_CleanRoom/_tx_tEnvDiffuse": {
+    "compressed": false,
+    "filename": "pano-ATv6-1700435330543-diffuse-sRGB.png",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/pano-ATv6-1700435330543-diffuse-sRGB.png",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_12_CleanRoom/_tx_tEnvSpecular": {
+    "compressed": false,
+    "filename": "pano-ATv6-1700435330543-specular-sRGB.png",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/pano-ATv6-1700435330543-specular-sRGB.png",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_12_CleanRoom/_tx_tLightmap": {
+    "compressed": false,
+    "filename": "tomoco_studio-diffuse-sRGB.png",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/tomoco_studio-diffuse-sRGB.png",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_12_CleanRoom/_tx_tMRO": {
+    "compressed": false,
+    "filename": "empty_mro.jpg",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/_scenelayout/empty_mro.jpg",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_12_CleanRoom/_tx_tNormal": {
+    "compressed": false,
+    "filename": "empty_normal.png",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/_scenelayout/empty_normal.png",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_12_CleanRoom/_txtBaseColor": {
+    "compressed": false,
+    "filename": "uv.jpg",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/_scenelayout/uv.jpg",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_12_CleanRoom/_txtEnvDiffuse": {
+    "compressed": false,
+    "filename": "pano-ATv6-1700435330543-diffuse-sRGB.png",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/pano-ATv6-1700435330543-diffuse-sRGB.png",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_12_CleanRoom/_txtEnvSpecular": {
+    "compressed": false,
+    "filename": "pano-ATv6-1700435330543-specular-sRGB.png",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/pano-ATv6-1700435330543-specular-sRGB.png",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_12_CleanRoom/_txtLightmap": {
+    "compressed": false,
+    "filename": "tomoco_studio-diffuse-sRGB.png",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/tomoco_studio-diffuse-sRGB.png",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_12_CleanRoom/_txtMRO": {
+    "compressed": false,
+    "filename": "empty_mro.jpg",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/_scenelayout/empty_mro.jpg",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_12_CleanRoom/_txtNormal": {
+    "compressed": false,
+    "filename": "empty_normal.png",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/_scenelayout/empty_normal.png",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_12_CleanRoom/uMRON": [
+    0.86,
+    0,
+    1,
+    1
+  ],
+  "PBR/PBR/Element_1_CleanRoom/_tx_tBaseColor": {
+    "compressed": false,
+    "filename": "walls_lightmap.jpg",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/walls_lightmap.jpg",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_1_CleanRoom/_tx_tEnvDiffuse": {
+    "compressed": false,
+    "filename": "tomoco_studio-diffuse-sRGB.png",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/tomoco_studio-diffuse-sRGB.png",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_1_CleanRoom/_tx_tEnvSpecular": {
+    "compressed": false,
+    "filename": "tomoco_studio-specular-RGBM.png",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/tomoco_studio-specular-RGBM.png",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_1_CleanRoom/_tx_tLightmap": {
+    "compressed": false,
+    "filename": "walls_diffuse.jpg",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/walls_diffuse.jpg",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_1_CleanRoom/_tx_tMRO": {
+    "compressed": false,
+    "filename": "walls_default_MRO.png",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/walls_default_MRO.png",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_1_CleanRoom/_tx_tNormal": {
+    "compressed": false,
+    "filename": "concrete-polished-normal.jpg",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/concrete-polished-normal.jpg",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_1_CleanRoom/_txtBaseColor": {
+    "compressed": false,
+    "filename": "walls_lightmap.jpg",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/walls_lightmap.jpg",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_1_CleanRoom/_txtEnvDiffuse": {
+    "compressed": false,
+    "filename": "tomoco_studio-diffuse-sRGB.png",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/tomoco_studio-diffuse-sRGB.png",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_1_CleanRoom/_txtEnvSpecular": {
+    "compressed": false,
+    "filename": "tomoco_studio-specular-RGBM.png",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/tomoco_studio-specular-RGBM.png",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_1_CleanRoom/_txtLightmap": {
+    "compressed": false,
+    "filename": "walls_diffuse.jpg",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/walls_diffuse.jpg",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_1_CleanRoom/_txtMRO": {
+    "compressed": false,
+    "filename": "walls_default_MRO.png",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/walls_default_MRO.png",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_1_CleanRoom/_txtNormal": {
+    "compressed": false,
+    "filename": "concrete-polished-normal.jpg",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/concrete-polished-normal.jpg",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_1_CleanRoom/uEnv": [
+    1,
+    1,
+    1
+  ],
+  "PBR/PBR/Element_1_CleanRoom/uMRON": [
+    1,
+    0.3,
+    1,
+    0.6
+  ],
+  "PBR/PBR/Element_1_CleanRoom/uTint": "#4F4F4F",
+  "PBR/PBR/Element_2_CleanRoom/_tx_tBaseColor": {
+    "compressed": false,
+    "filename": "prop_lightmap.jpg",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/prop_lightmap.jpg",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_2_CleanRoom/_tx_tEnvDiffuse": {
+    "compressed": false,
+    "filename": "tomoco_studio-diffuse-sRGB.png",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/tomoco_studio-diffuse-sRGB.png",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_2_CleanRoom/_tx_tEnvSpecular": {
+    "compressed": false,
+    "filename": "tomoco_studio-specular-RGBM.png",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/tomoco_studio-specular-RGBM.png",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_2_CleanRoom/_tx_tMRO": {
+    "compressed": false,
+    "filename": "concrete_light_mro.jpg",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/concrete_light_mro.jpg",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_2_CleanRoom/_tx_tNormal": {
+    "compressed": false,
+    "filename": "concrete-polished-normal.jpg",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/concrete-polished-normal.jpg",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_2_CleanRoom/_txtBaseColor": {
+    "compressed": false,
+    "filename": "prop_lightmap.jpg",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/prop_lightmap.jpg",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_2_CleanRoom/_txtEnvDiffuse": {
+    "compressed": false,
+    "filename": "tomoco_studio-diffuse-sRGB.png",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/tomoco_studio-diffuse-sRGB.png",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_2_CleanRoom/_txtEnvSpecular": {
+    "compressed": false,
+    "filename": "tomoco_studio-specular-RGBM.png",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/tomoco_studio-specular-RGBM.png",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_2_CleanRoom/_txtMRO": {
+    "compressed": false,
+    "filename": "concrete_light_mro.jpg",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/concrete_light_mro.jpg",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_2_CleanRoom/_txtNormal": {
+    "compressed": false,
+    "filename": "concrete-polished-normal.jpg",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/concrete-polished-normal.jpg",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_2_CleanRoom/uEnv": [
+    0.14,
+    1,
+    0
+  ],
+  "PBR/PBR/Element_2_CleanRoom/uMRON": [
+    1,
+    1,
+    1,
+    1
+  ],
+  "PBR/PBR/Element_2_CleanRoom/uTint": "#6b6b6b",
+  "PBR/PBR/Element_3_CleanRoom/_tx_tBaseColor": {
+    "compressed": false,
+    "filename": "landscape_lightmap2.jpg",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/landscape_lightmap2.jpg",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_3_CleanRoom/_tx_tEnvDiffuse": {
+    "compressed": false,
+    "filename": "tomoco_studio-diffuse-sRGB.png",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/tomoco_studio-diffuse-sRGB.png",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_3_CleanRoom/_tx_tEnvSpecular": {
+    "compressed": false,
+    "filename": "tomoco_studio-specular-RGBM.png",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/tomoco_studio-specular-RGBM.png",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_3_CleanRoom/_tx_tLightmap": {
+    "compressed": false,
+    "filename": "landscape_lightmap.jpg",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/landscape_lightmap.jpg",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_3_CleanRoom/_tx_tMRO": {
+    "compressed": false,
+    "filename": "concrete_light_mro.jpg",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/concrete_light_mro.jpg",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_3_CleanRoom/_tx_tNormal": {
+    "compressed": false,
+    "filename": "Landscape_default_Normal.jpg",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/Landscape_default_Normal.jpg",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_3_CleanRoom/_txtBaseColor": {
+    "compressed": false,
+    "filename": "landscape_lightmap2.jpg",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/landscape_lightmap2.jpg",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_3_CleanRoom/_txtEnvDiffuse": {
+    "compressed": false,
+    "filename": "tomoco_studio-diffuse-sRGB.png",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/tomoco_studio-diffuse-sRGB.png",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_3_CleanRoom/_txtEnvSpecular": {
+    "compressed": false,
+    "filename": "tomoco_studio-specular-RGBM.png",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/tomoco_studio-specular-RGBM.png",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_3_CleanRoom/_txtLightmap": {
+    "compressed": false,
+    "filename": "landscape_lightmap.jpg",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/landscape_lightmap.jpg",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_3_CleanRoom/_txtMRO": {
+    "compressed": false,
+    "filename": "concrete_light_mro.jpg",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/concrete_light_mro.jpg",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_3_CleanRoom/_txtNormal": {
+    "compressed": false,
+    "filename": "Landscape_default_Normal.jpg",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/Landscape_default_Normal.jpg",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_3_CleanRoom/uEnv": [
+    1,
+    1,
+    1
+  ],
+  "PBR/PBR/Element_3_CleanRoom/uLightmapIntensity": 1,
+  "PBR/PBR/Element_3_CleanRoom/uMRON": [
+    0.9,
+    0.8,
+    1,
+    0.5
+  ],
+  "PBR/PBR/Element_3_CleanRoom/uOffset": [
+    1,
+    0
+  ],
+  "PBR/PBR/Element_3_CleanRoom/uTiling": [
+    1,
+    1
+  ],
+  "PBR/PBR/Element_3_CleanRoom/uTint": "#ffffff",
+  "PBR/PBR/Element_3_CleanRoom/uUseLightmap": 0,
+  "PBR/PBR/Element_3_CleanRoom/uUseLinearOutput": 0,
+  "PBR/PBR/Element_6_CleanRoom/_tx_tBaseColor": {
+    "compressed": false,
+    "filename": "1234.png",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/1234.png",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_6_CleanRoom/_tx_tEnvDiffuse": {
+    "compressed": false,
+    "filename": "tomoco_studio-diffuse-sRGB.png",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/tomoco_studio-diffuse-sRGB.png",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_6_CleanRoom/_tx_tEnvSpecular": {
+    "compressed": false,
+    "filename": "tomoco_studio-specular-RGBM.png",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/tomoco_studio-specular-RGBM.png",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_6_CleanRoom/_tx_tMRO": {
+    "compressed": false,
+    "filename": "concrete_light_mro.jpg",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/concrete_light_mro.jpg",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_6_CleanRoom/_tx_tNormal": {
+    "compressed": false,
+    "filename": "concrete-polished-normal.jpg",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/concrete-polished-normal.jpg",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_6_CleanRoom/_txtBaseColor": {
+    "compressed": false,
+    "filename": "1234.png",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/1234.png",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_6_CleanRoom/_txtEnvDiffuse": {
+    "compressed": false,
+    "filename": "tomoco_studio-diffuse-sRGB.png",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/tomoco_studio-diffuse-sRGB.png",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_6_CleanRoom/_txtEnvSpecular": {
+    "compressed": false,
+    "filename": "tomoco_studio-specular-RGBM.png",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/tomoco_studio-specular-RGBM.png",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_6_CleanRoom/_txtMRO": {
+    "compressed": false,
+    "filename": "concrete_light_mro.jpg",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/concrete_light_mro.jpg",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_6_CleanRoom/_txtNormal": {
+    "compressed": false,
+    "filename": "concrete-polished-normal.jpg",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/concrete-polished-normal.jpg",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_6_CleanRoom/uMRON": [
+    1,
+    1,
+    1,
+    0.4
+  ],
+  "PBR/PBR/Element_6_CleanRoom/uTint": "#c7c7c7",
+  "PBR/PBR/Element_8_CleanRoom/_tx_tBaseColor": {
+    "compressed": "ktx2",
+    "filename": "1234.png",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/1234.png",
+    "useCompressed": true
+  },
+  "PBR/PBR/Element_8_CleanRoom/_tx_tEnvDiffuse": {
+    "compressed": "ktx2",
+    "filename": "pano-ATv6-1700435330543-diffuse-sRGB.png",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/pano-ATv6-1700435330543-diffuse-sRGB.png",
+    "useCompressed": true
+  },
+  "PBR/PBR/Element_8_CleanRoom/_tx_tEnvSpecular": {
+    "compressed": "ktx2",
+    "filename": "tomoco_studio-specular-RGBM.png",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/tomoco_studio-specular-RGBM.png",
+    "useCompressed": true
+  },
+  "PBR/PBR/Element_8_CleanRoom/_tx_tMRO": {
+    "compressed": "ktx2",
+    "filename": "concrete_light_mro.jpg",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/concrete_light_mro.jpg",
+    "useCompressed": true
+  },
+  "PBR/PBR/Element_8_CleanRoom/_tx_tNormal": {
+    "hotreload": true,
+    "src": "assets/images/room/concrete-polished-normal.jpg?1704406258425-compressedKtx2"
+  },
+  "PBR/PBR/Element_8_CleanRoom/_txtBaseColor": {
+    "compressed": "ktx2",
+    "filename": "1234.png",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/1234.png",
+    "useCompressed": true
+  },
+  "PBR/PBR/Element_8_CleanRoom/_txtEnvDiffuse": {
+    "compressed": "ktx2",
+    "filename": "pano-ATv6-1700435330543-diffuse-sRGB.png",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/pano-ATv6-1700435330543-diffuse-sRGB.png",
+    "useCompressed": true
+  },
+  "PBR/PBR/Element_8_CleanRoom/_txtEnvSpecular": {
+    "compressed": "ktx2",
+    "filename": "tomoco_studio-specular-RGBM.png",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/tomoco_studio-specular-RGBM.png",
+    "useCompressed": true
+  },
+  "PBR/PBR/Element_8_CleanRoom/_txtMRO": {
+    "compressed": "ktx2",
+    "filename": "concrete_light_mro.jpg",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/concrete_light_mro.jpg",
+    "useCompressed": true
+  },
+  "PBR/PBR/Element_8_CleanRoom/_txtNormal": {
+    "compressed": false,
+    "filename": "concrete-polished-normal.jpg",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/concrete-polished-normal.jpg",
+    "useCompressed": false
+  },
+  "PBR/PBR/Element_8_CleanRoom/uEnv": [
+    1,
+    1,
+    0
+  ],
+  "PBR/PBR/Element_8_CleanRoom/uMRON": [
+    1,
+    1,
+    1,
+    0.6
+  ],
+  "PBR/PBR/Element_8_CleanRoom/uTiling": [
+    1,
+    1
+  ],
+  "PBR/PBR/Element_8_CleanRoom/uTint": "#00ff40",
+  "SHADOW_Element_1_ParticleTestfar": 400,
+  "SHADOW_Element_1_ParticleTestfov": 120,
+  "SHADOW_Element_1_ParticleTestposition": [
+    -1.85,
+    5.61,
+    -13.5
+  ],
+  "SHADOW_Element_1_ParticleTestsize": 2048,
+  "SHADOW_Element_1_ParticleTesttarget": [
+    1.45,
+    -0.32,
+    19.36
+  ],
+  "SHADOW_Element_9_home_scenefar": 40,
+  "SHADOW_Element_9_home_sceneposition": [
+    0,
+    6.51,
+    0
+  ],
+  "SHADOW_Element_9_home_scenesize": 1024,
+  "SHADOW_Element_9_home_scenestatic": true,
+  "SHADOW_Element_9_home_scenetarget": [
+    0,
+    0,
+    0
+  ],
+  "TreeParticleShader/TreeParticleShader/P_Element_21_TreeScene/_tx_tMap": {
+    "compressed": false,
+    "filename": "matcap3.png",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/particle/matcap3.png",
+    "useCompressed": false
+  },
+  "TreeParticleShader/TreeParticleShader/P_Element_21_TreeScene/_txtMap": {
+    "compressed": false,
+    "filename": "matcap3.png",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/particle/matcap3.png",
+    "useCompressed": false
+  },
+  "TreeSceneCompositeuContrast": [
+    1,
+    1.5
+  ],
+  "TreeSceneCompositeuRGBStrength": 0,
+  "UIL_graph_fluidsim-0": "{\"isOpen\":true,\"isFocused\":true,\"focusedLayer\":\"sl_fluidsim_0\",\"order\":[\"Config\",\"sl_fluidsim_0\"]}",
+  "UIL_graph_glass_test-0": "{\"isOpen\":true,\"isFocused\":true,\"focusedLayer\":\"sl_glass_test_1\",\"order\":[\"Config\",\"sl_glass_test_0\",\"sl_glass_test_1\"]}",
+  "UIL_graph_home_scene-0": "{\"isOpen\":true,\"isFocused\":true,\"focusedLayer\":\"sl_home_scene_19\",\"order\":[\"Config\",{\"id\":\"sl_home_scene_screens\",\"children\":[\"sl_home_scene_12\",\"sl_home_scene_13\",\"sl_home_scene_14\",\"sl_home_scene_15\"]},{\"id\":\"sl_home_scene_lights\",\"children\":[\"sl_home_scene_9\",\"sl_home_scene_10\",\"sl_home_scene_11\"]},{\"id\":\"sl_home_scene_alleygroup\",\"children\":[\"sl_home_scene_4\",\"sl_home_scene_5\",\"sl_home_scene_6\"]},\"sl_home_scene_0\",\"sl_home_scene_2\",\"sl_home_scene_3\",\"sl_home_scene_8\",\"sl_home_scene_16\",\"sl_home_scene_17\",\"sl_home_scene_21\",\"sl_home_scene_18\",\"sl_home_scene_19\",{\"id\":\"sl_home_scene_scene\",\"children\":[\"sl_home_scene_23\",\"sl_home_scene_22\",\"sl_home_scene_24\",\"sl_home_scene_25\"]},{\"id\":\"sl_home_scene_group_15\",\"children\":[\"sl_home_scene_26\"]}]}",
+  "UIL_graph_homescene-0": "{\"isOpen\":true,\"isFocused\":true,\"focusedLayer\":\"sl_homeScene_8\",\"order\":[\"Config\",{\"id\":\"sl_homeScene_main\",\"children\":[\"sl_homeScene_2\",\"sl_homeScene_3\",\"sl_homeScene_4\",\"sl_homeScene_5\"]},{\"id\":\"sl_homeScene_secondary\",\"children\":[\"sl_homeScene_6\"]},\"sl_homeScene_1\"]}",
+  "UIL_graph_mousefluid-0": "{\"isOpen\":true,\"isFocused\":true,\"focusedLayer\":\"sl_mousefluid_0\",\"order\":[\"Config\",\"sl_mousefluid_0\"]}",
+  "UIL_graph_mousefluid-1": "{\"isOpen\":false,\"isFocused\":false,\"order\":[]}",
+  "UIL_graph_particletest-0": "{\"isOpen\":true,\"isFocused\":true,\"focusedLayer\":\"sl_particleTest_1\",\"order\":[\"Config\",\"sl_particleTest_0\",\"sl_particleTest_1\"]}",
+  "UIL_graph_work_page-0": "{\"isOpen\":true,\"isFocused\":true,\"focusedLayer\":\"sl_work_page_1\",\"order\":[\"Config\",\"sl_work_page_0\",\"sl_work_page_1\",\"sl_work_page_2\",\"sl_work_page_4\",\"sl_work_page_5\",\"sl_work_page_6\"]}",
+  "UIL_graph_work_scene-0": "{\"isOpen\":true,\"isFocused\":true,\"focusedLayer\":\"sl_work_scene_1\",\"order\":[\"Config\",\"sl_work_scene_0\",\"sl_work_scene_1\"]}",
+  "WorkCompositeuContrast": [
+    1,
+    1
+  ],
+  "WorkCompositeuRGBStrength": 0,
+  "WorkCompositeuTransition": 0,
+  "WorkDetailCompositeuRGBStrength": 0,
+  "WorkGlassCubeShader/WorkGlassCubeShader/_tx_tEnv": "{\"src\":\"assets/images/home/hdri.jpg\",\"relative\":\"home\",\"prefix\":\"assets/images\",\"filename\":\"hdri.jpg\",\"compressed\":false}",
+  "WorkGlassCubeShader/WorkGlassCubeShader/uAlpha": 1,
+  "WorkGlassCubeShader/WorkGlassCubeShader/uAttenuation": 0.010000000000000002,
+  "WorkGlassCubeShader/WorkGlassCubeShader/uDistortStrength": 4.96,
+  "WorkGlassCubeShader/WorkGlassCubeShader/uEnvBlend": 1,
+  "WorkGlassCubeShader/WorkGlassCubeShader/uFresnelAlpha": 1,
+  "WorkGlassCubeShader/WorkGlassCubeShader/uFresnelColor": "#000000",
+  "WorkGlassCubeShader/WorkGlassCubeShader/uFresnelPow": 1,
+  "WorkGlassCubeShader/WorkGlassCubeShader/uLightDir": [
+    0,
+    0,
+    1
+  ],
+  "WorkGlassCubeShader/WorkGlassCubeShader/uPhongColor": "#000000",
+  "WorkGlassCubeShader/WorkGlassCubeShader/uRatio": 0,
+  "WorkGlassCubeShader/WorkGlassCubeShader/uShininess": 1,
+  "WorkGlassCubeShader/WorkGlassCubeShader/uSpecAdd": [
+    5.5600000000000005,
+    0.98
+  ],
+  "WorkGlassCubeShader/WorkGlassCubeShader/uTransparent": 1,
+  "WorkGlassFront/WorkGlassFront/uAlpha": 0.4399999999999999,
+  "WorkGlassFront/WorkGlassFront/uTransform": [
+    -1.5299999999999998,
+    0.010000000000000002,
+    -1.83
+  ],
+  "WorkGlassShader/WorkGlassShader/_tx_tEnv": "{\"src\":\"assets/images/home/hdri.jpg\",\"relative\":\"home\",\"prefix\":\"assets/images\",\"filename\":\"hdri.jpg\",\"compressed\":false}",
+  "WorkGlassShader/WorkGlassShader/uAlpha": 1,
+  "WorkGlassShader/WorkGlassShader/uAttenuation": 0.18999999999999995,
+  "WorkGlassShader/WorkGlassShader/uBlend": 0.6,
+  "WorkGlassShader/WorkGlassShader/uDOFContrast": [
+    1,
+    1.3
+  ],
+  "WorkGlassShader/WorkGlassShader/uEnvBlend": 0,
+  "WorkGlassShader/WorkGlassShader/uFresnelAlpha": 1,
+  "WorkGlassShader/WorkGlassShader/uFresnelColor": "#e9f9ff",
+  "WorkGlassShader/WorkGlassShader/uFresnelPow": 1,
+  "WorkGlassShader/WorkGlassShader/uGlassAdd": 0.25,
+  "WorkGlassShader/WorkGlassShader/uLightDir": [
+    0,
+    -1.12,
+    4.6899999999999995
+  ],
+  "WorkGlassShader/WorkGlassShader/uPhongColor": "#ffffff",
+  "WorkGlassShader/WorkGlassShader/uReflectScale": 0,
+  "WorkGlassShader/WorkGlassShader/uRefractionRatio": 0,
+  "WorkGlassShader/WorkGlassShader/uSpecAdd": [
+    1.53,
+    0
+  ],
+  "WorkGlassShader/WorkGlassShader/uTransparent": 1,
+  "WorkGlassWallShader/WorkGlassWallShader/uAlpha": 0.2,
+  "WorkGlassWallShader/WorkGlassWallShader/uGradient": 1,
+  "WorkGlassWallShader/WorkGlassWallShader/uReflectionAmount": 0.1,
+  "WorkPageCompositeuDOF": [
+    0.1,
+    0.4099999999999999,
+    0.25,
+    0
+  ],
+  "WorkPageCompositeuDOFContrast": [
+    1,
+    1.1400000000000001
+  ],
+  "sl_About_0_deleted": true,
+  "sl_CleanRoom_0_deleted": true,
+  "sl_CleanRoom_12_deleted": true,
+  "sl_CleanRoom_13_deleted": true,
+  "sl_CleanRoom_18_deleted": true,
+  "sl_CleanRoom_1_deleted": true,
+  "sl_CleanRoom_23_deleted": true,
+  "sl_CleanRoom_2_deleted": true,
+  "sl_CleanRoom_3_deleted": true,
+  "sl_CleanRoom_4_deleted": true,
+  "sl_CleanRoom_5_deleted": true,
+  "sl_CleanRoom_6_deleted": true,
+  "sl_CleanRoom_7_deleted": true,
+  "sl_CleanRoom_8_deleted": true,
+  "sl_CleanRoom_9_deleted": true,
+  "sl_Contact_0_deleted": true,
+  "sl_Contact_1_deleted": true,
+  "sl_Contact_2_deleted": true,
+  "sl_Home_2_deleted": true,
+  "sl_ParticleTest_11_deleted": true,
+  "sl_ParticleTest_1_deleted": true,
+  "sl_ParticleTest_4_deleted": true,
+  "sl_TreeScene_0_deleted": true,
+  "sl_TreeScene_11_deleted": true,
+  "sl_TreeScene_12_deleted": true,
+  "sl_TreeScene_13_deleted": true,
+  "sl_TreeScene_16_deleted": true,
+  "sl_TreeScene_18_deleted": true,
+  "sl_TreeScene_4_deleted": true,
+  "sl_TreeScene_6_deleted": true,
+  "sl_WorkDetailContent_0_deleted": true,
+  "sl_WorkDetailContent_1_deleted": true,
+  "sl_WorkDetailContent_2_deleted": true,
+  "sl_WorkDetailContent_3_deleted": true,
+  "sl_WorkDetailContent_4_deleted": true,
+  "sl_Work_4_deleted": true,
+  "sl_Work_7_deleted": true,
+  "sl_homeScene_0_deleted": true,
+  "sl_homeScene_7_deleted": true,
+  "sl_homeScene_8_deleted": true,
+  "sl_home_scene_14_deleted": true,
+  "sl_home_scene_1_deleted": true,
+  "sl_home_scene_20_deleted": true,
+  "sl_home_scene_7_deleted": true,
+  "sl_work_page_3_deleted": true,
+  "sl_work_scene_2_deleted": true,
+  "undefined_tx_tBaseColor": {
+    "compressed": false,
+    "filename": "prop_lightmap.jpg",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/prop_lightmap.jpg",
+    "useCompressed": false
+  },
+  "undefined_tx_tEnvDiffuse": {
+    "compressed": false,
+    "filename": "tomoco_studio-diffuse-sRGB.png",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/tomoco_studio-diffuse-sRGB.png",
+    "useCompressed": false
+  },
+  "undefined_tx_tEnvSpecular": {
+    "compressed": false,
+    "filename": "tomoco_studio-specular-RGBM.png",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/tomoco_studio-specular-RGBM.png",
+    "useCompressed": false
+  },
+  "undefined_tx_tLightmap": {
+    "compressed": false,
+    "filename": "landscape_lightmap.jpg",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/landscape_lightmap.jpg",
+    "useCompressed": false
+  },
+  "undefined_tx_tMRO": {
+    "compressed": false,
+    "filename": "concrete_light_mro.jpg",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/concrete_light_mro.jpg",
+    "useCompressed": false
+  },
+  "undefined_tx_tMap": {
+    "compressed": false,
+    "filename": "1234.png",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/1234.png",
+    "useCompressed": false
+  },
+  "undefined_tx_tNormal": {
+    "compressed": false,
+    "filename": "concrete-polished-normal.jpg",
+    "prefix": "assets/images",
+    "relative": "assets/images",
+    "src": "assets/images/room/concrete-polished-normal.jpg",
+    "useCompressed": false
+  }
+}
