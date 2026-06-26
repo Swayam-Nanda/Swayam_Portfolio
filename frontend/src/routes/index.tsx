@@ -16,6 +16,7 @@ import { api } from "@/lib/api-client";
 import { SideRays } from "@/components/ui/SideRays";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useTheme } from "@/lib/ThemeContext";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 export const Route = createFileRoute("/")({
   loader: async () => {
@@ -138,6 +139,7 @@ function ParallaxSection({ children }: { children: React.ReactNode }) {
 function RaysBackground() {
   const { scrollYProgress } = useScroll();
   const { themeColors } = useTheme();
+  const isMobile = useIsMobile();
 
   // Perimeter revolving logic: Travels along the edges clockwise
   const rayX = useTransform(scrollYProgress, [0, 0.25, 0.5, 0.75, 1], [1.2, 1.2, -0.2, -0.2, 1.2]);
@@ -173,6 +175,9 @@ function RaysBackground() {
       unsubY2();
     };
   }, [rotation, rayX, rayY, rotation2, rayX2, rayY2]);
+
+  // Don't render expensive WebGL canvases on mobile — saves GPU and battery
+  if (isMobile) return null;
 
   return (
     <div className="fixed inset-0 z-[1] pointer-events-none overflow-hidden opacity-60">

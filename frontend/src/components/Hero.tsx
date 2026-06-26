@@ -111,9 +111,9 @@ export function Hero({ data }: { data?: any }) {
   const imgScale = useTransform(scrollYProgress, [0, 1], [1, 1.1]);
   const imgY = useTransform(scrollYProgress, [0, 1], [0, -50]);
 
-  // Smoothed 3D tilt
-  const tiltX = useTransform(smoothY, [0, 100], [4, -4]);
-  const tiltY = useTransform(smoothX, [0, 100], [-4, 4]);
+  // Smoothed 3D tilt — disabled on mobile (touch devices have no mouse)
+  const tiltX = useTransform(smoothY, [0, 100], isMobile ? [0, 0] : [4, -4]);
+  const tiltY = useTransform(smoothX, [0, 100], isMobile ? [0, 0] : [-4, 4]);
 
   // Dynamic Theme Integration for Reveal Colors
   const [themeColor, setThemeColor] = useState("#5eb8ff");
@@ -311,18 +311,18 @@ export function Hero({ data }: { data?: any }) {
           <motion.div
             ref={imgWrap}
             style={{
-              rotateX: tiltX,
-              rotateY: tiltY,
-              scale: imgScale,
-              y: imgY,
+              rotateX: isMobile ? 0 : tiltX,
+              rotateY: isMobile ? 0 : tiltY,
+              scale: isMobile ? 1 : imgScale,
+              y: isMobile ? 0 : imgY,
               position: "absolute",
               inset: 0,
               zIndex: currentImgConfig.zIndex,
               transformStyle: "preserve-3d",
             }}
-            onMouseMove={onMove}
-            onMouseLeave={() => window.dispatchEvent(new Event("reset-blob"))}
-            className="cursor-none"
+            onMouseMove={isMobile ? undefined : onMove}
+            onMouseLeave={isMobile ? undefined : () => window.dispatchEvent(new Event("reset-blob"))}
+            className={isMobile ? undefined : "cursor-none"}
           >
             {/* LAYER 1: REVEAL BG ONLY (Bottom) */}
             <div
@@ -354,9 +354,9 @@ export function Hero({ data }: { data?: any }) {
             {/* LAYER 2: SWAYAM TEXT (Middle) */}
             <motion.div
               style={{
-                y: typoY,
-                opacity: typoOpacity,
-                scale: typoScale,
+                y: isMobile ? 0 : typoY,
+                opacity: isMobile ? 1 : typoOpacity,
+                scale: isMobile ? 1 : typoScale,
                 zIndex: currentTextConfig.zIndex,
                 transform: `translateZ(0px) translateY(${currentTextConfig.yOffset})`,
                 left: currentTextConfig.leftOffset,

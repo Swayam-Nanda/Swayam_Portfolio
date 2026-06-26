@@ -15,6 +15,7 @@ import { MusicPlayer } from "../components/MusicPlayer";
 import appCss from "../styles.css?url";
 import TargetCursor from "../components/ui/TargetCursor";
 import VideoLoader from "../components/VideoLoader";
+import { useIsMobile } from "../hooks/use-mobile";
 
 function NotFoundComponent() {
   return (
@@ -140,11 +141,7 @@ function RootShell({ children }: { children: React.ReactNode }) {
       </head>
       <body>
         {children}
-        <TargetCursor
-          targetSelector="a, button, .cursor-target, [role='button']"
-          spinDuration={3}
-          hoverDuration={0.15}
-        />
+        <MobileAwareCursor />
         <Scripts />
       </body>
     </html>
@@ -153,13 +150,23 @@ function RootShell({ children }: { children: React.ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
-  const [showLoader, setShowLoader] = useState(true);
+  const isMobile = useIsMobile();
+  // Skip loader on mobile — video doesn't fit portrait well and delays content
+  const [showLoader, setShowLoader] = useState(() => {
+    if (typeof window === "undefined") return false;
+    return !isMobile && !sessionStorage.getItem("loader-played");
+  });
 
   React.useEffect(() => {
+    // If on mobile, never show the loader
+    if (isMobile) {
+      setShowLoader(false);
+      return;
+    }
     if (sessionStorage.getItem("loader-played")) {
       setShowLoader(false);
     }
-  }, []);
+  }, [isMobile]);
 
   const handleLoaderComplete = () => {
     setShowLoader(false);
@@ -184,5 +191,18 @@ function RootComponent() {
         </MusicProvider>
       </ThemeProvider>
     </QueryClientProvider>
+  );
+}
+
+/** Renders the custom pointer cursor only on non-touch (desktop) devices */
+function MobileAwareCursor() {
+  const isMobile = useIsMobile();
+  if (isMobile) return null;
+  return (
+    <TargetCursor
+      targetSelector="a, button, .cursor-target, [role='button']"
+      spinDuration={3}
+      hoverDuration={0.15}
+    />
   );
 }

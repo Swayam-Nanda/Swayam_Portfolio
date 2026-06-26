@@ -5,6 +5,7 @@ import { AchievementsNav } from "./AchievementsNav";
 import { ScrollDistortionWrapper } from "./ScrollDistortionWrapper";
 import { Link } from "@tanstack/react-router";
 import { Zap, Github, Linkedin, Mail, Menu, X } from "lucide-react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const links = [
   { label: "About", href: "#about", key: "about" },
@@ -19,6 +20,7 @@ export function Navbar() {
   const [activeSection, setActiveSection] = useState("");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { scrollY } = useScroll();
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     const unsub = scrollY.on("change", (latest) => setScrolled(latest > 50));
@@ -115,7 +117,7 @@ export function Navbar() {
             : "py-2.5"
         }`}
       >
-        <ScrollDistortionWrapper>
+        {isMobile ? (
           <nav className="w-full max-w-[1400px] px-4 md:px-8 flex items-center justify-between relative h-full">
             <div className="flex items-center gap-4">
               <Link to="/" className="flex items-center gap-2 group shrink-0">
@@ -211,7 +213,105 @@ export function Navbar() {
 
             </div>
           </nav>
-        </ScrollDistortionWrapper>
+        ) : (
+          <ScrollDistortionWrapper>
+            <nav className="w-full max-w-[1400px] px-4 md:px-8 flex items-center justify-between relative h-full">
+              <div className="flex items-center gap-4">
+                <Link to="/" className="flex items-center gap-2 group shrink-0">
+                  <div className="relative size-6 overflow-hidden rounded-full bg-primary/20 flex items-center justify-center transition-transform group-hover:rotate-12">
+                    <Zap className="size-3.5 text-primary fill-primary/20" />
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="font-display font-black text-xs uppercase tracking-tighter text-gradient-primary">
+                      SWAYAM
+                    </span>
+                    <span className="text-[7px] font-mono text-muted-foreground uppercase tracking-widest leading-none">
+                      NANDA
+                    </span>
+                  </div>
+                </Link>
+                <div className="hidden xl:block h-6 w-px bg-white/10 mx-2" />
+                <div className="hidden xl:flex items-center gap-3">
+                  {socials.map((s) => (
+                    <a
+                      key={s.label}
+                      href={s.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="size-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-muted-foreground hover:bg-primary/20 hover:text-primary hover:border-primary/50 transition-all group"
+                      title={s.label}
+                    >
+                      {s.icon}
+                    </a>
+                  ))}
+                </div>
+              </div>
+
+              {/* Centered Navigation Links - Desktop */}
+              <div className="hidden lg:block absolute left-1/2 -translate-x-1/2">
+                <ul className="flex items-center gap-1">
+                  {links.map((l) => {
+                    const isActive = activeSection === l.key;
+                    return (
+                      <li key={l.key}>
+                        <a
+                          href={l.href}
+                          onClick={(e) => handleNavClick(e, l.href)}
+                          className={`px-3 py-1 text-[10px] xl:text-[11px] font-display font-bold uppercase tracking-[0.2em] transition-all relative group ${
+                            isActive ? "text-primary" : "text-muted-foreground hover:text-foreground"
+                          }`}
+                        >
+                          {l.label}
+                          <motion.div
+                            initial={false}
+                            animate={isActive ? { scaleX: 1 } : { scaleX: 0 }}
+                            className="absolute bottom-0 left-3 right-3 h-[1.5px] bg-primary origin-center"
+                            transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                          />
+                          {!isActive && (
+                            <div className="absolute bottom-0 left-3 right-3 h-[1.5px] bg-primary scale-x-0 group-hover:scale-x-100 transition-transform origin-center" />
+                          )}
+                        </a>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+
+              <div className="flex items-center gap-2 md:gap-4">
+                <div className="hidden sm:block h-6 w-px bg-white/10" />
+                <ThemeSwitcher />
+                <a
+                  href="#contact"
+                  className={`hidden sm:flex p-1.5 rounded-full transition-all duration-300 shadow-glow items-center justify-center ${
+                    isContactActive
+                      ? "bg-primary text-primary-foreground scale-105"
+                      : "bg-white/5 text-muted-foreground hover:bg-primary hover:text-primary-foreground hover:scale-105"
+                  }`}
+                  title="Contact"
+                >
+                  <Mail className="size-3.5" />
+                </a>
+
+                <div className="hidden lg:block h-8 w-px bg-white/10 mx-1" />
+
+                {/* Achievements & Audio Line - Desktop or Large Mobile */}
+                <div className="hidden xs:block">
+                    <AchievementsNav />
+                </div>
+
+                {/* Mobile Menu Toggle */}
+                <button
+                  onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                  className="p-1.5 rounded-full bg-white/5 text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-all lg:hidden"
+                >
+                  {mobileMenuOpen ? <X className="size-4" /> : <Menu className="size-4" />}
+                </button>
+
+              </div>
+            </nav>
+          </ScrollDistortionWrapper>
+        )}
       </motion.header>
 
       {/* Mobile Menu Drawer */}
