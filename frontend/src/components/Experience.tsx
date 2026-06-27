@@ -288,10 +288,10 @@ export function Experience({ data }: { data?: any[] }) {
   );
 
   return (
-    <>
+    <div id="experience" className="relative w-full z-40">
       {/* Mobile view */}
       <div className="md:hidden">
-        <section id="experience" className="relative w-full py-16 px-6 bg-transparent z-40 isolate">
+        <section className="relative w-full py-16 px-6 bg-transparent z-40 isolate">
           <div className="max-w-xl mx-auto">
             <span className="font-mono text-[10px] uppercase tracking-[0.4em] text-primary block mb-3 opacity-60">
               ／ 04 — Trajectory
@@ -341,7 +341,6 @@ export function Experience({ data }: { data?: any[] }) {
       <div className="hidden md:block">
         <section 
           ref={containerRef} 
-          id="experience" 
           className="relative block w-full bg-transparent overflow-visible z-40 isolate"
           style={{ minHeight: "600vh" }}
         >
@@ -378,6 +377,6 @@ export function Experience({ data }: { data?: any[] }) {
           </div>
         </section>
       </div>
-    </>
+    </div>
   );
 }

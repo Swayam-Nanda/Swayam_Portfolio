@@ -320,7 +320,76 @@ export function Projects({
     setIsHolding(state);
   };
 
-  if (allProjects.length === 0) return null;
+  if (allProjects.length === 0) {
+    return (
+      <Section
+        id="projects"
+        eyebrow="03 — Selected Work"
+        title={
+          <span>
+            A few <span className="text-gradient-primary italic">things</span> I've shipped.
+          </span>
+        }
+      >
+        <div className="h-64 flex items-center justify-center">
+          <div className="size-8 rounded-full border-2 border-primary border-t-transparent animate-spin" />
+        </div>
+      </Section>
+    );
+  }
+
+  if (isMobile) {
+    return (
+      <Section
+        id="projects"
+        eyebrow="03 — Selected Work"
+        title={
+          <div className="flex flex-col gap-4">
+            <span>
+              A few <span className="text-gradient-primary italic">things</span> I've shipped.
+            </span>
+            <AnimatePresence>
+              {activeFilter.length > 0 && (
+                <motion.button
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: 20 }}
+                  onClick={onClearFilter}
+                  className="w-fit flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-2 text-xs font-mono text-primary hover:bg-primary/20 transition-colors"
+                >
+                  Clear Filter ({activeFilter.length})
+                </motion.button>
+              )}
+            </AnimatePresence>
+          </div>
+        }
+      >
+        <div className="relative mt-8">
+          {displayProjects.length === 0 ? (
+            <div className="w-full py-20 text-center glass rounded-[2.5rem] border-dashed border-white/10">
+              <p className="text-muted-foreground font-mono">
+                No projects found with this tech stack.
+              </p>
+              <button onClick={onClearFilter} className="mt-4 text-primary text-sm hover:underline">
+                View all projects
+              </button>
+            </div>
+          ) : (
+            <div className="flex gap-6 overflow-x-auto snap-x snap-mandatory py-6 px-4 scrollbar-none -mx-4">
+              {displayProjects.map((p, i) => (
+                <div key={`${p.title}-${i}`} className="snap-center shrink-0 w-[85vw] max-w-[340px]">
+                  <ProjectCard project={p} onHoverChange={() => {}} />
+                </div>
+              ))}
+            </div>
+          )}
+          
+          {/* Ambient lighting */}
+          <div className="absolute -inset-x-[20vw] top-1/2 -translate-y-1/2 h-[300px] bg-primary/5 blur-[100px] pointer-events-none rounded-full" />
+        </div>
+      </Section>
+    );
+  }
 
   return (
     <Section

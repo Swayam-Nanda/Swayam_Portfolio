@@ -162,11 +162,10 @@ export function Hero({ data }: { data?: any }) {
   };
 
   return (
-    <>
+    <div id="hero" className="w-full relative">
       {/* Mobile view */}
       <div className="md:hidden">
         <section
-          id="hero"
           className="relative flex min-h-[100svh] flex-col items-center justify-between overflow-hidden pt-24 pb-8"
         >
           <div className="absolute inset-0 grid-lines opacity-10" aria-hidden />
@@ -280,7 +279,6 @@ export function Hero({ data }: { data?: any }) {
       <div className="hidden md:block">
         <section
           ref={ref}
-          id="hero"
           className="relative flex min-h-[100svh] items-center justify-center overflow-hidden pt-20"
         >
           <div className="absolute inset-0 grid-lines opacity-20" aria-hidden />
@@ -538,6 +536,6 @@ export function Hero({ data }: { data?: any }) {
           </div>
         </section>
       </div>
-    </>
+    </div>
   );
 }

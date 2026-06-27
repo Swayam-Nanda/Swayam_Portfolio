@@ -120,7 +120,11 @@ export function Navbar() {
         <ScrollDistortionWrapper>
           <nav className="w-full max-w-[1400px] px-4 md:px-8 flex items-center justify-between relative h-full">
             <div className="flex items-center gap-4">
-              <Link to="/" className="flex items-center gap-2 group shrink-0">
+              <a
+                href="#hero"
+                onClick={(e) => handleNavClick(e, "#hero")}
+                className="flex items-center gap-2 group shrink-0"
+              >
                 <div className="relative size-6 overflow-hidden rounded-full bg-primary/20 flex items-center justify-center transition-transform group-hover:rotate-12">
                   <Zap className="size-3.5 text-primary fill-primary/20" />
                 </div>
@@ -132,7 +136,7 @@ export function Navbar() {
                     NANDA
                   </span>
                 </div>
-              </Link>
+              </a>
               <div className="hidden xl:block h-6 w-px bg-white/10 mx-2" />
               <div className="hidden xl:flex items-center gap-3">
                 {socials.map((s) => (
