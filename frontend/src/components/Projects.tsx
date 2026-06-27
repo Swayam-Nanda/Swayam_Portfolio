@@ -306,14 +306,6 @@ export function Projects({
     return () => cancelAnimationFrame(animationFrame);
   }, [direction, isHolding, isPaused, scrollPos, displayProjects.length]);
 
-  // Handle speed boost on hold
-  const handleArrowHold = (dir: number, state: boolean) => {
-    setDirection(dir);
-    setIsHolding(state);
-  };
-
-  if (allProjects.length === 0) return null;
-
   const translateX = useTransform(scrollPos, (v) => {
     if (displayProjects.length <= 1) return "0px";
     // Estimate total width based on mix of sizes (average ~550px)
@@ -321,6 +313,14 @@ export function Projects({
     const totalWidth = displayProjects.length * avgWidth;
     return `${(v % totalWidth) - totalWidth}px`;
   });
+
+  // Handle speed boost on hold
+  const handleArrowHold = (dir: number, state: boolean) => {
+    setDirection(dir);
+    setIsHolding(state);
+  };
+
+  if (allProjects.length === 0) return null;
 
   return (
     <Section
