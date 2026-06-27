@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect, useMemo } from "react";
 import { motion, useScroll, useVelocity, useSpring, useTransform } from "framer-motion";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 interface Particle {
   id: number;
@@ -11,6 +12,7 @@ interface Particle {
 }
 
 export function ScrollDistortionWrapper({ children }: { children: React.ReactNode }) {
+  const isMobile = useIsMobile();
   const { scrollY } = useScroll();
   const scrollVelocity = useVelocity(scrollY);
   
@@ -27,18 +29,21 @@ export function ScrollDistortionWrapper({ children }: { children: React.ReactNod
   
   // Top border bend path
   const topPathData = useTransform(bendAmount, (v) => {
-    return `M 0,0 Q 50,${v} 100,0`;
+    return isMobile ? "M 0,0 L 100,0" : `M 0,0 Q 50,${v} 100,0`;
   });
 
   // Bottom border bend path
   const bottomPathData = useTransform(bendAmount, (v) => {
-    return `M 0,100 Q 50,${100 + v} 100,100`;
+    return isMobile ? "M 0,100 L 100,100" : `M 0,100 Q 50,${100 + v} 100,100`;
   });
 
   // Full shape for the glass background
   const fullShapeData = useTransform(bendAmount, (v) => {
-    return `M 0,0 Q 50,${v} 100,0 L 100,100 Q 50,${100 + v} 0,100 Z`;
+    return isMobile ? "M 0,0 L 100,0 L 100,100 L 0,100 Z" : `M 0,0 Q 50,${v} 100,0 L 100,100 Q 50,${100 + v} 0,100 Z`;
   });
+
+  const contentY = useTransform(smoothVelocity, [-3000, 3000], [15, -15]);
+  const contentRotateX = useTransform(smoothVelocity, [-3000, 3000], [15, -15]);
 
   return (
     <div className="relative w-full h-full overflow-visible drop-shadow-2xl">
@@ -79,7 +84,7 @@ export function ScrollDistortionWrapper({ children }: { children: React.ReactNod
                 fill: "none", 
                 strokeWidth: 2,
                 vectorEffect: "non-scaling-stroke",
-                filter: "drop-shadow(0 0 4px var(--primary))"
+                filter: isMobile ? "none" : "drop-shadow(0 0 4px var(--primary))"
             }}
           />
         </svg>
@@ -87,9 +92,9 @@ export function ScrollDistortionWrapper({ children }: { children: React.ReactNod
 
       {/* Content Layer - Removed py-4 to allow for a thinner navbar */}
       <motion.div
-        style={{
-          y: useTransform(smoothVelocity, [-3000, 3000], [15, -15]),
-          rotateX: useTransform(smoothVelocity, [-3000, 3000], [15, -15]),
+        style={isMobile ? {} : {
+          y: contentY,
+          rotateX: contentRotateX,
         }}
         className="w-full h-full relative z-10 flex items-center justify-center"
       >
@@ -98,3 +103,4 @@ export function ScrollDistortionWrapper({ children }: { children: React.ReactNod
     </div>
   );
 }
+

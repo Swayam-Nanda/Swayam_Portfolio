@@ -161,379 +161,383 @@ export function Hero({ data }: { data?: any }) {
     mouseY.set(((e.clientY - rect.top) / rect.height) * 100);
   };
 
-  if (isMobile) {
-    return (
-      <section
-        id="hero"
-        className="relative flex min-h-[100svh] flex-col items-center justify-between overflow-hidden pt-24 pb-8"
-      >
-        <div className="absolute inset-0 grid-lines opacity-10" aria-hidden />
-        <div
-          className="absolute inset-0"
-          aria-hidden
-          style={{ background: "var(--gradient-hero)" }}
-        />
-        <div className="absolute inset-0 edge-shadow-overlay" />
-
-        {/* Top Eyebrow Text & Roles */}
-        <div className="relative z-40 w-full text-center flex flex-col items-center">
-          <p className="font-display font-black text-[10px] uppercase tracking-[0.5em] text-primary">
-            {data?.eyebrow_text || "MEET NANDA JI KA BETA"}
-          </p>
-
-          {/* Dynamic Roles */}
-          <div className="h-6 mt-2 overflow-hidden px-4">
-            <AnimatePresence mode="wait">
-              <motion.p
-                key={roleIdx}
-                initial={{ y: 15, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                exit={{ y: -15, opacity: 0 }}
-                transition={{ duration: 0.4, ease: "circOut" }}
-                className="font-mono text-[9px] uppercase tracking-[0.2em] text-muted-foreground/60"
-              >
-                {roles[roleIdx]}
-              </motion.p>
-            </AnimatePresence>
-          </div>
-        </div>
-
-        {/* Center Container: Name + Portrait Image Stack */}
-        <div className="relative flex-1 w-full flex items-center justify-center my-4 overflow-visible">
-          {/* SWAYAM Text behind the portrait */}
-          <div className="absolute z-1 pointer-events-none select-none text-center w-full">
-            <h1
-              className="uppercase"
-              style={{
-                fontFamily: "'Anton', sans-serif",
-                lineHeight: "0.8",
-                fontWeight: "300",
-              }}
-            >
-              <span
-                className="block text-grainy text-center"
-                style={{
-                  fontSize: "clamp(4.5rem, 20vw, 8rem)",
-                  transform: `scaleY(1.15) scaleX(0.9)`,
-                  letterSpacing: "-0.04em",
-                  display: "inline-block",
-                  opacity: 0.15,
-                }}
-              >
-                {data?.name || "SWAYAM"}
-              </span>
-            </h1>
-          </div>
-
-          {/* Portrait Image (transparent background PNG) */}
-          <div className="relative z-2 w-[78vw] max-w-[320px] aspect-[3/4] rounded-[2rem] overflow-hidden border border-white/10 shadow-[0_0_40px_rgba(56,189,248,0.15)]">
-            <img
-              src={portrait}
-              alt={data?.name || "Swayam"}
-              className="w-full h-full object-cover"
-            />
-          </div>
-        </div>
-
-        {/* Bottom CTA Actions */}
-        <div className="relative z-40 w-full px-6 flex flex-col items-center gap-4 mt-2">
-          <a
-            href="#about"
-            className="group flex items-center gap-3 w-full max-w-[280px] p-3 rounded-full bg-white/5 border border-white/10 shadow-elegant hover:bg-primary/10 hover:border-primary/30 transition-all justify-center"
-          >
-            <div className="size-8 rounded-full glass flex items-center justify-center text-foreground group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
-              <ArrowRight className="size-3.5 rotate-90" />
-            </div>
-            <div className="flex flex-col leading-none text-left">
-              <span className="font-display font-black text-sm uppercase tracking-tighter text-foreground group-hover:text-primary transition-colors">
-                Know more
-              </span>
-              <span className="font-display font-black text-[8px] uppercase tracking-widest text-muted-foreground/60 mt-0.5">
-                about me
-              </span>
-            </div>
-          </a>
-
-          <a
-            href="#contact"
-            className="group flex items-center gap-3 w-full max-w-[280px] p-3 rounded-full bg-primary text-primary-foreground shadow-glow hover:scale-105 transition-all justify-center"
-          >
-            <div className="size-8 rounded-full bg-white/20 flex items-center justify-center text-primary-foreground">
-              <ArrowRight className="size-3.5 rotate-90" />
-            </div>
-            <div className="flex flex-col leading-none text-left">
-              <span className="font-display font-black text-sm uppercase tracking-tighter text-primary-foreground">
-                Start a project
-              </span>
-              <span className="font-display font-black text-[8px] uppercase tracking-widest text-primary-foreground/75 mt-0.5">
-                Get in touch
-              </span>
-            </div>
-          </a>
-        </div>
-      </section>
-    );
-  }
-
   return (
-    <section
-      ref={ref}
-      id="hero"
-      className="relative flex min-h-[100svh] items-center justify-center overflow-hidden pt-20"
-    >
-      <div className="absolute inset-0 grid-lines opacity-20" aria-hidden />
-      <div
-        className="absolute inset-0"
-        aria-hidden
-        style={{ background: "var(--gradient-hero)" }}
-      />
-
-      {/* Edge Shadow Overlays */}
-      <div className="absolute inset-0 edge-shadow-overlay" />
-
-      {/* Top Eyebrow Text & Roles */}
-      <div className="absolute top-16 md:top-24 left-1/2 -translate-x-1/2 z-40 w-full text-center flex flex-col items-center">
-        <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className="font-display font-black text-[10px] md:text-sm uppercase tracking-[0.5em] md:tracking-[0.8em] text-primary"
+    <>
+      {/* Mobile view */}
+      <div className="md:hidden">
+        <section
+          id="hero"
+          className="relative flex min-h-[100svh] flex-col items-center justify-between overflow-hidden pt-24 pb-8"
         >
-          {data?.eyebrow_text || "MEET NANDA JI KA BETA"}
-        </motion.p>
+          <div className="absolute inset-0 grid-lines opacity-10" aria-hidden />
+          <div
+            className="absolute inset-0"
+            aria-hidden
+            style={{ background: "var(--gradient-hero)" }}
+          />
+          <div className="absolute inset-0 edge-shadow-overlay" />
 
-        {/* Dynamic Roles */}
-        <div className="h-6 mt-2 md:mt-4 overflow-hidden px-4">
-          <AnimatePresence mode="wait">
-            <motion.p
-              key={roleIdx}
-              initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: -20, opacity: 0 }}
-              transition={{ duration: 0.5, ease: "circOut" }}
-              className="font-mono text-[8px] md:text-xs uppercase tracking-[0.2em] md:tracking-[0.4em] text-muted-foreground/60"
-            >
-              {roles[roleIdx]}
-            </motion.p>
-          </AnimatePresence>
-        </div>
-      </div>
+          {/* Top Eyebrow Text & Roles */}
+          <div className="relative z-40 w-full text-center flex flex-col items-center">
+            <p className="font-display font-black text-[10px] uppercase tracking-[0.5em] text-primary">
+              {data?.eyebrow_text || "MEET NANDA JI KA BETA"}
+            </p>
 
-      {/* Bottom Content: Left (Know More) */}
-      <div className="absolute left-6 bottom-24 md:left-10 md:bottom-12 z-40">
-        <motion.a
-          href="#about"
-          className="group flex items-center gap-3 md:gap-4"
-          whileHover={{ x: 10 }}
-        >
-          <div className="size-10 md:size-14 rounded-full glass border-white/10 flex items-center justify-center text-foreground group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-500 shadow-elegant">
-            <ArrowRight className="size-4 md:size-6 rotate-90" />
-          </div>
-          <div className="flex flex-col leading-none">
-            <span className="font-display font-black text-lg md:text-xl uppercase tracking-tighter text-foreground group-hover:text-primary transition-colors">
-              Know more
-              </span>
-            <span className="font-display font-black text-[9px] md:text-xs uppercase tracking-widest text-muted-foreground/60 mt-0.5 md:mt-1">
-              about me
-            </span>
-          </div>
-        </motion.a>
-      </div>
-
-      {/* Bottom Content: Center (Socials) */}
-      <div className="absolute left-1/2 bottom-8 md:bottom-12 -translate-x-1/2 z-40 hidden sm:block">
-        <div className="flex items-center gap-4 md:gap-8">
-          {[
-            {
-              icon: <Github className="size-5" />,
-              href: data?.github || "https://github.com",
-              label: "GitHub",
-            },
-            {
-              icon: <Linkedin className="size-5" />,
-              href: data?.linkedin || "https://linkedin.com",
-              label: "LinkedIn",
-            },
-            {
-              icon: (
-                <svg viewBox="0 0 24 24" className="size-4.5 fill-current">
-                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                </svg>
-              ),
-              href: data?.twitter || "https://x.com",
-              label: "X",
-            },
-            {
-              icon: (
-                <svg viewBox="0 0 24 24" className="size-5 fill-current">
-                  <path d="M13.483 0a1.374 1.374 0 0 0-.961.414l-9.77 9.77a1.375 1.374 0 0 0 0 1.942l9.77 9.77c.26.26.609.404.961.404.352 0 .701-.144.961-.404l2.777-2.77a1.374 1.374 0 0 0 0-1.942l-9.77-9.77a1.375 1.374 0 0 0 0-1.942l9.77-9.77A1.374 1.374 0 0 0 13.483 0zM13.483 1.942l8.8 8.8-8.8 8.8-1.816-1.815 6.984-6.985-6.984-6.984zM6.984 10.742l1.815 1.815-1.815 1.815-1.815-1.815z" />
-                </svg>
-              ),
-              href: data?.leetcode || "https://leetcode.com",
-              label: "LeetCode",
-              hoverColor: "#FFA116",
-            },
-          ].map((s) => (
-            <motion.a
-              key={s.label}
-              href={s.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="size-12 rounded-xl glass border border-white/5 flex items-center justify-center text-muted-foreground transition-all relative group shadow-elegant"
-              whileHover={{
-                scale: 1.2,
-                y: -8,
-                rotate: 8,
-                color: (s as any).hoverColor || "var(--primary)",
-              }}
-            >
-              {s.icon}
-              <span className="absolute -top-10 left-1/2 -translate-x-1/2 px-2 py-1 bg-primary text-primary-foreground text-[8px] font-mono rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap uppercase tracking-widest">
-                {s.label}
-              </span>
-            </motion.a>
-          ))}
-        </div>
-      </div>
-
-      {/* Bottom Content: Right (Dynamic Actions) */}
-      <div className="absolute right-6 bottom-8 md:right-10 md:bottom-12 z-40">
-        <motion.a
-          href="#contact"
-          className="group flex items-center gap-3 md:gap-4 text-right"
-          whileHover={{ x: -10 }}
-        >
-          <div className="flex flex-col leading-none order-1">
-            <span className="font-display font-black text-lg md:text-xl uppercase tracking-tighter text-foreground group-hover:text-primary transition-colors">
-              Start a project
-            </span>
-            <span className="font-display font-black text-[9px] md:text-xs uppercase tracking-widest text-muted-foreground/60 mt-0.5 md:mt-1">
-              Get in touch
-            </span>
-          </div>
-          <div className="size-10 md:size-14 rounded-full glass border-white/10 flex items-center justify-center text-foreground group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-500 shadow-elegant order-2">
-            <ArrowRight className="size-4 md:size-6 rotate-90" />
-          </div>
-        </motion.a>
-      </div>
-
-      <div
-        className="absolute inset-0 flex items-center justify-center"
-        style={{ perspective: "1200px" }}
-      >
-        <div className="relative flex h-full w-full items-center justify-center">
-          <motion.div
-            ref={imgWrap}
-            style={{
-              rotateX: isMobile ? 0 : tiltX,
-              rotateY: isMobile ? 0 : tiltY,
-              scale: isMobile ? 1 : imgScale,
-              y: isMobile ? 0 : imgY,
-              position: "absolute",
-              inset: 0,
-              zIndex: currentImgConfig.zIndex,
-              transformStyle: "preserve-3d",
-            }}
-            onMouseMove={isMobile ? undefined : onMove}
-            onMouseLeave={isMobile ? undefined : () => window.dispatchEvent(new Event("reset-blob"))}
-            className={isMobile ? undefined : "cursor-none"}
-          >
-            {/* LAYER 1: REVEAL BG ONLY (Bottom) */}
-            <div
-              style={{
-                position: "absolute",
-                inset: 0,
-                zIndex: 1,
-                transform: "translateZ(-10px)",
-                pointerEvents: "none",
-              }}
-            >
-              <LorenzoInteractivePortrait
-                baseImageUrl={portrait}
-                revealImageUrl={portraitAlt}
-                backgroundColor="transparent"
-                blobRadius={0.14}
-                blobFadeSpeed={1.8}
-                fadeInDelay={0.4}
-                fadeInDuration={1.2}
-                colorBgVec3={hexToVec3(themeColor, 0.05)}
-                colorSoftShapeVec3={hexToVec3(themeColor, 0.2)}
-                colorLineVec3={hexToVec3(themeColor, 0.5)}
-                maxImageWidth={520}
-                yOffset={-30}
-                renderMode="bgOnly"
-              />
+            {/* Dynamic Roles */}
+            <div className="h-6 mt-2 overflow-hidden px-4">
+              <AnimatePresence mode="wait">
+                <motion.p
+                  key={roleIdx}
+                  initial={{ y: 15, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  exit={{ y: -15, opacity: 0 }}
+                  transition={{ duration: 0.4, ease: "circOut" }}
+                  className="font-mono text-[9px] uppercase tracking-[0.2em] text-muted-foreground/60"
+                >
+                  {roles[roleIdx]}
+                </motion.p>
+              </AnimatePresence>
             </div>
+          </div>
 
-            {/* LAYER 2: SWAYAM TEXT (Middle) */}
-            <motion.div
-              style={{
-                y: isMobile ? 0 : typoY,
-                opacity: isMobile ? 1 : typoOpacity,
-                scale: isMobile ? 1 : typoScale,
-                zIndex: currentTextConfig.zIndex,
-                transform: `translateZ(0px) translateY(${currentTextConfig.yOffset})`,
-                left: currentTextConfig.leftOffset,
-                top: currentTextConfig.topOffset,
-              }}
-              className="pointer-events-none absolute select-none text-left w-full"
-            >
-              <motion.h1
-                layoutId="brand-text"
+          {/* Center Container: Name + Portrait Image Stack */}
+          <div className="relative flex-1 w-full flex items-center justify-center my-4 overflow-visible">
+            {/* SWAYAM Text behind the portrait */}
+            <div className="absolute z-1 pointer-events-none select-none text-center w-full">
+              <h1
                 className="uppercase"
                 style={{
                   fontFamily: "'Anton', sans-serif",
-                  lineHeight: currentTextConfig.lineHeight,
-                  fontWeight: currentTextConfig.fontWeight,
-                  // @ts-ignore - custom CSS variables
-                  "--text-opacity": currentTextConfig.opacity,
-                  "--text-shadow-blur": currentTextConfig.shadowBlur,
-                  "--text-shadow-opacity": currentTextConfig.shadowOpacity,
+                  lineHeight: "0.8",
+                  fontWeight: "300",
                 }}
               >
                 <span
-                  className="block text-grainy text-center md:text-left"
+                  className="block text-grainy text-center"
                   style={{
-                    fontSize: currentTextConfig.fontSize,
-                    transform: `scaleY(${currentTextConfig.heightScale}) scaleX(${currentTextConfig.widthScale})`,
-                    letterSpacing: currentTextConfig.letterSpacing,
+                    fontSize: "clamp(4.5rem, 20vw, 8rem)",
+                    transform: `scaleY(1.15) scaleX(0.9)`,
+                    letterSpacing: "-0.04em",
                     display: "inline-block",
+                    opacity: 0.15,
                   }}
                 >
                   {data?.name || "SWAYAM"}
                 </span>
-              </motion.h1>
-            </motion.div>
+              </h1>
+            </div>
 
-            {/* LAYER 3: PORTRAITS ONLY (Top) */}
-            <div
-              style={{
-                position: "absolute",
-                inset: 0,
-                zIndex: 3,
-                transform: "translateZ(10px)",
-                pointerEvents: "none",
-              }}
-            >
-              <LorenzoInteractivePortrait
-                baseImageUrl={portrait}
-                revealImageUrl={portraitAlt}
-                backgroundColor="transparent"
-                blobRadius={0.14}
-                blobFadeSpeed={1.8}
-                fadeInDelay={0.4}
-                fadeInDuration={1.2}
-                colorBgVec3={hexToVec3(themeColor, 0.05)}
-                colorSoftShapeVec3={hexToVec3(themeColor, 0.2)}
-                colorLineVec3={hexToVec3(themeColor, 0.5)}
-                maxImageWidth={520}
-                yOffset={-30}
-                renderMode="portraitsOnly"
+            {/* Portrait Image (transparent background PNG) */}
+            <div className="relative z-2 w-[78vw] max-w-[320px] aspect-[3/4] rounded-[2rem] overflow-hidden border border-white/10 shadow-[0_0_40px_rgba(56,189,248,0.15)]">
+              <img
+                src={portrait}
+                alt={data?.name || "Swayam"}
+                className="w-full h-full object-cover"
               />
             </div>
-          </motion.div>
-        </div>
+          </div>
+
+          {/* Bottom CTA Actions */}
+          <div className="relative z-40 w-full px-6 flex flex-col items-center gap-4 mt-2">
+            <a
+              href="#about"
+              className="group flex items-center gap-3 w-full max-w-[280px] p-3 rounded-full bg-white/5 border border-white/10 shadow-elegant hover:bg-primary/10 hover:border-primary/30 transition-all justify-center"
+            >
+              <div className="size-8 rounded-full glass flex items-center justify-center text-foreground group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
+                <ArrowRight className="size-3.5 rotate-90" />
+              </div>
+              <div className="flex flex-col leading-none text-left">
+                <span className="font-display font-black text-sm uppercase tracking-tighter text-foreground group-hover:text-primary transition-colors">
+                  Know more
+                </span>
+                <span className="font-display font-black text-[8px] uppercase tracking-widest text-muted-foreground/60 mt-0.5">
+                  about me
+                </span>
+              </div>
+            </a>
+
+            <a
+              href="#contact"
+              className="group flex items-center gap-3 w-full max-w-[280px] p-3 rounded-full bg-primary text-primary-foreground shadow-glow hover:scale-105 transition-all justify-center"
+            >
+              <div className="size-8 rounded-full bg-white/20 flex items-center justify-center text-primary-foreground">
+                <ArrowRight className="size-3.5 rotate-90" />
+              </div>
+              <div className="flex flex-col leading-none text-left">
+                <span className="font-display font-black text-sm uppercase tracking-tighter text-primary-foreground">
+                  Start a project
+                </span>
+                <span className="font-display font-black text-[8px] uppercase tracking-widest text-primary-foreground/75 mt-0.5">
+                  Get in touch
+                </span>
+              </div>
+            </a>
+          </div>
+        </section>
       </div>
-    </section>
+
+      {/* Desktop view */}
+      <div className="hidden md:block">
+        <section
+          ref={ref}
+          id="hero"
+          className="relative flex min-h-[100svh] items-center justify-center overflow-hidden pt-20"
+        >
+          <div className="absolute inset-0 grid-lines opacity-20" aria-hidden />
+          <div
+            className="absolute inset-0"
+            aria-hidden
+            style={{ background: "var(--gradient-hero)" }}
+          />
+
+          {/* Edge Shadow Overlays */}
+          <div className="absolute inset-0 edge-shadow-overlay" />
+
+          {/* Top Eyebrow Text & Roles */}
+          <div className="absolute top-16 md:top-24 left-1/2 -translate-x-1/2 z-40 w-full text-center flex flex-col items-center">
+            <motion.p
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+              className="font-display font-black text-[10px] md:text-sm uppercase tracking-[0.5em] md:tracking-[0.8em] text-primary"
+            >
+              {data?.eyebrow_text || "MEET NANDA JI KA BETA"}
+            </motion.p>
+
+            {/* Dynamic Roles */}
+            <div className="h-6 mt-2 md:mt-4 overflow-hidden px-4">
+              <AnimatePresence mode="wait">
+                <motion.p
+                  key={roleIdx}
+                  initial={{ y: 20, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  exit={{ y: -20, opacity: 0 }}
+                  transition={{ duration: 0.5, ease: "circOut" }}
+                  className="font-mono text-[8px] md:text-xs uppercase tracking-[0.2em] md:tracking-[0.4em] text-muted-foreground/60"
+                >
+                  {roles[roleIdx]}
+                </motion.p>
+              </AnimatePresence>
+            </div>
+          </div>
+
+          {/* Bottom Content: Left (Know More) */}
+          <div className="absolute left-6 bottom-24 md:left-10 md:bottom-12 z-40">
+            <motion.a
+              href="#about"
+              className="group flex items-center gap-3 md:gap-4"
+              whileHover={{ x: 10 }}
+            >
+              <div className="size-10 md:size-14 rounded-full glass border-white/10 flex items-center justify-center text-foreground group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-500 shadow-elegant">
+                <ArrowRight className="size-4 md:size-6 rotate-90" />
+              </div>
+              <div className="flex flex-col leading-none">
+                <span className="font-display font-black text-lg md:text-xl uppercase tracking-tighter text-foreground group-hover:text-primary transition-colors">
+                  Know more
+                  </span>
+                <span className="font-display font-black text-[9px] md:text-xs uppercase tracking-widest text-muted-foreground/60 mt-0.5 md:mt-1">
+                  about me
+                </span>
+              </div>
+            </motion.a>
+          </div>
+
+          {/* Bottom Content: Center (Socials) */}
+          <div className="absolute left-1/2 bottom-8 md:bottom-12 -translate-x-1/2 z-40 hidden sm:block">
+            <div className="flex items-center gap-4 md:gap-8">
+              {[
+                {
+                  icon: <Github className="size-5" />,
+                  href: data?.github || "https://github.com",
+                  label: "GitHub",
+                },
+                {
+                  icon: <Linkedin className="size-5" />,
+                  href: data?.linkedin || "https://linkedin.com",
+                  label: "LinkedIn",
+                },
+                {
+                  icon: (
+                    <svg viewBox="0 0 24 24" className="size-4.5 fill-current">
+                      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                    </svg>
+                  ),
+                  href: data?.twitter || "https://x.com",
+                  label: "X",
+                },
+                {
+                  icon: (
+                    <svg viewBox="0 0 24 24" className="size-5 fill-current">
+                      <path d="M13.483 0a1.374 1.374 0 0 0-.961.414l-9.77 9.77a1.375 1.374 0 0 0 0 1.942l9.77 9.77c.26.26.609.404.961.404.352 0 .701-.144.961-.404l2.777-2.77a1.374 1.374 0 0 0 0-1.942l-9.77-9.77a1.375 1.374 0 0 0 0-1.942l9.77-9.77A1.374 1.374 0 0 0 13.483 0zM13.483 1.942l8.8 8.8-8.8 8.8-1.816-1.815 6.984-6.985-6.984-6.984zM6.984 10.742l1.815 1.815-1.815 1.815-1.815-1.815z" />
+                    </svg>
+                  ),
+                  href: data?.leetcode || "https://leetcode.com",
+                  label: "LeetCode",
+                  hoverColor: "#FFA116",
+                },
+              ].map((s) => (
+                <motion.a
+                  key={s.label}
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="size-12 rounded-xl glass border border-white/5 flex items-center justify-center text-muted-foreground transition-all relative group shadow-elegant"
+                  whileHover={{
+                    scale: 1.2,
+                    y: -8,
+                    rotate: 8,
+                    color: (s as any).hoverColor || "var(--primary)",
+                  }}
+                >
+                  {s.icon}
+                  <span className="absolute -top-10 left-1/2 -translate-x-1/2 px-2 py-1 bg-primary text-primary-foreground text-[8px] font-mono rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap uppercase tracking-widest">
+                    {s.label}
+                  </span>
+                </motion.a>
+              ))}
+            </div>
+          </div>
+
+          {/* Bottom Content: Right (Dynamic Actions) */}
+          <div className="absolute right-6 bottom-8 md:right-10 md:bottom-12 z-40">
+            <motion.a
+              href="#contact"
+              className="group flex items-center gap-3 md:gap-4 text-right"
+              whileHover={{ x: -10 }}
+            >
+              <div className="flex flex-col leading-none order-1">
+                <span className="font-display font-black text-lg md:text-xl uppercase tracking-tighter text-foreground group-hover:text-primary transition-colors">
+                  Start a project
+                </span>
+                <span className="font-display font-black text-[9px] md:text-xs uppercase tracking-widest text-muted-foreground/60 mt-0.5 md:mt-1">
+                  Get in touch
+                </span>
+              </div>
+              <div className="size-10 md:size-14 rounded-full glass border-white/10 flex items-center justify-center text-foreground group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-500 shadow-elegant order-2">
+                <ArrowRight className="size-4 md:size-6 rotate-90" />
+              </div>
+            </motion.a>
+          </div>
+
+          <div
+            className="absolute inset-0 flex items-center justify-center"
+            style={{ perspective: "1200px" }}
+          >
+            <div className="relative flex h-full w-full items-center justify-center">
+              <motion.div
+                ref={imgWrap}
+                style={{
+                  rotateX: isMobile ? 0 : tiltX,
+                  rotateY: isMobile ? 0 : tiltY,
+                  scale: isMobile ? 1 : imgScale,
+                  y: isMobile ? 0 : imgY,
+                  position: "absolute",
+                  inset: 0,
+                  zIndex: currentImgConfig.zIndex,
+                  transformStyle: "preserve-3d",
+                }}
+                onMouseMove={isMobile ? undefined : onMove}
+                onMouseLeave={isMobile ? undefined : () => window.dispatchEvent(new Event("reset-blob"))}
+                className={isMobile ? undefined : "cursor-none"}
+              >
+                {/* LAYER 1: REVEAL BG ONLY (Bottom) */}
+                <div
+                  style={{
+                    position: "absolute",
+                    inset: 0,
+                    zIndex: 1,
+                    transform: "translateZ(-10px)",
+                    pointerEvents: "none",
+                  }}
+                >
+                  <LorenzoInteractivePortrait
+                    baseImageUrl={portrait}
+                    revealImageUrl={portraitAlt}
+                    backgroundColor="transparent"
+                    blobRadius={0.14}
+                    blobFadeSpeed={1.8}
+                    fadeInDelay={0.4}
+                    fadeInDuration={1.2}
+                    colorBgVec3={hexToVec3(themeColor, 0.05)}
+                    colorSoftShapeVec3={hexToVec3(themeColor, 0.2)}
+                    colorLineVec3={hexToVec3(themeColor, 0.5)}
+                    maxImageWidth={520}
+                    yOffset={-30}
+                    renderMode="bgOnly"
+                  />
+                </div>
+
+                {/* LAYER 2: SWAYAM TEXT (Middle) */}
+                <motion.div
+                  style={{
+                    y: isMobile ? 0 : typoY,
+                    opacity: isMobile ? 1 : typoOpacity,
+                    scale: isMobile ? 1 : typoScale,
+                    zIndex: currentTextConfig.zIndex,
+                    transform: `translateZ(0px) translateY(${currentTextConfig.yOffset})`,
+                    left: currentTextConfig.leftOffset,
+                    top: currentTextConfig.topOffset,
+                  }}
+                  className="pointer-events-none absolute select-none text-left w-full"
+                >
+                  <motion.h1
+                    layoutId="brand-text"
+                    className="uppercase"
+                    style={{
+                      fontFamily: "'Anton', sans-serif",
+                      lineHeight: currentTextConfig.lineHeight,
+                      fontWeight: currentTextConfig.fontWeight,
+                      // @ts-ignore - custom CSS variables
+                      "--text-opacity": currentTextConfig.opacity,
+                      "--text-shadow-blur": currentTextConfig.shadowBlur,
+                      "--text-shadow-opacity": currentTextConfig.shadowOpacity,
+                    }}
+                  >
+                    <span
+                      className="block text-grainy text-center md:text-left"
+                      style={{
+                        fontSize: currentTextConfig.fontSize,
+                        transform: `scaleY(${currentTextConfig.heightScale}) scaleX(${currentTextConfig.widthScale})`,
+                        letterSpacing: currentTextConfig.letterSpacing,
+                        display: "inline-block",
+                      }}
+                    >
+                      {data?.name || "SWAYAM"}
+                    </span>
+                  </motion.h1>
+                </motion.div>
+
+                {/* LAYER 3: PORTRAITS ONLY (Top) */}
+                <div
+                  style={{
+                    position: "absolute",
+                    inset: 0,
+                    zIndex: 3,
+                    transform: "translateZ(10px)",
+                    pointerEvents: "none",
+                  }}
+                >
+                  <LorenzoInteractivePortrait
+                    baseImageUrl={portrait}
+                    revealImageUrl={portraitAlt}
+                    backgroundColor="transparent"
+                    blobRadius={0.14}
+                    blobFadeSpeed={1.8}
+                    fadeInDelay={0.4}
+                    fadeInDuration={1.2}
+                    colorBgVec3={hexToVec3(themeColor, 0.05)}
+                    colorSoftShapeVec3={hexToVec3(themeColor, 0.2)}
+                    colorLineVec3={hexToVec3(themeColor, 0.5)}
+                    maxImageWidth={520}
+                    yOffset={-30}
+                    renderMode="portraitsOnly"
+                  />
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
   );
 }

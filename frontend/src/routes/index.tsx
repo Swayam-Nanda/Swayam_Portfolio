@@ -151,16 +151,8 @@ function ParallaxSection({ children }: { children: React.ReactNode }) {
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "15%"]);
   const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0.7, 1, 1, 0.7]);
 
-  if (isMobile) {
-    return (
-      <div className="relative z-10">
-        {children}
-      </div>
-    );
-  }
-
   return (
-    <motion.section ref={ref} style={{ y, opacity }} className="relative z-10">
+    <motion.section ref={ref} style={isMobile ? {} : { y, opacity }} className="relative z-10">
       {children}
     </motion.section>
   );
@@ -169,7 +161,6 @@ function ParallaxSection({ children }: { children: React.ReactNode }) {
 function RaysBackground() {
   const { scrollYProgress } = useScroll();
   const { themeColors } = useTheme();
-  const isMobile = useIsMobile();
 
   // Perimeter revolving logic: Travels along the edges clockwise
   const rayX = useTransform(scrollYProgress, [0, 0.25, 0.5, 0.75, 1], [1.2, 1.2, -0.2, -0.2, 1.2]);
@@ -206,11 +197,8 @@ function RaysBackground() {
     };
   }, [rotation, rayX, rayY, rotation2, rayX2, rayY2]);
 
-  // Don't render expensive WebGL canvases on mobile — saves GPU and battery
-  if (isMobile) return null;
-
   return (
-    <div className="fixed inset-0 z-[1] pointer-events-none overflow-hidden opacity-60">
+    <div className="hidden md:block fixed inset-0 z-[1] pointer-events-none overflow-hidden opacity-60">
       <SideRays
         rayPos={pos}
         tilt={tilt}
@@ -234,3 +222,4 @@ function RaysBackground() {
     </div>
   );
 }
+
