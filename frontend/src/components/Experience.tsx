@@ -286,93 +286,97 @@ export function Experience({ data }: { data?: any[] }) {
     ["0px", `-${(displayItems.length - 1) * cardWidth}px`],
   );
 
-  if (isMobile) {
-    return (
-      <section id="experience" className="relative w-full py-16 px-6 bg-transparent z-40 isolate">
-        <div className="max-w-xl mx-auto">
-          <span className="font-mono text-[10px] uppercase tracking-[0.4em] text-primary block mb-3 opacity-60">
-            ／ 04 — Trajectory
-          </span>
-          <h2 className="font-display text-3xl font-bold tracking-tight text-gradient leading-tight mb-12">
-            The <span className="text-gradient-primary italic">Journey</span>
-          </h2>
-          
-          <div className="relative pl-6 border-l border-white/10 space-y-12">
-            {displayItems.map((item, i) => {
-              const isMajor = item.card_type === "big" || item.card_type === "medium";
-              return (
-                <div key={item.title + i} className="relative">
-                  {/* Glowing Node Dot */}
-                  <div className="absolute -left-[31px] top-1.5 flex items-center justify-center">
-                    <div className={`rounded-full shadow-glow ${isMajor ? "size-3.5 bg-primary" : "size-2.5 bg-white/40 border border-white/10"}`} />
-                  </div>
-                  
-                  {/* Card Content */}
-                  <div className={`glass-strong p-6 rounded-[1.5rem] border ${
-                    isMajor
-                      ? "border-primary/40 bg-primary/5 shadow-[0_0_30px_rgba(56,189,248,0.15)]"
-                      : "border-white/10 bg-white/[0.01]"
-                  }`}>
-                    <div className="font-mono text-[9px] uppercase tracking-[0.4em] text-primary mb-2 opacity-80">
-                      {item.year}
-                    </div>
-                    <h3 className="font-display font-bold tracking-tight text-white text-base mb-1">
-                      {item.title}
-                    </h3>
-                    <div className="text-[9px] font-medium text-primary/60 mb-3 uppercase tracking-[0.2em] italic">
-                      {item.place}
-                    </div>
-                    <p className="font-mono text-muted-foreground text-[10px] leading-relaxed">
-                      {item.desc}
-                    </p>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-    );
-  }
-
   return (
-    <section 
-      ref={containerRef} 
-      id="experience" 
-      className="relative block w-full bg-transparent overflow-visible z-40 isolate"
-      style={{ minHeight: "600vh" }}
-    >
-      <div className="sticky top-0 h-screen w-full overflow-hidden flex flex-col items-center justify-center z-10">
-        <div className="absolute top-24 left-0 right-0 z-40 px-6 md:px-8 pointer-events-auto">
-          <div className="max-w-7xl mx-auto flex flex-col items-center md:items-start">
+    <>
+      {/* Mobile view */}
+      <div className="md:hidden">
+        <section id="experience" className="relative w-full py-16 px-6 bg-transparent z-40 isolate">
+          <div className="max-w-xl mx-auto">
             <span className="font-mono text-[10px] uppercase tracking-[0.4em] text-primary block mb-3 opacity-60">
               ／ 04 — Trajectory
             </span>
-            <h2 className="font-display text-3xl md:text-6xl font-bold tracking-tight text-gradient leading-tight">
+            <h2 className="font-display text-3xl font-bold tracking-tight text-gradient leading-tight mb-12">
               The <span className="text-gradient-primary italic">Journey</span>
             </h2>
+            
+            <div className="relative pl-6 border-l border-white/10 space-y-12">
+              {displayItems.map((item, i) => {
+                const isMajor = item.card_type === "big" || item.card_type === "medium";
+                return (
+                  <div key={item.title + i} className="relative">
+                    {/* Glowing Node Dot */}
+                    <div className="absolute -left-[31px] top-1.5 flex items-center justify-center">
+                      <div className={`rounded-full shadow-glow ${isMajor ? "size-3.5 bg-primary" : "size-2.5 bg-white/40 border border-white/10"}`} />
+                    </div>
+                    
+                    {/* Card Content */}
+                    <div className={`glass-strong p-6 rounded-[1.5rem] border ${
+                      isMajor
+                        ? "border-primary/40 bg-primary/5 shadow-[0_0_30px_rgba(56,189,248,0.15)]"
+                        : "border-white/10 bg-white/[0.01]"
+                    }`}>
+                      <div className="font-mono text-[9px] uppercase tracking-[0.4em] text-primary mb-2 opacity-80">
+                        {item.year}
+                      </div>
+                      <h3 className="font-display font-bold tracking-tight text-white text-base mb-1">
+                        {item.title}
+                      </h3>
+                      <div className="text-[9px] font-medium text-primary/60 mb-3 uppercase tracking-[0.2em] italic">
+                        {item.place}
+                      </div>
+                      <p className="font-mono text-muted-foreground text-[10px] leading-relaxed">
+                        {item.desc}
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
           </div>
-        </div>
-
-        <div className="relative w-full h-[70vh] mt-12 pointer-events-auto">
-          <div className="absolute top-1/2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-y-1/2 z-0" />
-          <JourneyStar progress={smoothProgress} />
-          <div className="relative h-full flex items-center overflow-visible">
-            <motion.div
-              style={{ x, left: "50%", marginLeft: `-${cardWidth / 2}px` }}
-              className="absolute top-0 bottom-0 flex items-center"
-            >
-              {displayItems.map((item, i) => (
-                <ExperienceItem key={item.title + i} item={item} index={i} />
-              ))}
-            </motion.div>
-          </div>
-        </div>
-
-        <div className="absolute bottom-12 left-0 right-0 flex justify-center opacity-30 pointer-events-auto">
-          <div className="h-12 w-px bg-gradient-to-b from-primary to-transparent" />
-        </div>
+        </section>
       </div>
-    </section>
+
+      {/* Desktop view */}
+      <div className="hidden md:block">
+        <section 
+          ref={containerRef} 
+          id="experience" 
+          className="relative block w-full bg-transparent overflow-visible z-40 isolate"
+          style={{ minHeight: "600vh" }}
+        >
+          <div className="sticky top-0 h-screen w-full overflow-hidden flex flex-col items-center justify-center z-10">
+            <div className="absolute top-24 left-0 right-0 z-40 px-6 md:px-8 pointer-events-auto">
+              <div className="max-w-7xl mx-auto flex flex-col items-center md:items-start">
+                <span className="font-mono text-[10px] uppercase tracking-[0.4em] text-primary block mb-3 opacity-60">
+                  ／ 04 — Trajectory
+                </span>
+                <h2 className="font-display text-3xl md:text-6xl font-bold tracking-tight text-gradient leading-tight">
+                  The <span className="text-gradient-primary italic">Journey</span>
+                </h2>
+              </div>
+            </div>
+
+            <div className="relative w-full h-[70vh] mt-12 pointer-events-auto">
+              <div className="absolute top-1/2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-y-1/2 z-0" />
+              <JourneyStar progress={smoothProgress} />
+              <div className="relative h-full flex items-center overflow-visible">
+                <motion.div
+                  style={{ x, left: "50%", marginLeft: `-${cardWidth / 2}px` }}
+                  className="absolute top-0 bottom-0 flex items-center"
+                >
+                  {displayItems.map((item, i) => (
+                    <ExperienceItem key={item.title + i} item={item} index={i} />
+                  ))}
+                </motion.div>
+              </div>
+            </div>
+
+            <div className="absolute bottom-12 left-0 right-0 flex justify-center opacity-30 pointer-events-auto">
+              <div className="h-12 w-px bg-gradient-to-b from-primary to-transparent" />
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
   );
 }
