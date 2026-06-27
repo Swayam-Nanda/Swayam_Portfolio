@@ -120,6 +120,7 @@ function Index() {
 }
 
 function ParallaxSection({ children }: { children: React.ReactNode }) {
+  const isMobile = useIsMobile();
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -128,6 +129,14 @@ function ParallaxSection({ children }: { children: React.ReactNode }) {
 
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "15%"]);
   const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0.7, 1, 1, 0.7]);
+
+  if (isMobile) {
+    return (
+      <div className="relative z-10">
+        {children}
+      </div>
+    );
+  }
 
   return (
     <motion.section ref={ref} style={{ y, opacity }} className="relative z-10">

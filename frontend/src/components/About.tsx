@@ -262,7 +262,7 @@ export function About({ data }: { data?: any }) {
         {/* TOP HALF (70%) - Bento Grid & Laser */}
         <div className="relative w-full h-[70vh] md:h-[65vh] overflow-hidden">
           {/* Bento Grid Layout - 8 Items perfectly tiled */}
-          <div className="absolute inset-0 w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 grid-rows-6 md:grid-rows-3 gap-1 p-1 z-10">
+          <div className="absolute inset-0 w-full grid grid-cols-2 md:grid-cols-4 grid-rows-4 md:grid-rows-3 gap-1 p-1 z-10">
             {GALLERY_ITEMS.map((item, i) => {
               const imageField = data?.[`image${item.id}`];
               const imageUrl = imageField

@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5B37CPQ2J5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-5B37CPQ2J5');
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ✅ Optimized Title Tag — Long-tail keyword focused -->
+    <title>CertiGen Studio — Bulk AI Certificate Generator with Verification | Free Online Tool</title>
+    <link rel="canonical" href="https://www.certigen.studio/" />
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- ✅ Meta Description — High-intent, action-focused -->
+    <meta name="description" content="Generate, collaborate, and verify certificates in bulk using AI. Real-time shared workspaces for teams. Perfect for events, courses & workshops — free to try." />
+
+    <!-- ✅ Expanded Long-Tail Keywords -->
+    <meta name="keywords" content="bulk certificate generator online, certificate verification system, shared workspace certificate maker, team collaboration certificate design, bulk certificate maker with verification, generate certificates in bulk free, certificate generator with QR code verification, AI certificate maker for events, collaborative certificate studio, bulk certificate generator for workshops, CertiGen Studio, certigen certificate generator, certificate automation tool, generate certificates from Excel, digital certificate generator" />
+
+    <meta name="author" content="CertiGen Studio" />
+    <meta name="robots" content="index, follow" />
+    <meta name="google-site-verification" content="P7ONkWhm70EeGBRZCPz_TzeJejaf9XFqPjSO-oVzGDA" />
+
+    <!-- ✅ JSON-LD: SoftwareApplication Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "CertiGen Studio",
+      "alternateName": ["CertiGen", "certigen certificate generator"],
+      "url": "https://www.certigen.studio",
+      "logo": "https://www.certigen.studio/logo.png",
+      "applicationCategory": "DesignApplication",
+      "description": "AI-powered bulk certificate generator with verification. Create, customize and verify certificates for events, courses, and workshops.",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": [
+        "Bulk certificate generation from Excel",
+        "AI-powered design and import",
+        "QR code certificate verification",
+        "Shared workspaces for team collaboration",
+        "High-fidelity PDF export",
+        "Instant verification registry"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "120"
+      }
+    }
+    </script>
+
+    <!-- ✅ JSON-LD: FAQ Schema — Targets featured snippets -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I generate certificates in bulk for free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CertiGen Studio lets you upload any Excel or CSV participant list and generate hundreds of personalized PDF certificates in minutes — completely free."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does CertiGen Studio support certificate verification?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Every certificate includes a unique QR code linking to a hosted verification page, allowing anyone to confirm authenticity instantly."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I collaborate with others on certificate designs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, CertiGen Studio features 'Shared Workspaces'. You can generate a secure link to invite teammates to view and edit your certificates in real-time without them needing to create an account."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use CertiGen Studio for online courses and workshops?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. CertiGen Studio is built for event organizers, course creators, and workshop hosts who need to issue professional certificates at scale."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <!-- ✅ Open Graph / Social Sharing -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.certigen.studio/" />
+    <meta property="og:title" content="CertiGen Studio — Bulk AI Certificate Generator with Verification" />
+    <meta property="og:description" content="Generate and verify certificates in bulk using AI. Perfect for events, courses & workshops. Free to try." />
+    <meta property="og:image" content="https://www.certigen.studio/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="CertiGen Studio" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- ✅ Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://www.certigen.studio/" />
+    <meta name="twitter:title" content="CertiGen Studio — Bulk AI Certificate Generator with Verification" />
+    <meta name="twitter:description" content="Generate and verify certificates in bulk using AI. Perfect for events, courses & workshops. Free to try." />
+    <meta name="twitter:image" content="https://www.certigen.studio/og-image.png" />
+
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <style>
+      body { margin: 0; padding: 0; box-sizing: border-box; background: #020617; }
+      #root { min-height: 100vh; }
+    </style>
+    <script type="module" crossorigin src="/assets/index-C2VcvwSJ.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

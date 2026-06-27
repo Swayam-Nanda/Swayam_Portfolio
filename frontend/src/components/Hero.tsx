@@ -161,6 +161,120 @@ export function Hero({ data }: { data?: any }) {
     mouseY.set(((e.clientY - rect.top) / rect.height) * 100);
   };
 
+  if (isMobile) {
+    return (
+      <section
+        id="hero"
+        className="relative flex min-h-[100svh] flex-col items-center justify-between overflow-hidden pt-24 pb-8"
+      >
+        <div className="absolute inset-0 grid-lines opacity-10" aria-hidden />
+        <div
+          className="absolute inset-0"
+          aria-hidden
+          style={{ background: "var(--gradient-hero)" }}
+        />
+        <div className="absolute inset-0 edge-shadow-overlay" />
+
+        {/* Top Eyebrow Text & Roles */}
+        <div className="relative z-40 w-full text-center flex flex-col items-center">
+          <p className="font-display font-black text-[10px] uppercase tracking-[0.5em] text-primary">
+            {data?.eyebrow_text || "MEET NANDA JI KA BETA"}
+          </p>
+
+          {/* Dynamic Roles */}
+          <div className="h-6 mt-2 overflow-hidden px-4">
+            <AnimatePresence mode="wait">
+              <motion.p
+                key={roleIdx}
+                initial={{ y: 15, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                exit={{ y: -15, opacity: 0 }}
+                transition={{ duration: 0.4, ease: "circOut" }}
+                className="font-mono text-[9px] uppercase tracking-[0.2em] text-muted-foreground/60"
+              >
+                {roles[roleIdx]}
+              </motion.p>
+            </AnimatePresence>
+          </div>
+        </div>
+
+        {/* Center Container: Name + Portrait Image Stack */}
+        <div className="relative flex-1 w-full flex items-center justify-center my-4 overflow-visible">
+          {/* SWAYAM Text behind the portrait */}
+          <div className="absolute z-1 pointer-events-none select-none text-center w-full">
+            <h1
+              className="uppercase"
+              style={{
+                fontFamily: "'Anton', sans-serif",
+                lineHeight: "0.8",
+                fontWeight: "300",
+              }}
+            >
+              <span
+                className="block text-grainy text-center"
+                style={{
+                  fontSize: "clamp(4.5rem, 20vw, 8rem)",
+                  transform: `scaleY(1.15) scaleX(0.9)`,
+                  letterSpacing: "-0.04em",
+                  display: "inline-block",
+                  opacity: 0.15,
+                }}
+              >
+                {data?.name || "SWAYAM"}
+              </span>
+            </h1>
+          </div>
+
+          {/* Portrait Image (transparent background PNG) */}
+          <div className="relative z-2 w-[78vw] max-w-[320px] aspect-[3/4] rounded-[2rem] overflow-hidden border border-white/10 shadow-[0_0_40px_rgba(56,189,248,0.15)]">
+            <img
+              src={portrait}
+              alt={data?.name || "Swayam"}
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+
+        {/* Bottom CTA Actions */}
+        <div className="relative z-40 w-full px-6 flex flex-col items-center gap-4 mt-2">
+          <a
+            href="#about"
+            className="group flex items-center gap-3 w-full max-w-[280px] p-3 rounded-full bg-white/5 border border-white/10 shadow-elegant hover:bg-primary/10 hover:border-primary/30 transition-all justify-center"
+          >
+            <div className="size-8 rounded-full glass flex items-center justify-center text-foreground group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
+              <ArrowRight className="size-3.5 rotate-90" />
+            </div>
+            <div className="flex flex-col leading-none text-left">
+              <span className="font-display font-black text-sm uppercase tracking-tighter text-foreground group-hover:text-primary transition-colors">
+                Know more
+              </span>
+              <span className="font-display font-black text-[8px] uppercase tracking-widest text-muted-foreground/60 mt-0.5">
+                about me
+              </span>
+            </div>
+          </a>
+
+          <a
+            href="#contact"
+            className="group flex items-center gap-3 w-full max-w-[280px] p-3 rounded-full bg-primary text-primary-foreground shadow-glow hover:scale-105 transition-all justify-center"
+          >
+            <div className="size-8 rounded-full bg-white/20 flex items-center justify-center text-primary-foreground">
+              <ArrowRight className="size-3.5 rotate-90" />
+            </div>
+            <div className="flex flex-col leading-none text-left">
+              <span className="font-display font-black text-sm uppercase tracking-tighter text-primary-foreground">
+                Start a project
+              </span>
+              <span className="font-display font-black text-[8px] uppercase tracking-widest text-primary-foreground/75 mt-0.5">
+                Get in touch
+              </span>
+            </div>
+          </a>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section
       ref={ref}
@@ -218,7 +332,7 @@ export function Hero({ data }: { data?: any }) {
           <div className="flex flex-col leading-none">
             <span className="font-display font-black text-lg md:text-xl uppercase tracking-tighter text-foreground group-hover:text-primary transition-colors">
               Know more
-            </span>
+              </span>
             <span className="font-display font-black text-[9px] md:text-xs uppercase tracking-widest text-muted-foreground/60 mt-0.5 md:mt-1">
               about me
             </span>

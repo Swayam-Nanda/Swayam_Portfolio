@@ -138,9 +138,10 @@ function ProjectCard({
     return () => clearInterval(interval);
   }, []);
 
-  const rotateY = isHovered ? 0 : distanceFromCenter * -15;
-  const blur = isHovered ? 0 : Math.min(Math.abs(distanceFromCenter) * 4, 3);
-  const scale = isHovered ? 1.05 : 1 - Math.abs(distanceFromCenter) * 0.1;
+  const isMobile = useIsMobile();
+  const rotateY = isMobile ? 0 : (isHovered ? 0 : distanceFromCenter * -15);
+  const blur = isMobile ? 0 : (isHovered ? 0 : Math.min(Math.abs(distanceFromCenter) * 4, 3));
+  const scale = isMobile ? 1 : (isHovered ? 1.05 : 1 - Math.abs(distanceFromCenter) * 0.1);
 
   const handleHover = (state: boolean) => {
     setIsHovered(state);
