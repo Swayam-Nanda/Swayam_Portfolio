@@ -117,8 +117,11 @@ export const MinimalistGlobe = () => {
     worldGroup.add(bordersGroup);
     const borderLines: THREE.Line[] = [];
 
-    fetch("https://raw.githubusercontent.com/johan/world.geo.json/master/countries.geo.json")
-      .then((res) => res.json())
+    fetch("https://cdn.jsdelivr.net/gh/johan/world.geo.json@master/countries.geo.json")
+      .then((res) => {
+        if (!res.ok) throw new Error(`HTTP error ${res.status}`);
+        return res.json();
+      })
       .then((data) => {
         data.features.forEach((feature: any) => {
           const { geometry } = feature;
@@ -130,6 +133,9 @@ export const MinimalistGlobe = () => {
             });
           }
         });
+      })
+      .catch((err) => {
+        console.error("Failed to load map borders GeoJSON:", err);
       });
 
     const drawPolygon = (coordinates: any, group: THREE.Group) => {
