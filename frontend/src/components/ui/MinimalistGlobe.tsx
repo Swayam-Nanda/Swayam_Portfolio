@@ -337,7 +337,7 @@ export const MinimalistGlobe = () => {
   return (
     <div className="relative h-full w-full pointer-events-auto">
       <div ref={mountRef} className="h-full w-full cursor-grab active:cursor-grabbing" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 translate-y-12 pointer-events-none text-center">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 translate-y-12 pointer-events-none text-center hidden md:block">
         <div className="glass px-4 py-2 rounded-xl border border-white/10 backdrop-blur-md min-w-[220px]">
           <p className="font-mono text-[11px] uppercase tracking-[0.4em] text-primary flex items-center justify-center gap-3">
             <span className="relative flex h-2 w-2">

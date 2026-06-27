@@ -64,26 +64,28 @@ export function Contact() {
         intro="A short brief gets us aligned faster than a 30-minute call."
       >
         <div className="relative min-h-[500px] md:min-h-[600px]">
-          <div className="glass relative z-10 mx-auto max-w-sm md:max-w-2xl overflow-hidden rounded-3xl p-6 md:p-10 shadow-2xl">
+          <div className="glass relative z-10 mx-auto w-full max-w-md md:max-w-2xl overflow-hidden rounded-2xl md:rounded-3xl p-4 sm:p-6 md:p-10 shadow-2xl">
             {/* stepper */}
-            <div className="mb-8 flex items-center gap-2">
+            <div className="mb-8 flex items-center gap-1.5 sm:gap-2">
               {steps.map((s, i) => (
-                <div key={s} className="flex flex-1 items-center gap-2">
+                <div key={s} className="flex flex-1 items-center gap-1.5 sm:gap-2">
                   <div
-                    className={`flex size-7 items-center justify-center rounded-full border text-xs font-medium transition-all ${
+                    className={`flex size-6 sm:size-7 shrink-0 items-center justify-center rounded-full border text-[10px] sm:text-xs font-medium transition-all ${
                       i <= step
                         ? "border-primary bg-primary text-primary-foreground"
                         : "border-white/15 text-muted-foreground"
                     }`}
                   >
-                    {i < step ? <Check className="size-3.5" /> : i + 1}
+                    {i < step ? <Check className="size-3 sm:size-3.5" /> : i + 1}
                   </div>
                   <span
-                    className={`text-xs uppercase tracking-[0.2em] ${i === step ? "text-foreground" : "text-muted-foreground"}`}
+                    className={`text-[10px] sm:text-xs uppercase tracking-[0.1em] sm:tracking-[0.2em] ${
+                      i === step ? "text-foreground" : "text-muted-foreground"
+                    }`}
                   >
                     {s}
                   </span>
-                  {i < steps.length - 1 && <div className="h-px flex-1 bg-white/10" />}
+                  {i < steps.length - 1 && <div className="h-px flex-1 bg-white/10 hidden sm:block" />}
                 </div>
               ))}
             </div>
@@ -244,13 +246,13 @@ function Chips({
   onChange: (v: string) => void;
 }) {
   return (
-    <div className="flex flex-wrap gap-2">
+    <div className="flex flex-wrap gap-1.5 sm:gap-2">
       {options.map((o) => (
         <button
           key={o}
           type="button"
           onClick={() => onChange(o)}
-          className={`rounded-full border px-4 py-2 text-sm transition-all ${
+          className={`rounded-full border px-3 py-1.5 text-xs sm:text-sm sm:px-4 sm:py-2 transition-all ${
             value === o
               ? "border-primary/60 bg-primary/15 text-foreground"
               : "border-white/10 text-muted-foreground hover:border-white/30 hover:text-foreground"
@@ -286,8 +288,8 @@ function Field({
           required
           value={value}
           onChange={(e) => onChange(e.target.value)}
-          rows={4}
-          className="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm outline-none transition-colors focus:border-primary/60"
+          rows={3}
+          className="w-full rounded-xl md:rounded-2xl border border-white/10 bg-white/5 px-3 py-2.5 md:px-4 md:py-3 text-sm outline-none transition-colors focus:border-primary/60"
         />
       ) : (
         <input
@@ -295,7 +297,7 @@ function Field({
           type={type}
           value={value}
           onChange={(e) => onChange(e.target.value)}
-          className="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm outline-none transition-colors focus:border-primary/60"
+          className="w-full rounded-xl md:rounded-2xl border border-white/10 bg-white/5 px-3 py-2.5 md:px-4 md:py-3 text-sm outline-none transition-colors focus:border-primary/60"
         />
       )}
     </label>

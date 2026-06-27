@@ -35,8 +35,8 @@ export function Footer() {
         </span>
       </div>
 
-      <div className="max-w-[1400px] mx-auto px-6 md:px-12 pt-20 pb-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+      <div className="max-w-[1400px] mx-auto px-6 md:px-12 pt-12 pb-8 md:pt-20 md:pb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mb-12 md:mb-16">
           {/* Brand Column */}
           <div className="space-y-6">
             <div className="flex items-center gap-3">
@@ -59,11 +59,11 @@ export function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6">
             <h4 className="text-xs font-mono uppercase tracking-[0.2em] text-white/40">
               Navigation
             </h4>
-            <ul className="space-y-4">
+            <ul className="grid grid-cols-2 gap-x-4 gap-y-3 sm:flex sm:flex-col sm:space-y-4">
               {quickLinks.map((link) => (
                 <li key={link.label}>
                   <a
@@ -79,20 +79,20 @@ export function Footer() {
           </div>
 
           {/* Socials */}
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6">
             <h4 className="text-xs font-mono uppercase tracking-[0.2em] text-white/40">Connect</h4>
             <div className="flex flex-wrap gap-4 relative min-h-[3rem]">
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-3 sm:gap-4">
                 {socialLinks.map((social) => (
                   <a
                     key={social.label}
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="size-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 group"
+                    className="size-10 rounded-xl sm:size-12 sm:rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 group"
                     title={social.label}
                   >
-                    <social.icon className="size-5 group-hover:scale-110 transition-transform" />
+                    <social.icon className="size-4 sm:size-5 group-hover:scale-110 transition-transform" />
                   </a>
                 ))}
               </div>
@@ -100,9 +100,9 @@ export function Footer() {
           </div>
 
           {/* CTA Column */}
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6">
             <h4 className="text-xs font-mono uppercase tracking-[0.2em] text-white/40">Inquiry</h4>
-            <div className="glass rounded-[2rem] p-6 border-white/10 relative group overflow-hidden">
+            <div className="glass rounded-xl sm:rounded-[2rem] p-5 sm:p-6 border-white/10 relative group overflow-hidden">
               <div className="relative z-10 space-y-4">
                 <p className="text-sm font-display font-bold text-white">Have a project in mind?</p>
                 <a
@@ -119,10 +119,10 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="text-[10px] font-mono text-muted-foreground uppercase tracking-widest flex items-center gap-4">
+        <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+          <div className="text-[10px] font-mono text-muted-foreground uppercase tracking-widest flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
             <span>© {currentYear} SWAYAM NANDA</span>
-            <span className="size-1 rounded-full bg-white/20" />
+            <span className="size-1 rounded-full bg-white/20 hidden sm:block" />
             <span>ALL RIGHTS RESERVED</span>
           </div>
 
