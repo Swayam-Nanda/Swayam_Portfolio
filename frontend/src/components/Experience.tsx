@@ -116,6 +116,7 @@ function JourneyStar({ progress }: { progress: MotionValue<number> }) {
 
   // Direction logic - Flipped to match requested direction
   const isForward = useTransform(velocity, (v) => v >= 0);
+  const trailRotate = useTransform(isForward, (f) => (f ? 180 : 0));
 
   useEffect(() => {
     return velocity.on("change", (v) => {
@@ -139,7 +140,7 @@ function JourneyStar({ progress }: { progress: MotionValue<number> }) {
           {/* Multi-Circle Waving Trail - Symmetric Waving */}
           <motion.div
             style={{
-              rotate: useTransform(isForward, (f) => (f ? 180 : 0)), // REVERSED DIRECTION
+              rotate: trailRotate,
             }}
             className="absolute left-[80%] h-0 flex items-center" // Trail anchored to the right side of head (relative to head)
           >
