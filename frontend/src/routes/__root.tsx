@@ -151,19 +151,12 @@ function RootShell({ children }: { children: React.ReactNode }) {
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
   const isMobile = useIsMobile();
-  // Skip loader on mobile — video doesn't fit portrait well and delays content
-  const [showLoader, setShowLoader] = useState(() => {
-    if (typeof window === "undefined") return false;
-    return !isMobile && !sessionStorage.getItem("loader-played");
-  });
+  // Safe initial state for both Server (SSR) and Client first render to prevent React Error #418
+  const [showLoader, setShowLoader] = useState(true);
 
   React.useEffect(() => {
-    // If on mobile, never show the loader
-    if (isMobile) {
-      setShowLoader(false);
-      return;
-    }
-    if (sessionStorage.getItem("loader-played")) {
+    // Instantly bypass on mobile or if already played, safe after mount hydration completes
+    if (isMobile || sessionStorage.getItem("loader-played")) {
       setShowLoader(false);
     }
   }, [isMobile]);
