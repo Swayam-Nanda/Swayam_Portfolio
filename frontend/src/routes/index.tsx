@@ -19,17 +19,16 @@ import { useTheme } from "@/lib/ThemeContext";
 import { useIsMobile } from "@/hooks/use-mobile";
 
 export const Route = createFileRoute("/")({
-  loader: async () => {
-    const [hero, about, services, projects, experience, testimonials, avatars] = await Promise.all([
-      api.getHero().catch(() => null),
-      api.getAbout().catch(() => null),
-      api.getServices().catch(() => []),
-      api.getProjects().catch(() => []),
-      api.getExperience().catch(() => []),
-      api.getTestimonials().catch(() => []),
-      api.getAvatars().catch(() => []),
-    ]);
-    return { hero, about, services, projects, experience, testimonials, avatars };
+  loader: () => {
+    return {
+      hero: null,
+      about: null,
+      services: [],
+      projects: [],
+      experience: [],
+      testimonials: [],
+      avatars: [],
+    };
   },
   head: () => ({
     meta: [
@@ -50,10 +49,32 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
-  const { hero, about, services, projects, experience, testimonials, avatars } =
-    Route.useLoaderData();
+  const initialData = Route.useLoaderData();
+  const [data, setData] = useState(initialData);
   const [filterTechs, setFilterTechs] = useState<string[]>([]);
   const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const loadData = async () => {
+      try {
+        const [hero, about, services, projects, experience, testimonials, avatars] = await Promise.all([
+          api.getHero().catch(() => null),
+          api.getAbout().catch(() => null),
+          api.getServices().catch(() => []),
+          api.getProjects().catch(() => []),
+          api.getExperience().catch(() => []),
+          api.getTestimonials().catch(() => []),
+          api.getAvatars().catch(() => []),
+        ]);
+        setData({ hero, about, services, projects, experience, testimonials, avatars });
+      } catch (err) {
+        console.error("Failed to load runtime data:", err);
+      }
+    };
+    loadData();
+  }, []);
+
+  const { hero, about, services, projects, experience, testimonials, avatars } = data;
 
   return (
     <div ref={containerRef} className="relative min-h-screen bg-black">
