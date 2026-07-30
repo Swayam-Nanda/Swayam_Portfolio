@@ -57,15 +57,16 @@ function Index() {
   useEffect(() => {
     const loadData = async () => {
       try {
-        const [hero, about, services, projects, experience, testimonials, avatars] = await Promise.all([
-          api.getHero().catch(() => null),
-          api.getAbout().catch(() => null),
-          api.getServices().catch(() => []),
-          api.getProjects().catch(() => []),
-          api.getExperience().catch(() => []),
-          api.getTestimonials().catch(() => []),
-          api.getAvatars().catch(() => []),
-        ]);
+        const [hero, about, services, projects, experience, testimonials, avatars] =
+          await Promise.all([
+            api.getHero().catch(() => null),
+            api.getAbout().catch(() => null),
+            api.getServices().catch(() => []),
+            api.getProjects().catch(() => []),
+            api.getExperience().catch(() => []),
+            api.getTestimonials().catch(() => []),
+            api.getAvatars().catch(() => []),
+          ]);
         setData({ hero, about, services, projects, experience, testimonials, avatars });
       } catch (err) {
         console.error("Failed to load runtime data:", err);
@@ -162,13 +163,17 @@ function RaysBackground() {
   const { scrollYProgress } = useScroll();
   const { themeColors } = useTheme();
 
-  // Perimeter revolving logic: Travels along the edges clockwise
+  // Perimeter revolving logic: Travels along the edges clockwise...
   const rayX = useTransform(scrollYProgress, [0, 0.25, 0.5, 0.75, 1], [1.2, 1.2, -0.2, -0.2, 1.2]);
   const rayY = useTransform(scrollYProgress, [0, 0.25, 0.5, 0.75, 1], [-0.2, 1.2, 1.2, -0.2, -0.2]);
   const rotation = useTransform(scrollYProgress, [0, 1], [0, -720]);
 
   // Ray 2: Mirrored Path
-  const rayX2 = useTransform(scrollYProgress, [0, 0.25, 0.5, 0.75, 1], [-0.2, -0.2, 1.2, 1.2, -0.2]);
+  const rayX2 = useTransform(
+    scrollYProgress,
+    [0, 0.25, 0.5, 0.75, 1],
+    [-0.2, -0.2, 1.2, 1.2, -0.2],
+  );
   const rayY2 = useTransform(scrollYProgress, [0, 0.25, 0.5, 0.75, 1], [1.2, -0.2, -0.2, 1.2, 1.2]);
   const rotation2 = useTransform(scrollYProgress, [0, 1], [180, -540]);
 
@@ -222,4 +227,3 @@ function RaysBackground() {
     </div>
   );
 }
-
