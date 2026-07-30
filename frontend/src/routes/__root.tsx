@@ -8,6 +8,7 @@ import {
   Scripts,
 } from "@tanstack/react-router";
 import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 import { MusicProvider } from "../lib/MusicContext";
 import { ThemeProvider } from "../lib/ThemeContext";
@@ -153,13 +154,21 @@ function RootComponent() {
   const isMobile = useIsMobile();
   // Safe initial state for both Server (SSR) and Client first render to prevent React Error #418
   const [showLoader, setShowLoader] = useState(true);
+  const [showMobileDialog, setShowMobileDialog] = useState(false);
 
   React.useEffect(() => {
-    // Instantly bypass on mobile or if already played, safe after mount hydration completes
-    if (isMobile || sessionStorage.getItem("loader-played")) {
+    // Only bypass if already played, show loader on mobile as well
+    if (sessionStorage.getItem("loader-played")) {
       setShowLoader(false);
     }
-  }, [isMobile]);
+  }, []);
+
+  React.useEffect(() => {
+    // If loader is finished and it is mobile, show the desktop recommendation alert
+    if (!showLoader && isMobile && !sessionStorage.getItem("mobile-dialog-dismissed")) {
+      setShowMobileDialog(true);
+    }
+  }, [showLoader, isMobile]);
 
   const handleLoaderComplete = () => {
     setShowLoader(false);
@@ -181,6 +190,56 @@ function RootComponent() {
             <MusicPlayer />
             <Outlet />
           </div>
+
+          <AnimatePresence>
+            {showMobileDialog && (
+              <div className="fixed inset-0 z-[10000] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.95, y: 20 }}
+                  animate={{ opacity: 1, scale: 1, y: 0 }}
+                  exit={{ opacity: 0, scale: 0.95, y: 20 }}
+                  transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+                  className="w-full max-w-sm rounded-3xl border border-white/10 bg-black/80 p-6 text-center shadow-2xl backdrop-blur-md"
+                >
+                  <div className="mx-auto mb-4 flex size-12 items-center justify-center rounded-full bg-primary/10 text-primary border border-primary/20">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={1.5}
+                      stroke="currentColor"
+                      className="size-6"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25"
+                      />
+                    </svg>
+                  </div>
+                  <h3 className="font-display text-xl font-bold text-white mb-2">
+                    Desktop Recommended
+                  </h3>
+                  <p className="text-white/60 text-xs leading-relaxed mb-6">
+                    This site features heavy 3D WebGL scenes, interactive canvas layouts, and custom shaders that are best experienced on a desktop or laptop computer.
+                  </p>
+                  <button
+                    onClick={() => {
+                      setShowMobileDialog(false);
+                      sessionStorage.setItem("mobile-dialog-dismissed", "true");
+                    }}
+                    className="w-full rounded-full py-2.5 text-xs font-semibold text-primary-foreground transition-transform hover:scale-[1.02] active:scale-[0.98]"
+                    style={{
+                      background: "var(--gradient-primary)",
+                      boxShadow: "var(--shadow-glow)",
+                    }}
+                  >
+                    Enter Anyway
+                  </button>
+                </motion.div>
+              </div>
+            )}
+          </AnimatePresence>
         </MusicProvider>
       </ThemeProvider>
     </QueryClientProvider>

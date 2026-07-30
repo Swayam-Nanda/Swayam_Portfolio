@@ -163,8 +163,9 @@ function ProjectCard({
     medium: "w-[85vw] md:w-[500px] h-[400px] md:h-[500px]",
     big: "w-[95vw] md:w-[650px] h-[450px] md:h-[550px]",
   };
-  const cardSizeClass =
-    sizeClasses[project.card_type as keyof typeof sizeClasses] || sizeClasses.medium;
+  const cardSizeClass = isMobile
+    ? "w-full h-[200px]"
+    : (sizeClasses[project.card_type as keyof typeof sizeClasses] || sizeClasses.medium);
 
   return (
     <motion.article
@@ -201,20 +202,20 @@ function ProjectCard({
       </div>
 
       {/* Content Layer */}
-      <div className="relative z-10 h-full flex flex-col justify-between p-10">
+      <div className="relative z-10 h-full flex flex-col justify-between p-5 md:p-10">
         <div className="flex items-start justify-between">
-          <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-white/50 bg-black/20 backdrop-blur-sm px-3 py-1 rounded-full border border-white/5">
+          <span className="font-mono text-[9px] md:text-[10px] uppercase tracking-[0.3em] text-white/50 bg-black/20 backdrop-blur-sm px-2.5 py-0.5 md:px-3 md:py-1 rounded-full border border-white/5">
             Project
           </span>
-          <div className="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          <div className="flex gap-1.5 md:gap-2 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500">
             {project.github_link && project.github_link !== "null" && project.github_link.trim() !== "" && (
               <a
                 href={project.github_link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-full bg-white/10 p-3 backdrop-blur hover:bg-white/20 transition-colors"
+                className="rounded-full bg-white/10 p-2 md:p-3 backdrop-blur hover:bg-white/20 transition-colors"
               >
-                <Github className="size-4 text-white" />
+                <Github className="size-3.5 md:size-4 text-white" />
               </a>
             )}
             {project.live_link && project.live_link !== "null" && project.live_link.trim() !== "" && (
@@ -222,23 +223,23 @@ function ProjectCard({
                 href={project.live_link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-full bg-primary p-3 backdrop-blur hover:scale-110 transition-transform shadow-lg shadow-primary/20"
+                className="rounded-full bg-primary p-2 md:p-3 backdrop-blur hover:scale-110 transition-transform shadow-lg shadow-primary/20"
               >
-                <ArrowUpRight className="size-4 text-primary-foreground" />
+                <ArrowUpRight className="size-3.5 md:size-4 text-primary-foreground" />
               </a>
             )}
           </div>
         </div>
 
-        <div>
-          <h3 className="font-display text-4xl font-bold tracking-tight text-white mb-3">
+        <div className="mt-2 md:mt-0">
+          <h3 className="font-display text-xl md:text-4xl font-bold tracking-tight text-white mb-1 md:mb-3">
             {project.title}
           </h3>
-          <p className="text-white/60 text-lg leading-relaxed max-w-sm mb-6">
+          <p className="text-white/60 text-xs md:text-sm leading-relaxed max-w-sm mb-2 md:mb-6 line-clamp-2 md:line-clamp-none">
             {project.description}
           </p>
-          <div className="flex flex-wrap gap-2">
-            {stack.map((s: string) => (
+          <div className="flex flex-wrap gap-1 md:gap-2">
+            {stack.slice(0, isMobile ? 3 : undefined).map((s: string) => (
               <TechPill key={s} name={s} isHovered={isHovered} />
             ))}
           </div>
@@ -375,9 +376,9 @@ export function Projects({
               </button>
             </div>
           ) : (
-            <div className="flex gap-6 overflow-x-auto snap-x snap-mandatory py-6 px-4 scrollbar-none -mx-4">
+            <div className="flex flex-col gap-4 py-4 px-4">
               {displayProjects.map((p, i) => (
-                <div key={`${p.title}-${i}`} className="snap-center shrink-0 w-[85vw] max-w-[340px]">
+                <div key={`${p.title}-${i}`} className="w-full">
                   <ProjectCard project={p} onHoverChange={() => {}} />
                 </div>
               ))}

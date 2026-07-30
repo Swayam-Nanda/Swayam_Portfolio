@@ -12,10 +12,32 @@ interface VideoLoaderProps {
 const VideoLoader: React.FC<VideoLoaderProps> = ({ onComplete }) => {
   const [isVisible, setIsVisible] = useState(true);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [isSiteDataLoaded, setIsSiteDataLoaded] = useState(false);
   const [loadProgress, setLoadProgress] = useState(0);
   const [showOverlayText, setShowOverlayText] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
   const isMobile = useIsMobile();
+
+  // Listen for the database loading completion event
+  useEffect(() => {
+    const handleDataLoaded = () => {
+      setIsSiteDataLoaded(true);
+    };
+    window.addEventListener("portfolio-data-loaded", handleDataLoaded);
+    if ((window as any).__portfolioDataLoaded) {
+      setIsSiteDataLoaded(true);
+    }
+    
+    // Safety timeout: If database takes longer than 7 seconds, force unlock
+    const safetyTimeout = setTimeout(() => {
+      setIsSiteDataLoaded(true);
+    }, 7000);
+
+    return () => {
+      window.removeEventListener("portfolio-data-loaded", handleDataLoaded);
+      clearTimeout(safetyTimeout);
+    };
+  }, []);
 
   // --- CONFIGURATION VARIABLES FOR CINEMATIC TEXTS ---
   const showTextTimeBeforeEnd = 4.0; // Time in seconds before the video ends to show the text
@@ -58,7 +80,30 @@ const VideoLoader: React.FC<VideoLoaderProps> = ({ onComplete }) => {
       .catch(() => {});
   }, []);
 
+  // Simulated preloader progress for mobile
   useEffect(() => {
+    if (isMobile) {
+      let currentProgress = 0;
+      const interval = setInterval(() => {
+        currentProgress += Math.random() * 12 + 4;
+        if (currentProgress >= 100) {
+          currentProgress = 100;
+          setLoadProgress(100);
+          setIsLoaded(true);
+          clearInterval(interval);
+          setTimeout(() => {
+            handleEnd();
+          }, 400);
+        } else {
+          setLoadProgress(currentProgress);
+        }
+      }, 150);
+      return () => clearInterval(interval);
+    }
+  }, [isMobile, handleEnd]);
+
+  useEffect(() => {
+    if (isMobile) return;
     // If video fails to load or takes too long, we should still show the site
     const timeout = setTimeout(() => {
       if (!isLoaded) {
@@ -67,10 +112,11 @@ const VideoLoader: React.FC<VideoLoaderProps> = ({ onComplete }) => {
     }, 20000); // Slightly increased timeout
 
     return () => clearTimeout(timeout);
-  }, [isLoaded, handleEnd]);
+  }, [isLoaded, handleEnd, isMobile]);
 
   useEffect(() => {
-    if (isLoaded && videoRef.current) {
+    if (isMobile) return;
+    if (isLoaded && isSiteDataLoaded && videoRef.current) {
       // Attempt to play with sound
       videoRef.current.muted = false;
       const playPromise = videoRef.current.play();
@@ -88,7 +134,7 @@ const VideoLoader: React.FC<VideoLoaderProps> = ({ onComplete }) => {
         });
       }
     }
-  }, [isLoaded, handleEnd]);
+  }, [isLoaded, isSiteDataLoaded, handleEnd, isMobile]);
 
   const onProgress = () => {
     if (videoRef.current && videoRef.current.buffered.length > 0) {
@@ -141,7 +187,7 @@ const VideoLoader: React.FC<VideoLoaderProps> = ({ onComplete }) => {
             />
           </div>
 
-          {!isLoaded && (
+          {(isMobile || !isLoaded || !isSiteDataLoaded) && (
             <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/40 backdrop-blur-sm z-10">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -210,18 +256,20 @@ const VideoLoader: React.FC<VideoLoaderProps> = ({ onComplete }) => {
             )}
           </AnimatePresence>
 
-          <video
-            ref={videoRef}
-            src={videoUrl}
-            playsInline
-            onEnded={handleEnd}
-            onCanPlayThrough={() => setIsLoaded(true)}
-            onProgress={onProgress}
-            onTimeUpdate={handleTimeUpdate}
-            className={`transition-opacity duration-1500 z-20 
-              ${isLoaded ? "opacity-100" : "opacity-0"} 
-              ${isMobile ? "rotate-90 w-[100vh] h-[100vw] object-contain" : "w-full h-full object-contain"}`}
-          />
+          {!isMobile && (
+            <video
+              ref={videoRef}
+              src={videoUrl}
+              playsInline
+              onEnded={handleEnd}
+              onCanPlayThrough={() => setIsLoaded(true)}
+              onProgress={onProgress}
+              onTimeUpdate={handleTimeUpdate}
+              className={`transition-opacity duration-1500 z-20 
+                ${(isLoaded && isSiteDataLoaded) ? "opacity-100" : "opacity-0"} 
+                w-full h-full object-contain`}
+            />
+          )}
         </motion.div>
       )}
     </AnimatePresence>

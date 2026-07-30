@@ -68,8 +68,14 @@ function Index() {
             api.getAvatars().catch(() => []),
           ]);
         setData({ hero, about, services, projects, experience, testimonials, avatars });
+        // Signal that the site data is fully loaded in the background
+        (window as any).__portfolioDataLoaded = true;
+        window.dispatchEvent(new CustomEvent("portfolio-data-loaded"));
       } catch (err) {
         console.error("Failed to load runtime data:", err);
+        // Fallback: Dispatch event anyway to prevent the loader from hanging
+        (window as any).__portfolioDataLoaded = true;
+        window.dispatchEvent(new CustomEvent("portfolio-data-loaded"));
       }
     };
     loadData();

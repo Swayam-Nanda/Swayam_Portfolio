@@ -49,7 +49,7 @@ export function Contact() {
       {exploding && <ParticleExplosion onComplete={() => setExploding(false)} />}
 
       {/* 3D Minimalist Globe Layer - Completely Unboxed, Fixed to Section Area */}
-      <div className="absolute top-0 right-0 z-0 h-[300px] md:h-[800px] w-[300px] md:w-[800px] pointer-events-none translate-x-[10%] md:translate-x-[20%] translate-y-[-10%]">
+      <div className="hidden md:block absolute top-0 right-0 z-0 h-[300px] md:h-[800px] w-[300px] md:w-[800px] pointer-events-none translate-x-[10%] md:translate-x-[20%] translate-y-[-10%]">
         <MinimalistGlobe />
       </div>
 
